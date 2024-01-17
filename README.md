@@ -3,11 +3,11 @@ Materia: Teoría de robótica 🦾<br>
 Universidad: UMNG 🏫<br>
 Año: 2024 📅</h1><br>
 
-El laboratorio de robótica está enfocado al desarrollo de plataformas móviles y brazos manipuladores programados a través de STM32, operados por medio de una interfaz gráfica en Matlab o Python.
+La teoría de robótica está enfocado al estudio y desarrollo de plataformas móviles y brazos manipuladores teniendo en cuenta las cinemáticas directas e inversas de cada robot.
 
 <h1>Aula 1</h1>
 
-En esta clase se presenta la materia: el contenido temático, los métodos de evaluación, las observaciones, las NO EXCUSAS y los recursos para el desarrollo del curso.
+En esta clase se presenta la materia, en cuanto al contenido temático, los métodos de evaluación, las observaciones, las NO EXCUSAS y los recursos para el desarrollo del curso.
 
 <h2>Presentación de la materia 🚀</h2>
 
