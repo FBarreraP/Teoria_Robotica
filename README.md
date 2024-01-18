@@ -62,7 +62,7 @@ En esta clase se presenta la materia, en cuanto al contenido temático, los mét
 		<td>05/04/2024</td> <td>2</td> <td>10</td> <td>10</td> <td>Desacople cinemático 6R</td>
 	</tr>
 	<tr>
-		<td>12/04/2024</td> <td>2</td> <td>11</td> <td>11</td> <td>Dudas</td>
+		<td>12/04/2024</td> <td>2</td> <td>11</td> <td>11</td> <td>Parcial segundo corte</td>
 	</tr><!--semana de parciales del segundo corte-->
 	<tr>
 		<td>19/04/2024</td> <td>2</td> <td>12</td> <td>12</td> <td>Retroalimentación del parcial segundo corte y entrega de notas segundo corte</td>
@@ -70,7 +70,7 @@ En esta clase se presenta la materia, en cuanto al contenido temático, los mét
 
 </table>
 
-<h4>Tercer corte MEC D</h4>
+<h4>Tercer corte</h4>
 
 <table>
 		<tr>
@@ -111,7 +111,7 @@ En esta clase se presenta la materia, en cuanto al contenido temático, los mét
 		<td rowspan="2">Primer (19.5%)</td>
 		<td>Parcial</td>
 		<td>12.675%</td>
-		<td>/02/2024</td>
+		<td>26/02/2024</td>
 		<td rowspan="7">Presencial</td>
 	</tr>
 	<tr>
@@ -123,7 +123,7 @@ En esta clase se presenta la materia, en cuanto al contenido temático, los mét
 		<td rowspan="2">Segundo (19.5%)</td>
 		<td>Parcial</td>
 		<td>12.675%</td>
-		<td>/02/2024</td>
+		<td>12/04/2024</td>
 	</tr>
 	<tr>
 		<td>Quices y/o talleres</td>
@@ -134,7 +134,7 @@ En esta clase se presenta la materia, en cuanto al contenido temático, los mét
 		<td rowspan="3">Tercer (20%)</td>
 		<td>Examen final</td>
 		<td>12%</td>
-		<td>/02/2024</td>
+		<td>24/05/2024</td>
 	</tr>
 	<tr>
 		<td>Quices y/o talleres</td>
