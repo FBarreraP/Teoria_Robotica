@@ -108,42 +108,37 @@ En esta clase se presenta la materia, en cuanto al contenido temático, los mét
 		<td>Metodología</td>
 	</tr>
 	<tr>
-		<td rowspan="2">Primer (20%)</td>
+		<td rowspan="2">Primer (19.5%)</td>
 		<td>Parcial</td>
-		<td>10%</td>
+		<td>12.675%</td>
 		<td>/02/2024</td>
 		<td rowspan="7">Presencial</td>
 	</tr>
 	<tr>
-		<td>Laboratorios y/o talleres</td>
-		<td>10%</td>
+		<td>Quices y/o talleres</td>
+		<td>6.825%</td>
 		<td>/02/2024</td>
 	</tr>
 	<tr>
-		<td rowspan="2">Segundo (30%)</td>
+		<td rowspan="2">Segundo (19.5%)</td>
 		<td>Parcial</td>
-		<td>15%</td>
+		<td>12.675%</td>
 		<td>/02/2024</td>
 	</tr>
 	<tr>
-		<td>Laboratorios y/o talleres</td>
-		<td>15%</td>
+		<td>Quices y/o talleres</td>
+		<td>6.825%</td>
 		<td>/02/2024</td>
 	</tr>
 	<tr>
-		<td rowspan="3">Tercer (50%)</td>
+		<td rowspan="3">Tercer (20%)</td>
 		<td>Examen final</td>
-		<td>15%</td>
+		<td>12%</td>
 		<td>/02/2024</td>
 	</tr>
 	<tr>
-		<td>Laboratorios y/o talleres</td>
-		<td>15%</td>
-		<td>/02/2024</td>
-	</tr>
-	<tr>
-		<td>Proyecto</td>
-		<td>20%</td>
+		<td>Quices y/o talleres</td>
+		<td>8%</td>
 		<td>/02/2024</td>
 	</tr>
 </table>
