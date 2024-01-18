@@ -77,13 +77,13 @@ En esta clase se presenta la materia, en cuanto al contenido temático, los mét
 		<td>Fecha</td> <td>Horas</td> <td>Clase</td> <td>Semana</td> <td>Actividades</td>
 	</tr>
 	<tr>
-		<td>26/04/2024</td> <td>2</td> <td>13</td> <td>13</td> <td>Jacobianos</td>
+		<td>26/04/2024</td> <td>2</td> <td>13</td> <td>13</td> <td>Plataforma diferencial</td>
 	</tr>
 	<tr>
-		<td>03/05/2024</td> <td>2</td> <td>14</td> <td>14</td> <td>Plataforma diferencial</td>
+		<td>03/05/2024</td> <td>2</td> <td>14</td> <td>14</td> <td>Plataforma omnidireccional</td>
 	</tr>
 	<tr>
-		<td>10/05/2024</td> <td>2</td> <td>15</td> <td>15</td> <td>Plataforma omnidireccional</td>
+		<td>10/05/2024</td> <td>2</td> <td>15</td> <td>15</td> <td>Jacobianos</td>
 	</tr>
 	<tr>
 		<td>17/05/2024</td> <td>2</td> <td>16</td> <td>16</td> <td>Dudas</td>
@@ -117,7 +117,7 @@ En esta clase se presenta la materia, en cuanto al contenido temático, los mét
 	<tr>
 		<td>Quices y/o talleres</td>
 		<td>6.825%</td>
-		<td>/02/2024</td>
+		<td>09/02/2024<br>16/02/2024<br>23/02/2024</td>
 	</tr>
 	<tr>
 		<td rowspan="2">Segundo (19.5%)</td>
@@ -128,7 +128,7 @@ En esta clase se presenta la materia, en cuanto al contenido temático, los mét
 	<tr>
 		<td>Quices y/o talleres</td>
 		<td>6.825%</td>
-		<td>/02/2024</td>
+		<td>22/03/2024<br>05/04/2024<br></td>
 	</tr>
 	<tr>
 		<td rowspan="3">Tercer (20%)</td>
