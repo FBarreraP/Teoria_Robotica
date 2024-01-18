@@ -139,7 +139,7 @@ En esta clase se presenta la materia, en cuanto al contenido temático, los mét
 	<tr>
 		<td>Quices y/o talleres</td>
 		<td>8%</td>
-		<td>/02/2024</td>
+		<td>03/05/2024<br>10/05/2024<br>17/05/2024</td>
 	</tr>
 </table>
 
