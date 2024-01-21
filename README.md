@@ -187,7 +187,7 @@ Nota del curso = (***0.195***+0.105)*NotaCorte1 + (***0.195***+0.105)*NotaCorte2
 
 <ul>
 	<li> Computador 💻</li>
-	<li> Visual Studio Code</li>
+	<li> Matlab</li>
 	<li> STM-32</li>
 	<img src="https://www.codeinsideout.com/blog/stm32/stm32-nucleo-boards.png" alt="Imagen de Raspberrys Pi 3B y 4B" caption="Hola"/>
 	<li> Plataforma diferencial</li>
