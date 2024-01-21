@@ -183,7 +183,6 @@ Nota del curso = (***0.195***+0.105)*NotaCorte1 + (***0.195***+0.105)*NotaCorte2
 	<li> No lo toque, no lo mire, ni se acerque mucho porque se daña 🤨</li>
 </ul>
 
-
 <h3>RECURSOS 🛠️</h3>
 
 <ul>
