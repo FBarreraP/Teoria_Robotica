@@ -166,8 +166,8 @@ Nota del curso = (***0.195***+0.105)*NotaCorte1 + (***0.195***+0.105)*NotaCorte2
 
 <h4>Observaciones de reglamento estudiantil</h4>
 <ul>
-	<li> Revisión sobre la calificación solamente dentro de los dias establecidos en el reglamento estudiantil </li>
-	<li> Con el 10% de las fallas se pierde la materia</li>
+	<li> Revisión sobre la calificación solamente dentro de los dias (3) establecidos en el reglamento estudiantil </li>
+	<li> Con el 20% de las fallas se pierde la materia</li>
 	<li> Las ausencias a clases donde se saque una calificación se debe presentar la excusa familiar o laboral en la dirección del programa</li>
 </ul>
 
@@ -195,4 +195,22 @@ Nota del curso = (***0.195***+0.105)*NotaCorte1 + (***0.195***+0.105)*NotaCorte2
 	<img src="https://www.codeinsideout.com/blog/stm32/stm32-nucleo-boards.png" alt="Imagen de Raspberrys Pi 3B y 4B" caption="Hola"/>
 	<li> IMU (MPU6050 y MPU9250)</li>
 	<img src="https://memo.soarcloud.com/wp-content/uploads/2020/07/mpu6050-mpu9250.jpg" alt="Imagen de Raspberrys Pi 3B y 4B" caption="Hola"/>
+</ul>
+
+<h3>Bibliografía </h3>
+
+<ul>
+	<li> Siciliano, Bruno; Sciavicco, Lorenzo. Robotics - Modelling, Planning and Control. Springer, 2009.</li> 
+	<li> Peter Corke, Robotics, Vision and Control - Fundamental Algorithms in MATLAB, Springer, 2017.</li>
+	<li> Murray, Richard. A mathematical Introduction to Robotic manipulation</li>
+	<li> Siegwart, Roland. Introduction to Autonomous Mobile Robots</li>
+	<li> Jean Claude Latombe, Robot Motion Planning.</li>
+	<li> Howie Choset, Principles of Robot Motion: Theory, Algorithms, and Implementations</li>
+	<li> Fu King, Gonzales R. Robotics: Control, Sensing, Vision, and Intelligence.</li>
+	<li> Jones, Joseph. Mobile robots, Inspiration to Implementation</li>
+	<li> Niku, Saeed. Introduction to robotics: analysis, systems, applications.</li>
+	<li> Angulo José, Robótica Tecnología y Aplicaciones.</li>
+	<li> Barrientos A. Fundamentos de Robótica.</li>
+	<li> Kelly Rafael, Santibañez Victor. Control de Movimiento de Robots Manipuladores.</li>
+	<li> Ollero, Anibal. Robótica: Manipuladores y Robots Móviles.</li>
 </ul>
