@@ -153,8 +153,8 @@ Nota del curso = (***0.195***+0.105)*NotaCorte1 + (***0.195***+0.105)*NotaCorte2
 		<li> Fin de clases: Quince (15) minutos antes de la hora final definida de la clase ⏱️</li>
 		<li> Respeto en clase 🤝</li>
 		<li> No presto mi computador para presentar laboratorios, talleres y/o proyectos 🤦‍♂️</li>
-		<li> Prohibido el uso de celular en quices y clase 📵</li>
-		<li> Permitidas las salidas al baño 🚻 y a recibir llamadas 📲, en los quices se debe dejar el celular en el puesto para salir al baño</li>
+		<li> Prohibido el uso de celular en quices, parciales y clase 📵</li>
+		<li> Permitidas las salidas al baño 🚻 y a recibir llamadas 📲, en los quices y parciales se debe dejar el celular en el puesto para salir al baño</li>
 		<li> Si no dejan dictar la clase, pasan al tablero a dar la clase o doy la clase por vista 😤</li>
 		<li> No es permitido tomar fotos, ni videos en clase 📵. El material de clase está en el siguiente repositorio git: https://github.com/FBarreraP/Teoria_Robotica </li>
 		<li> Los laboratorios y el proyecto consistirán únicamente de montaje y podrán ser realizados en grupos de máximo 2 estudiantes 🧍‍♂️🧍‍♀️</li>
