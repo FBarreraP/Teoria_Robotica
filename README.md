@@ -26,13 +26,13 @@ En esta clase se presenta la materia, en cuanto al contenido temático, los mét
 		<td>02/02/2024</td> <td>2</td> <td>2</td> <td>2</td> <td>Posición y orientación del cuerpo rígido y matrices de rotación</td>
 	</tr>
 	<tr>
-		<td>09/02/2024</td> <td>2</td> <td>3</td> <td>3</td> <td>Matrices de transformación homogénea e introducción a la cinemática directa</td>
+		<td>09/02/2024</td> <td>2</td> <td>3</td> <td>3</td> <td>Matrices de transformación homogénea</td>
 	</tr>
 	<tr>
-		<td>16/02/2024</td> <td>2</td> <td>4</td> <td>4</td> <td>Convención Denavit Hartenberg para robots manipuladores</td>
+		<td>16/02/2024</td> <td>2</td> <td>4</td> <td>4</td> <td>Introducción a la cinemática directa</td>
 	</tr>
 	<tr>
-		<td>23/02/2024</td> <td>2</td> <td>5</td> <td>5</td> <td>Dudas</td>
+		<td>23/02/2024</td> <td>2</td> <td>5</td> <td>5</td> <td>Convención Denavit Hartenberg para robots manipuladores</td>
 	</tr>
 	<tr>
 		<td>01/03/2024</td> <td>2</td> <td>6</td> <td>6</td> <td>Parcial primer corte</td><!--semana de parciales del primer corte-->
