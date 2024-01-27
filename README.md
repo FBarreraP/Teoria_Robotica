@@ -111,7 +111,7 @@ En esta clase se presenta la materia, en cuanto al contenido temático, los mét
 		<td rowspan="2">Primer (19.5%)</td>
 		<td>Parcial</td>
 		<td>12.675%</td>
-		<td>26/02/2024</td>
+		<td>01/03/2024</td>
 		<td rowspan="7">Presencial</td>
 	</tr>
 	<tr>
