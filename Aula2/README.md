@@ -65,6 +65,12 @@ En la figura, el sistema 𝑂’𝑈𝑉𝑊 está trasladado de un vector 𝑝(
 
 Fuente: Barrientos, A., Peñín, L.F., Balaguer, C., y Aracil, R., 2007, Fundamentos de Robótica, 2nd edition, McGraw-Hill.
 
+$$\vec{p}= \begin{bmatrix}
+6\\ 
+-3\\ 
+8
+\end{bmatrix}$$
+
 
 <h3></h3>
 <h3></h3>
