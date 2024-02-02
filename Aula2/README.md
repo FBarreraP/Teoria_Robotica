@@ -46,7 +46,25 @@ $$𝜑=cos^{−1}\frac{𝑧}{𝑟}=69.588°$$
 
 La posición (traslación) es el punto en la coordenada XYZ y la orientación (rotación) es la localización de los ejes alrededor de dicho punto con respecto a un sistema coordenado de origen (cuerpo rígido). Cada articulación tiene un sistema coordenado.
 
+<img src="http://www.udesantiagovirtual.cl/moodle2/pluginfile.php?file=/55554/mod_book/chapter/285/figuras/Ch3_fig3-1.svg" alt="Posición y orientación" caption="Hola"/>
+Fuente: http://www.udesantiagovirtual.cl/moodle2/pluginfile.php?file=/55554/mod_book/chapter/285/figuras/Ch3_fig3-1.svg
 
-<h3></h3>
+<h3>Traslación</h3>
+
+La traslación consiste en desplazar un objeto linealmente (modificar la posición) sobre los ejes de un plano cartesiano XYZ.
+
+![Traslación](image-3.png)
+
+Fuente: http://galia.fc.uaslp.mx/~medellin/Applets/Trans3D/transformaciones_en_3d.htm
+
+<h2>Ejercicio 1</h2>
+
+En la figura, el sistema 𝑂’𝑈𝑉𝑊 está trasladado de un vector 𝑝(6,−3,8) con respecto del sistema 𝑂𝑋𝑌𝑍. Calcular las coordenadas ($𝑟_𝑥$,$𝑟_𝑦$,$𝑟_𝑧$) del vector 𝑟, cuyas coordenadas con respecto al sistema 𝑂’𝑈𝑉𝑊 son $𝑟_𝑢𝑣𝑤$ (−2,7,3)
+
+![Ejercicio1](image-4.png)
+
+Fuente: Barrientos, A., Peñín, L.F., Balaguer, C., y Aracil, R., 2007, Fundamentos de Robótica, 2nd edition, McGraw-Hill.
+
+
 <h3></h3>
 <h3></h3>
