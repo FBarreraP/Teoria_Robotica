@@ -93,7 +93,7 @@ $$\vec{p}+\vec{r}= \begin{bmatrix}
 
 <h2>Ejercicio 2</h2>
 
-Calcular el vector ${𝑟}'{_{𝑥𝑦𝑧}}$ resultante de trasladar el vector $𝑟_{𝑥𝑦𝑧}$ (4,4,11) las coordenadas $𝑝_{𝑥𝑦𝑧}$ (6,−3,8)
+Calcular el vector ${𝑟_{𝑥𝑦𝑧}}'$ resultante de trasladar el vector $𝑟_{𝑥𝑦𝑧}$ (4,4,11) las coordenadas $𝑝_{𝑥𝑦𝑧}$ (6,−3,8)
 
 ![Ejercicio2](image-5.png)
 
@@ -125,5 +125,35 @@ $$\vec{r}+\vec{p}= \begin{bmatrix}
 19
 \end{bmatrix}$$
 
-<h3></h3>
-<h3></h3>
+<h3>Rotación</h3>
+
+La rotación consiste en girar un objeto (modificar la orientación) sobre los ejes de un plano cartesiano XYZ.
+
+![Rotación](image-7.png)
+
+No es lo mismo primero rotar en X y luego rotar en Y, que primero rotar en Y y luego rotar en X, independientemente si es con respecto al sistema fijo (premultiplicar) o al sistema móvil o actual (posmultiplicar). Por tanto, las rotaciones no son conmutativas.
+
+![Rotación2](image-6.png)
+
+Fuente: Barrientos, A., Peñín, L.F., Balaguer, C., y Aracil, R., 2007, Fundamentos de Robótica, 2nd edition, McGraw-Hill.
+
+![Matrices](image-8.png)
+
+<h2>Sistema actual</h2>
+
+![Sistema actual](image-9.png)
+
+Fuente: Adaptado de Siciliano, B., Sciavicco, L., Villani, L., & Oriolo, G. (2010). Robotics: modelling, planning and control. Springer Science & Business Media.
+
+<h2>Sistema fijo</h2>
+
+![Sistema fijo](image-10.png)
+
+Fuente: Adaptado de Siciliano, B., Sciavicco, L., Villani, L., & Oriolo, G. (2010). Robotics: modelling, planning and control. Springer Science & Business Media.
+
+<h2>Composición de rotaciones</h2>
+
+Determinar la expresión de la matriz de transformación resultantes para las siguientes rotaciones:
+
+1. Rotación de 𝜃 alrededor del eje X actual -> $𝑅_{x}(𝜃)$
+2. Rotación de 𝜙 alrededor del eje Z actual -> $𝑅_{x}(𝜃)\cdot𝑅_{z}(𝜙)$
