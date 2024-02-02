@@ -168,3 +168,33 @@ Determinar la expresión de la matriz de transformación resultantes para las si
 <h2>Ejercicio 3</h2>
 
 En la figura, el sistema 𝑂𝑈𝑉𝑊 se encuentra girado −90° alrededor del eje 𝑍 con respecto al sistema 𝑂𝑋𝑌𝑍. Calcular las coordenadas del vector $𝑟_{𝑥𝑦𝑧}$, si $𝑟_{𝑢𝑣𝑤}=[4,8,12]^{𝑇}$
+
+![Ejercicio3](image-11.png)
+
+Fuente: Barrientos, A., Peñín, L.F., Balaguer, C., y Aracil, R., 2007, Fundamentos de Robótica, 2nd edition, McGraw-Hill.
+
+$$R_z=\begin{bmatrix}
+ cos(-90)&  -sin(-90)& 0\\ 
+ sin(-90)&  cos(-90)& 0\\ 
+ 0 & 0 & 1
+\end{bmatrix}$$
+
+$$\vec{r}= \begin{bmatrix}
+4\\ 
+8\\ 
+12
+\end{bmatrix}$$
+
+$$R_z\cdot \vec{r} =\begin{bmatrix}
+0&  1& 0\\ 
+ -1&  0& 0\\ 
+ 0 & 0 & 1
+\end{bmatrix}\cdot \begin{bmatrix}
+4\\ 
+8\\ 
+12
+\end{bmatrix} = \begin{bmatrix}
+8\\ 
+-4\\ 
+12
+\end{bmatrix}$$
