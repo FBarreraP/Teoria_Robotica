@@ -125,6 +125,39 @@ $$\vec{r}+\vec{p}= \begin{bmatrix}
 19
 \end{bmatrix}$$
 
+```c
+%% 
+clear all
+close all
+clc
+
+%Traslación 1
+p = [6; -3; 8]
+r = [-2; 7; 3]
+pr = p + r
+
+%Traslación 2
+r = [4; 4; 11]
+p = [6; -3; 8]
+rp = r + p
+
+%Rotación 1
+Rz = RotarZ(-pi/2)
+r = [4; 8; 12]
+Rzr = Rz * r
+
+%Matrices de rotación con 0 grados
+alfa = 0
+RotarX(alfa)
+RotarY(alfa)
+RotarZ(alfa)
+
+
+a = round(RotarZ(pi/2)*RotarY(pi/2))
+b = round(RotarY(pi/2)*RotarZ(pi/2))
+
+```
+
 <h3>Rotación</h3>
 
 La rotación consiste en girar un objeto (modificar la orientación) sobre los ejes de un plano cartesiano XYZ.
