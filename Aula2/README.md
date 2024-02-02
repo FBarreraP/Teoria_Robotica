@@ -36,6 +36,12 @@ $$𝑧=𝑧=3$$
 
 <h2>Esféricas</h2>
 
+$$𝑟=sqrt{𝑥^{2}+𝑦^{2}+𝑧^{2}}=8.602$$
+
+$$𝜃=tan^{−1}⁡\frac{𝑦}{𝑥}=60.255°$$
+
+$$𝜑=cos^{−1}\frac{𝑧}{𝑟}=69.588°$$
+
 <h3>Posición y orientación</h3>
 
 La posición (traslación) es el punto en la coordenada XYZ y la orientación (rotación) es la localización de los ejes alrededor de dicho punto con respecto a un sistema coordenado de origen (cuerpo rígido). Cada articulación tiene un sistema coordenado.
