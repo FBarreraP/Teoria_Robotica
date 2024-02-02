@@ -158,4 +158,13 @@ Determinar la expresión de la matriz de transformación resultantes para las si
 1. Rotación de 𝜃 alrededor del eje X actual -> $𝑅_{x}(𝜃)$
 2. Rotación de 𝜙 alrededor del eje Z actual -> $𝑅_{x}(𝜃)\cdot𝑅_{z}(𝜙)$
 3. Rotación de 𝛼 alrededor del eje Z fijo -> $𝑅_{z}(𝛼)\cdot𝑅_{x}(𝜃)\cdot𝑅_{z}(𝜙)$
+4. Rotación de 𝛽 alrededor del eje Y actual -> $𝑅_{z}(𝛼)\cdot𝑅_{x}(𝜃)\cdot𝑅_{z}(𝜙)\cdot𝑅_{y}(𝛽)$
+5. Rotación de 𝛾 alrededor del eje X fijo -> $𝑅_{x}(𝛾)\cdot𝑅_{z}(𝛼)\cdot𝑅_{x}(𝜃)\cdot𝑅_{z}(𝜙)\cdot𝑅_{y}(𝛽)$
+
+<!-- 
 4. Rotación de 𝛽 alrededor del eje Y actual -> $𝑅_{z}(𝛼)\cdot𝑅_{x}(𝜃)\cdot𝑅_{z}(𝜙)\cdotR_{y}(𝛽)$
+-->
+
+<h2>Ejercicio 3</h2>
+
+En la figura, el sistema 𝑂𝑈𝑉𝑊 se encuentra girado −90° alrededor del eje 𝑍 con respecto al sistema 𝑂𝑋𝑌𝑍. Calcular las coordenadas del vector $𝑟_{𝑥𝑦𝑧}$, si $𝑟_{𝑢𝑣𝑤}=[4,8,12]^{𝑇}$
