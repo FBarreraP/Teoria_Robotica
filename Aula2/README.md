@@ -157,3 +157,5 @@ Determinar la expresión de la matriz de transformación resultantes para las si
 
 1. Rotación de 𝜃 alrededor del eje X actual -> $𝑅_{x}(𝜃)$
 2. Rotación de 𝜙 alrededor del eje Z actual -> $𝑅_{x}(𝜃)\cdot𝑅_{z}(𝜙)$
+3. Rotación de 𝛼 alrededor del eje Z fijo -> $𝑅_{z}(𝛼)\cdot𝑅_{x}(𝜃)\cdot𝑅_{z}(𝜙)$
+4. Rotación de 𝛽 alrededor del eje Y actual -> $𝑅_{z}(𝛼)\cdot𝑅_{x}(𝜃)\cdot𝑅_{z}(𝜙)\cdotR_{y}(𝛽)$
