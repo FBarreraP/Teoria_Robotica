@@ -7,16 +7,19 @@ Esta clase está basada en comprender los conceptos de posición y orientación 
 <h3>Coordenadas cartesianas</h3>
 
 ![cartesianas](image.png)
+
 Fuente: Barrientos, A., Peñín, L.F., Balaguer, C., y Aracil, R., 2007, Fundamentos de Robótica, 2nd edition, McGraw-Hill.
 
 <h3>Coordenadas polares (2D) y cilíndricas (3D)</h3>
 
 ![cilíndricas](image-1.png)
+
 Fuente: Barrientos, A., Peñín, L.F., Balaguer, C., y Aracil, R., 2007, Fundamentos de Robótica, 2nd edition, McGraw-Hill.
 
 <h3>Coordenadas esféricas</h3>
 
 ![esféricas](image-2.png)
+
 Fuente: Barrientos, A., Peñín, L.F., Balaguer, C., y Aracil, R., 2007, Fundamentos de Robótica, 2nd edition, McGraw-Hill.
 
 <h3>Conversión de coordenadas</h3>
@@ -26,7 +29,9 @@ Encontrar la representación en coordenadas cilíndricas y esféricas de vector 
 <h2>Cilíndricas</h2>
 
 $$𝑟=  \sqrt{𝑥^{2}+𝑦^{2}}=8.062$$
+
 $$𝜃=tan^{−1}\frac{𝑦}{𝑥}=60.255°$$
+
 $$𝑧=𝑧=3$$
 
 <h2>Esféricas</h2>
