@@ -71,6 +71,26 @@ $$\vec{p}= \begin{bmatrix}
 8
 \end{bmatrix}$$
 
+$$\vec{r}= \begin{bmatrix}
+-2\\ 
+7\\ 
+3
+\end{bmatrix}$$
+
+$$\vec{p}+\vec{r}= \begin{bmatrix}
+6\\ 
+-3\\ 
+8
+\end{bmatrix} + \begin{bmatrix}
+-2\\ 
+7\\ 
+3
+\end{bmatrix} = \begin{bmatrix}
+4\\ 
+4\\ 
+11
+\end{bmatrix}$$
+
 
 <h3></h3>
 <h3></h3>
