@@ -91,6 +91,39 @@ $$\vec{p}+\vec{r}= \begin{bmatrix}
 11
 \end{bmatrix}$$
 
+<h2>Ejercicio 2</h2>
+
+Calcular el vector ${𝑟}'_{𝑥𝑦𝑧}$ resultante de trasladar el vector $𝑟_{𝑥𝑦𝑧}$ (4,4,11) las coordenadas $𝑝_{𝑥𝑦𝑧}$ (6,−3,8)
+
+![Ejercicio2](image-5.png)
+
+Fuente: Barrientos, A., Peñín, L.F., Balaguer, C., y Aracil, R., 2007, Fundamentos de Robótica, 2nd edition, McGraw-Hill.
+
+$$\vec{r}= \begin{bmatrix}
+4\\ 
+4\\ 
+11
+\end{bmatrix}$$
+
+$$\vec{r}= \begin{bmatrix}
+6\\ 
+-3\\ 
+8
+\end{bmatrix}$$
+
+$$\vec{p}+\vec{r}= \begin{bmatrix}
+4\\ 
+4\\ 
+11
+\end{bmatrix} + \begin{bmatrix}
+6\\ 
+-3\\ 
+8
+\end{bmatrix} = \begin{bmatrix}
+10\\ 
+1\\ 
+19
+\end{bmatrix}$$
 
 <h3></h3>
 <h3></h3>
