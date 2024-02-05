@@ -170,7 +170,7 @@ La rotación consiste en girar un objeto (modificar la orientación) sobre los e
 
 No es lo mismo primero rotar en X y luego rotar en Y, que primero rotar en Y y luego rotar en X, independientemente si es con respecto al sistema fijo (premultiplicar) o al sistema móvil o actual (posmultiplicar). Por tanto, las rotaciones no son conmutativas.
 
-![Rotación2](Imagenes/-6.png)
+![Rotación2](Imagenes/image-6.png)
 
 Fuente: Barrientos, A., Peñín, L.F., Balaguer, C., y Aracil, R., 2007, Fundamentos de Robótica, 2nd edition, McGraw-Hill.
 
