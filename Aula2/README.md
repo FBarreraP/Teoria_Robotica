@@ -6,19 +6,19 @@ Esta clase está basada en comprender los conceptos de posición y orientación 
 
 <h3>Coordenadas cartesianas</h3>
 
-![cartesianas](image.png)
+![cartesianas](imagenes/image.png)
 
 Fuente: Barrientos, A., Peñín, L.F., Balaguer, C., y Aracil, R., 2007, Fundamentos de Robótica, 2nd edition, McGraw-Hill.
 
 <h3>Coordenadas polares (2D) y cilíndricas (3D)</h3>
 
-![cilíndricas](image-1.png)
+![cilíndricas](imagenes/image-1.png)
 
 Fuente: Barrientos, A., Peñín, L.F., Balaguer, C., y Aracil, R., 2007, Fundamentos de Robótica, 2nd edition, McGraw-Hill.
 
 <h3>Coordenadas esféricas</h3>
 
-![esféricas](image-2.png)
+![esféricas](imagenes/image-2.png)
 
 Fuente: Barrientos, A., Peñín, L.F., Balaguer, C., y Aracil, R., 2007, Fundamentos de Robótica, 2nd edition, McGraw-Hill.
 
@@ -53,7 +53,7 @@ Fuente: http://www.udesantiagovirtual.cl/moodle2/pluginfile.php?file=/55554/mod_
 
 La traslación consiste en desplazar un objeto linealmente (modificar la posición) sobre los ejes de un plano cartesiano XYZ.
 
-![Traslación](image-3.png)
+![Traslación](imagenes/image-3.png)
 
 Fuente: http://galia.fc.uaslp.mx/~medellin/Applets/Trans3D/transformaciones_en_3d.htm
 
@@ -61,7 +61,7 @@ Fuente: http://galia.fc.uaslp.mx/~medellin/Applets/Trans3D/transformaciones_en_3
 
 En la figura, el sistema 𝑂’𝑈𝑉𝑊 está trasladado de un vector 𝑝(6,−3,8) con respecto del sistema 𝑂𝑋𝑌𝑍. Calcular las coordenadas ($𝑟_{𝑥}$, $𝑟_{𝑦}$, $𝑟_{𝑧}$) del vector 𝑟, cuyas coordenadas con respecto al sistema 𝑂’𝑈𝑉𝑊 son $𝑟_{𝑢𝑣𝑤}$ (−2,7,3)
 
-![Ejercicio1](image-4.png)
+![Ejercicio1](imagenes/image-4.png)
 
 Fuente: Barrientos, A., Peñín, L.F., Balaguer, C., y Aracil, R., 2007, Fundamentos de Robótica, 2nd edition, McGraw-Hill.
 
@@ -95,7 +95,7 @@ $$\vec{p}+\vec{r}= \begin{bmatrix}
 
 Calcular el vector ${𝑟_{𝑥𝑦𝑧}}'$ resultante de trasladar el vector $𝑟_{𝑥𝑦𝑧}$ (4,4,11) las coordenadas $𝑝_{𝑥𝑦𝑧}$ (6,−3,8)
 
-![Ejercicio2](image-5.png)
+![Ejercicio2](imagenes/image-5.png)
 
 Fuente: Barrientos, A., Peñín, L.F., Balaguer, C., y Aracil, R., 2007, Fundamentos de Robótica, 2nd edition, McGraw-Hill.
 
@@ -125,7 +125,7 @@ $$\vec{r}+\vec{p}= \begin{bmatrix}
 19
 \end{bmatrix}$$
 
-```Matlab
+```matlab
 %% 
 clear all
 close all
@@ -166,25 +166,25 @@ e = round(RotarX(pi+pi/2))
 
 La rotación consiste en girar un objeto (modificar la orientación) sobre los ejes de un plano cartesiano XYZ.
 
-![Rotación](image-7.png)
+![Rotación](imagenes/image-7.png)
 
 No es lo mismo primero rotar en X y luego rotar en Y, que primero rotar en Y y luego rotar en X, independientemente si es con respecto al sistema fijo (premultiplicar) o al sistema móvil o actual (posmultiplicar). Por tanto, las rotaciones no son conmutativas.
 
-![Rotación2](image-6.png)
+![Rotación2](imagenes/-6.png)
 
 Fuente: Barrientos, A., Peñín, L.F., Balaguer, C., y Aracil, R., 2007, Fundamentos de Robótica, 2nd edition, McGraw-Hill.
 
-![Matrices](image-8.png)
+![Matrices](imagenes/image-8.png)
 
 <h2>Sistema actual</h2>
 
-![Sistema actual](image-9.png)
+![Sistema actual](imagenes/image-9.png)
 
 Fuente: Adaptado de Siciliano, B., Sciavicco, L., Villani, L., & Oriolo, G. (2010). Robotics: modelling, planning and control. Springer Science & Business Media.
 
 <h2>Sistema fijo</h2>
 
-![Sistema fijo](image-10.png)
+![Sistema fijo](imagenes/image-10.png)
 
 Fuente: Adaptado de Siciliano, B., Sciavicco, L., Villani, L., & Oriolo, G. (2010). Robotics: modelling, planning and control. Springer Science & Business Media.
 
@@ -206,7 +206,7 @@ Determinar la expresión de la matriz de transformación resultantes para las si
 
 En la figura, el sistema 𝑂𝑈𝑉𝑊 se encuentra girado −90° alrededor del eje 𝑍 con respecto al sistema 𝑂𝑋𝑌𝑍. Calcular las coordenadas del vector $𝑟_{𝑥𝑦𝑧}$, si $𝑟_{𝑢𝑣𝑤}=[4,8,12]^{𝑇}$
 
-![Ejercicio3](image-11.png)
+![Ejercicio3](imagenes/image-11.png)
 
 Fuente: Barrientos, A., Peñín, L.F., Balaguer, C., y Aracil, R., 2007, Fundamentos de Robótica, 2nd edition, McGraw-Hill.
 

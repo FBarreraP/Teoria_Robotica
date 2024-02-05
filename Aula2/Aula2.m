@@ -3,22 +3,22 @@ clear all
 close all
 clc
 
-%Traslaci髇 1
+%Traslaci贸n 1
 p = [6; -3; 8]
 r = [-2; 7; 3]
 pr = p + r
 
-%Traslaci髇 2
+%Traslaci贸n 2
 r = [4; 4; 11]
 p = [6; -3; 8]
 rp = r + p
 
-%Rotaci髇 1
+%Rotaci贸n 1
 Rz = RotarZ(-pi/2)
 r = [4; 8; 12]
 Rzr = Rz * r
 
-%Matrices de rotaci髇 con 0 grados
+%Matrices de rotaci贸n con 0 grados
 alfa = 0
 RotarX(alfa)
 RotarY(alfa)
