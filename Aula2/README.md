@@ -1,4 +1,4 @@
-<h1>Aula 3</h1>
+<h1>Aula 2</h1>
 
 Esta clase consiste en comprender los conceptos de posición y orientación de un cuerpo rígido y su representación a través de matrices.
 
