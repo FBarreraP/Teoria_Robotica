@@ -1,4 +1,4 @@
-<h1>Aula 4</h1>
+<h1>Aula 3</h1>
 
 Esta clase consiste en relacionar la traslación y la rotación de un cuerpo rígido en la matriz de transformación homogénea (MTH).
 
