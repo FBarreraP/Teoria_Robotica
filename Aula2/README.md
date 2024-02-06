@@ -1,6 +1,6 @@
-<h1>Aula 2</h1>
+<h1>Aula 3</h1>
 
-Esta clase está basada en comprender los conceptos de posición y orientación de un cuerpo rígido y su representación a través de matrices.
+Esta clase consiste en comprender los conceptos de posición y orientación de un cuerpo rígido y su representación a través de matrices.
 
 <h2>Posición y orientación del cuerpo rígido y matrices de rotación</h2>
 
@@ -46,7 +46,8 @@ $$𝜑=cos^{−1}\frac{𝑧}{𝑟}=69.588°$$
 
 La posición (traslación) es el punto en la coordenada XYZ y la orientación (rotación) es la localización de los ejes alrededor de dicho punto con respecto a un sistema coordenado de origen (cuerpo rígido). Cada articulación tiene un sistema coordenado.
 
-<img src="http://www.udesantiagovirtual.cl/moodle2/pluginfile.php?file=/55554/mod_book/chapter/285/figuras/Ch3_fig3-1.svg" alt="Posición y orientación" caption="Hola"/>
+![SC trasladado y rotado](Imagenes/image12.png)
+
 Fuente: http://www.udesantiagovirtual.cl/moodle2/pluginfile.php?file=/55554/mod_book/chapter/285/figuras/Ch3_fig3-1.svg
 
 <h3>Traslación</h3>
@@ -64,6 +65,16 @@ En la figura, el sistema 𝑂’𝑈𝑉𝑊 está trasladado de un vector 𝑝(
 ![Ejercicio1](Imagenes/image-4.png)
 
 Fuente: Barrientos, A., Peñín, L.F., Balaguer, C., y Aracil, R., 2007, Fundamentos de Robótica, 2nd edition, McGraw-Hill.
+
+```matlab
+clear all
+close all
+clc
+
+p = [6; -3; 8]
+r = [-2; 7; 3]
+pr = p + r
+```
 
 $$\vec{p}= \begin{bmatrix}
 6\\ 
@@ -93,11 +104,21 @@ $$\vec{p}+\vec{r}= \begin{bmatrix}
 
 <h2>Ejercicio 2</h2>
 
-Calcular el vector ${𝑟_{𝑥𝑦𝑧}}'$ resultante de trasladar el vector $𝑟_{𝑥𝑦𝑧}$ (4,4,11) las coordenadas $𝑝_{𝑥𝑦𝑧}$ (6,−3,8)
+Calcular el vector $𝑟_{𝑥𝑦𝑧}'$ resultante de trasladar el vector $𝑟_{𝑥𝑦𝑧}$ (4,4,11) las coordenadas $𝑝_{𝑥𝑦𝑧}$ (6,−3,8)
 
 ![Ejercicio2](Imagenes/image-5.png)
 
 Fuente: Barrientos, A., Peñín, L.F., Balaguer, C., y Aracil, R., 2007, Fundamentos de Robótica, 2nd edition, McGraw-Hill.
+
+```matlab
+clear all
+close all
+clc
+
+r = [4; 4; 11]
+p = [6; -3; 8]
+rp = r + p
+```
 
 $$\vec{r}= \begin{bmatrix}
 4\\ 
@@ -125,48 +146,30 @@ $$\vec{r}+\vec{p}= \begin{bmatrix}
 19
 \end{bmatrix}$$
 
-```matlab
-%% 
-clear all
-close all
-clc
-
-%Traslación 1
-p = [6; -3; 8]
-r = [-2; 7; 3]
-pr = p + r
-
-%Traslación 2
-r = [4; 4; 11]
-p = [6; -3; 8]
-rp = r + p
-
-%Rotación 1
-Rz = RotarZ(-pi/2)
-r = [4; 8; 12]
-Rzr = Rz * r
-
-%Matrices de rotación con 0 grados
-alfa = 0
-RotarX(alfa)
-RotarY(alfa)
-RotarZ(alfa)
-
-
-a = round(RotarZ(pi/2)*RotarY(pi/2))
-b = round(RotarY(pi/2)*RotarZ(pi/2))
-
-c = round(RotarX(pi/2)*RotarX(pi))
-d = round(RotarX(pi)*RotarX(pi/2))
-e = round(RotarX(pi+pi/2))
-
-```
-
 <h3>Rotación</h3>
 
 La rotación consiste en girar un objeto (modificar la orientación) sobre los ejes de un plano cartesiano XYZ.
 
+![Regla mano derecha](Imagenes/image13.png)
+
+Fuente: https://livebook.manning.com/book/robotics-for-software-engineers/chapter-4/v-2/47
+
+![Regla de la mano derecha (Roll, Pitch y Yaw)](Imagenes/image14.png)
+
+Fuente: https://livebook.manning.com/book/robotics-for-software-engineers/chapter-4/v-2/47
+
 ![Rotación](Imagenes/image-7.png)
+
+```matlab
+clear all
+close all
+clc
+
+alfa = 0
+RotarX(alfa)
+RotarY(alfa)
+RotarZ(alfa)
+```
 
 No es lo mismo primero rotar en X y luego rotar en Y, que primero rotar en Y y luego rotar en X, independientemente si es con respecto al sistema fijo (premultiplicar) o al sistema móvil o actual (posmultiplicar). Por tanto, las rotaciones no son conmutativas.
 
@@ -175,6 +178,20 @@ No es lo mismo primero rotar en X y luego rotar en Y, que primero rotar en Y y l
 Fuente: Barrientos, A., Peñín, L.F., Balaguer, C., y Aracil, R., 2007, Fundamentos de Robótica, 2nd edition, McGraw-Hill.
 
 ![Matrices](Imagenes/image-8.png)
+
+```matlab
+clear all
+close all
+clc
+
+a = round(RotarZ(pi/2)*RotarY(pi/2))
+b = round(RotarY(pi/2)*RotarZ(pi/2))
+
+%Excepción si gira en el mismo eje
+c = round(RotarX(pi/2)*RotarX(pi))
+d = round(RotarX(pi)*RotarX(pi/2))
+e = round(RotarX(pi+pi/2))
+```
 
 <h2>Sistema actual</h2>
 
@@ -209,6 +226,16 @@ En la figura, el sistema 𝑂𝑈𝑉𝑊 se encuentra girado −90° alrededor 
 ![Ejercicio3](Imagenes/image-11.png)
 
 Fuente: Barrientos, A., Peñín, L.F., Balaguer, C., y Aracil, R., 2007, Fundamentos de Robótica, 2nd edition, McGraw-Hill.
+
+```matlab
+clear all
+close all
+clc
+
+Rz = RotarZ(-pi/2)
+r = [4; 8; 12]
+Rzr = Rz * r
+```
 
 $$R_z=\begin{bmatrix}
  cos(-90)&  -sin(-90)& 0\\ 
