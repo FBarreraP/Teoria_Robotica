@@ -242,6 +242,7 @@ clear all
 close all
 clc
 
+%Solución simbólica
 syms Px Py Pz theta
 
 dx = [1 0 0 Px; 0 1 0 Py; 0 0 1 Pz; 0 0 0 1]
@@ -250,6 +251,22 @@ Rx = [1     0           0      0;
       0 sin(theta) cos(theta)  0;
       0     0           0      1]
 RT = dx*Rx
+
+%Solución numérica
+Px = 8
+Py = -4
+Pz = 12
+theta = deg2rad(90)
+
+dx = [1 0 0 Px; 0 1 0 Py; 0 0 1 Pz; 0 0 0 1]
+Rx = [1     0           0      0;
+      0 cos(theta) -sin(theta) 0;
+      0 sin(theta) cos(theta)  0;
+      0     0           0      1]
+RT = dx*Rx
+
+r = [-3; 4; -11; 1]
+RTr = RT*r
 ```
 
 $$
@@ -262,7 +279,7 @@ $$
 1 & 0 & 0 & 𝑝_𝑥\\ 
 0 & cosθ & -sinθ & 𝑝_𝑦\\ 
 0 & sinθ & cosθ & 𝑝_𝑧\\ 
-0 & 0 & 0 & 
+0 & 0 & 0 & 1
 \end{bmatrix} \cdot \begin{bmatrix}
 𝑟_𝑢\\ 
 𝑟_𝑣\\ 
@@ -281,7 +298,7 @@ $$
 1 & 0 & 0 & 8\\ 
 0 & 0 & -1 & -4\\ 
 0 & 1 & 0 & 12\\ 
-0 & 0 & 0 & 
+0 & 0 & 0 & 1
 \end{bmatrix} \cdot \begin{bmatrix}
 -3\\ 
 4\\ 
@@ -308,6 +325,7 @@ clear all
 close all
 clc
 
+%Solución simbólica
 syms Px Py Pz theta
 
 dx = [1 0 0 Px; 0 1 0 Py; 0 0 1 Pz; 0 0 0 1]
@@ -316,6 +334,22 @@ Rx = [1     0           0      0;
       0 sin(theta) cos(theta)  0;
       0     0           0      1]
 TR = Rx*dx
+
+%Solución numérica
+Px = 8
+Py = -4
+Pz = 12
+theta = pi/2
+
+dx = [1 0 0 Px; 0 1 0 Py; 0 0 1 Pz; 0 0 0 1]
+Rx = [1     0           0      0;
+      0 cos(theta) -sin(theta) 0;
+      0 sin(theta) cos(theta)  0;
+      0     0           0      1]
+TR = Rx*dx
+
+r = [-3; 4; -11; 1]
+TRr = TR*r
 ```
 
 $$
@@ -344,7 +378,7 @@ $$
 𝑟_𝑧\\ 
 1
 \end{bmatrix} = \begin{bmatrix}
-1 & 0 & 0 & 9\\ 
+1 & 0 & 0 & 8\\ 
 0 & 0 & -1 & -12\\ 
 0 & 1 & 0 & -4\\ 
 0 & 0 & 0 & 1
