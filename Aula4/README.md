@@ -10,7 +10,7 @@ El problema cinemático directo se reduce a una matriz homogénea de transformac
 
 ![T06](image.png)
 
-![Cinemática directa](image-1.png)
+![CD](image-11.png)
 
 ![Articulaciones](image-2.png)
 
