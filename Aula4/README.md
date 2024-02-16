@@ -88,6 +88,9 @@ T34 = [1 0 0 0;
 
 T04 = simplify(T01*T12*T23*T34)
 % T04 = T01*T12*T23*T34
+
+% r = T04(1:3,1:3)
+% m = rad2deg(tr2rpy(r,'zyx'))
 ```
 
 Resultado final de la cinemática directa
