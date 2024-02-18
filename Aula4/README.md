@@ -66,17 +66,43 @@ Resultado final de la cinemática directa
 $$T_4^0 = \begin{bmatrix}
 cos⁡(𝜃_1+𝜃_2) & -sen⁡(𝜃_1+𝜃_2) & 0 & 𝑙_1cos⁡(𝜃_1)+𝑙_2cos⁡(𝜃_1+𝜃_2)\\ 
 sen⁡(𝜃_1+𝜃_2) & cos⁡(𝜃_1+𝜃_2) & 0 & 𝑙_1sen⁡(𝜃_1)+𝑙_2sen⁡(𝜃_1+𝜃_2)\\ 
-0 & 0 & 1 & ℎ_1−ℎ_2\\
+0 & 0 & 1 & ℎ_1−ℎ_2\\ 
 0 & 0 & 0 & 1
 \end{bmatrix}$$
 
-![MTH04](Imagenes/image-9.png)
-
-<h4>Transformaciones</h4>
+<h3>Transformaciones</h3>
 
 ![2R 3D](Imagenes/image-7.png)
 
-![MTH04](Imagenes/image-8.png)
+$$T_6^0 = T_1^0 \cdot T_2^1 \cdot T_3^2 \cdot T_4^3$$
+
+$$T_1^0 = \begin{bmatrix}
+1 & 0 & 0 & 0 \\ 
+0 & 1 & 0 & 0 \\ 
+0 & 0 & 1 & ℎ_1 \\ 
+0 & 0 & 0 & 1
+\end{bmatrix}$$
+
+$$T_2^1 = \begin{bmatrix}
+cos⁡(𝜃_1) & -sen⁡(𝜃_1) & 0 & 𝑙_1cos⁡(𝜃_1)\\ 
+sen⁡(𝜃_1) & cos⁡(𝜃_1) & 0 & 𝑙_1sen⁡(𝜃_1)\\ 
+0 & 0 & 1 & 0\\ 
+0 & 0 & 0 & 1
+\end{bmatrix}$$
+
+$$T_3^2 = \begin{bmatrix}
+cos⁡(𝜃_2) & -sen⁡(𝜃_2) & 0 & 𝑙_2cos⁡(𝜃_2)\\ 
+sen⁡(𝜃_2) & cos⁡(𝜃_2) & 0 & 𝑙_2sen⁡(𝜃_2)\\ 
+0 & 0 & 1 & 0\\ 
+0 & 0 & 0 & 1
+\end{bmatrix}$$
+
+$$T_4^3 = \begin{bmatrix}
+1 & 0 & 0 & 0 \\ 
+0 & 1 & 0 & 0 \\ 
+0 & 0 & 1 & -ℎ_2 \\ 
+0 & 0 & 0 & 1
+\end{bmatrix}$$
 
 ```matlab
 %Transformaciones (MTH)
@@ -118,7 +144,12 @@ T04 = simplify(T01*T12*T23*T34)
 
 Resultado final de la cinemática directa
 
-![MTH04](Imagenes/image-9.png)
+$$T_4^0 = \begin{bmatrix}
+cos⁡(𝜃_1+𝜃_2) & -sen⁡(𝜃_1+𝜃_2) & 0 & 𝑙_1cos⁡(𝜃_1)+𝑙_2cos⁡(𝜃_1+𝜃_2)\\ 
+sen⁡(𝜃_1+𝜃_2) & cos⁡(𝜃_1+𝜃_2) & 0 & 𝑙_1sen⁡(𝜃_1)+𝑙_2sen⁡(𝜃_1+𝜃_2)\\ 
+0 & 0 & 1 & ℎ_1−ℎ_2\\ 
+0 & 0 & 0 & 1
+\end{bmatrix}$$
 
 <h3>Ejercicios</h3>
 
