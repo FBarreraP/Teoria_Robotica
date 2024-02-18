@@ -8,9 +8,7 @@ Consiste en determinar la posición (traslación) y orientación (rotación) del
 
 El problema cinemático directo se reduce a una matriz homogénea de transformación (MTH) donde se relacione la posición y orientación del TCP
 
-![T06](Imagenes/image.png)
-
-$$T_6^0 = $$
+$$T_6^0 = T_1^0 \cdot T_2^1 \cdot T_3^2 \cdot T_4^3 \cdot T_5^4 \cdot T_6^5$$
 
 ![CD](Imagenes/image-11.png)
 
