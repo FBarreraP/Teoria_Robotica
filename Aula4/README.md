@@ -8,11 +8,13 @@ Consiste en determinar la posición (traslación) y orientación (rotación) del
 
 El problema cinemático directo se reduce a una matriz homogénea de transformación (MTH) donde se relacione la posición y orientación del TCP
 
-![T06](image.png)
+![T06](Imagenes/image.png)
 
-![CD](image-11.png)
+$$T_6^0 = $$
 
-![Articulaciones](image-2.png)
+![CD](Imagenes/image-11.png)
+
+![Articulaciones](Imagenes/image-2.png)
 
 <h3>Método geométrico</h3>
 
@@ -30,13 +32,13 @@ El problema cinemático directo se reduce a una matriz homogénea de transformac
 
 3. Es un método sistemático, es decir, el análisis funciona para cualquier robot de configuración serial
 
-![2R 2D y 3D](image-3.png)
+![2R 2D y 3D](Imagenes/image-3.png)
 
 <h4>Método geométrico</h4>
 
-![2R 2D](image-4.png)
+![2R 2D](Imagenes/image-4.png)
 
-![Ecuaciones 2R](image-5.png)
+![Ecuaciones 2R](Imagenes/image-5.png)
 
 ```matlab
 syms theta1 theta2
@@ -47,13 +49,13 @@ RZ3 = simplify(RotarZ(theta1+theta2))
 
 Resultado final de la cinemática directa
 
-![MTH04](image-9.png)
+![MTH04](Imagenes/image-9.png)
 
 <h4>Transformaciones</h4>
 
-![2R 3D](image-7.png)
+![2R 3D](Imagenes/image-7.png)
 
-![MTH04](image-8.png)
+![MTH04](Imagenes/image-8.png)
 
 ```matlab
 %Transformaciones (MTH)
@@ -95,12 +97,12 @@ T04 = simplify(T01*T12*T23*T34)
 
 Resultado final de la cinemática directa
 
-![MTH04](image-9.png)
+![MTH04](Imagenes/image-9.png)
 
 <h3>Ejercicios</h3>
 
 Calcular en Matlab el valor de la matriz de transformación homogénea para el robot planar, con los siguientes valores:
 
-![Ejercicios](image-10.png)
+![Ejercicios](Imagenes/image-10.png)
 
 
