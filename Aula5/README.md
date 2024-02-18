@@ -38,5 +38,56 @@ Los parámetros DH (𝑑,𝜃,𝑎,𝛼) son definidos por las articulaciones y 
 
 Fuente: Barrientos, A., Peñín, L.F., Balaguer, C., y Aracil, R., 2007, Fundamentos de Robótica, 2nd edition, McGraw-Hill.
 
+<h4>$𝜃_𝒊$</h4>
+
+Es el ángulo que forman los ejes de $x_{𝑖−1}$ a $x_𝑖$ perpendicular al eje $z_{𝑖−1}$
+
+![𝜃_𝒊](image-5.png)
+
+<h4>$𝒅_𝒊$</h4>
+
+Es la distancia de $𝑋_{𝑖−1}$ a $𝑋_𝑖$ a lo largo del eje $𝑍_{𝑖−1}$
+
+![𝒅_𝒊](image-6.png)
+
+<h4>$𝜶_𝒊$</h4>
+
+Es el ángulo que forman los ejes de $𝑍_{𝑖−1}$ a $𝑍_𝑖$ perpendicular al eje $𝑋_𝑖$
+
+![𝜶_𝒊](image-7.png)
+
+<h4>$𝒂_𝒊$</h4>
+
+Es la distancia de $𝑍_{𝑖−1}$ a $𝑍_𝑖$ a lo largo del eje $𝑋_𝑖$
+
+![𝒂_𝒊](image-8.png)
+
+![Ejemplo 1 paso 2 DH](image-9.png)
+
+```
+clear all
+close all
+clc
+
+%Peter corke
+a1 = 12;
+a2 = 14;
+a3 = 6;
+a4 = 4;
+
+q1 = 0;%Theta1
+q2 = 0;%Theta2
+
+R(1) = Link('revolute','d',a1,'alpha',pi/2,'a',a2,'offset',0);
+R(2) = Link('revolute','d',a3,'alpha',0,'a',a4,'offset',0);
+
+Robot = SerialLink(R,'name','Bender')
+
+Robot.plot([q1,q2],'scale',1.0,'workspace',[-30 30 -30 30 -30 30]);
+zlim([-15,30]);
+Robot.teach([q1,q2],'rpy/zyx');
+MTH = Robot.fkine([q1,q2])
+```matlab
+
 <h3>Matriz DH</h3>
 
