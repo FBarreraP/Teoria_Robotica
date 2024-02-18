@@ -10,5 +10,5 @@ El método Denavit Hartenberg (DH) fue propuesto en 1955 por Denavit y Hartenber
 2. Determinar los parámetros DH (𝜃,𝑑,𝛼,𝑎), los cuales se utilizarán en el Toolbox Peter Corke de Matlab 
 3. Obtener la siguiente matriz :
 
-$$𝑇_𝑛^{𝑛−1}=𝑇𝑟𝑎𝑛𝑠_{𝑧_{𝑛−1}}(𝑑_𝑛)∙𝑅𝑜𝑡_{𝑧_{𝑛−1}}(𝜃_𝑛)∙𝑇𝑟𝑎𝑛𝑠_{𝑥_𝑛}(𝑎_𝑛)∙𝑅𝑜𝑡_{𝑥_𝑛}(𝛼_𝑛)$$
+$$𝑇_𝑛^{𝑛−1}=𝑇𝑟𝑎𝑛𝑠_{𝑧_{𝑛−1}}(𝑑_𝑛) \cdot 𝑅𝑜𝑡_{𝑧_{𝑛−1}}(𝜃_𝑛) \cdot 𝑇𝑟𝑎𝑛𝑠_{𝑥_𝑛}(𝑎_𝑛) \cdot 𝑅𝑜𝑡_{𝑥_𝑛}(𝛼_𝑛)$$
 
