@@ -32,11 +32,27 @@ $$T_6^0 = T_1^0 \cdot T_2^1 \cdot T_3^2 \cdot T_4^3 \cdot T_5^4 \cdot T_6^5$$
 
 ![2R 2D y 3D](Imagenes/image-3.png)
 
-<h4>Método geométrico</h4>
+<h3>Método geométrico</h3>
 
 ![2R 2D](Imagenes/image-4.png)
 
-![Ecuaciones 2R](Imagenes/image-5.png)
+Traslación (posición)
+
+$$𝑥=𝑙_1cos⁡(𝜃_1)+𝑙_2cos⁡(𝜃_1+𝜃_2)$$
+
+$$𝑦=𝑙_1sen⁡(𝜃_1)+𝑙_2sen⁡(𝜃_1+𝜃_2)$$
+
+$$𝑧=ℎ_1−ℎ_2$$
+
+Rotación (orientación)
+
+$$𝑅_𝑧(𝜃_1)\cdot 𝑅_𝑧(𝜃_2)=𝑅_𝑧(𝜃_2) \cdot 𝑅_𝑧(𝜃_1)=𝑅_𝑧(𝜃_1+𝜃_2)$$
+
+$$𝑅_𝑧(𝜃_1+𝜃_2)=\begin{bmatrix}
+cos⁡(𝜃_1+𝜃_2) & -sen⁡(𝜃_1+𝜃_2) & 0\\ 
+sen⁡(𝜃_1+𝜃_2) & cos⁡(𝜃_1+𝜃_2) & 0 \\ 
+0 & 0 & 1 
+\end{bmatrix}$$
 
 ```matlab
 syms theta1 theta2
@@ -46,6 +62,13 @@ RZ3 = simplify(RotarZ(theta1+theta2))
 ```
 
 Resultado final de la cinemática directa
+
+$$T_4^0 = \begin{bmatrix}
+cos⁡(𝜃_1+𝜃_2) & -sen⁡(𝜃_1+𝜃_2) & 0 & 𝑙_1cos⁡(𝜃_1)+𝑙_2cos⁡(𝜃_1+𝜃_2)\\ 
+sen⁡(𝜃_1+𝜃_2) & cos⁡(𝜃_1+𝜃_2) & 0 & 𝑙_1sen⁡(𝜃_1)+𝑙_2sen⁡(𝜃_1+𝜃_2)\\ 
+0 & 0 & 1 & ℎ_1−ℎ_2\\
+0 & 0 & 0 & 1
+\end{bmatrix}$$
 
 ![MTH04](Imagenes/image-9.png)
 
