@@ -8,7 +8,7 @@ Consiste en determinar la posición (traslación) y orientación (rotación) del
 
 El problema cinemático directo se reduce a una matriz homogénea de transformación (MTH) donde se relacione la posición y orientación del TCP
 
-$$T_6^0 = T_1^0 \cdot T_2^1 \cdot T_3^2 \cdot T_4^3 \cdot T_5^4 \cdot T_6^5$$
+$$𝑇_6^0 = 𝑇_1^0 \cdot 𝑇_2^1 \cdot 𝑇_3^2 \cdot 𝑇_4^3 \cdot 𝑇_5^4 \cdot 𝑇_6^5$$
 
 ![CD](Imagenes/image-11.png)
 
@@ -63,7 +63,7 @@ RZ3 = simplify(RotarZ(theta1+theta2))
 
 Resultado final de la cinemática directa
 
-$$T_4^0 = \begin{bmatrix}
+$$𝑇_4^0 = \begin{bmatrix}
 cos⁡(𝜃_1+𝜃_2) & -sen⁡(𝜃_1+𝜃_2) & 0 & 𝑙_1cos⁡(𝜃_1)+𝑙_2cos⁡(𝜃_1+𝜃_2)\\ 
 sen⁡(𝜃_1+𝜃_2) & cos⁡(𝜃_1+𝜃_2) & 0 & 𝑙_1sen⁡(𝜃_1)+𝑙_2sen⁡(𝜃_1+𝜃_2)\\ 
 0 & 0 & 1 & ℎ_1−ℎ_2\\ 
@@ -74,30 +74,30 @@ sen⁡(𝜃_1+𝜃_2) & cos⁡(𝜃_1+𝜃_2) & 0 & 𝑙_1sen⁡(𝜃_1)+𝑙_2s
 
 ![2R 3D](Imagenes/image-7.png)
 
-$$T_6^0 = T_1^0 \cdot T_2^1 \cdot T_3^2 \cdot T_4^3$$
+$$𝑇_6^0 = 𝑇_1^0 \cdot 𝑇_2^1 \cdot 𝑇_3^2 \cdot 𝑇_4^3$$
 
-$$T_1^0 = \begin{bmatrix}
+$$𝑇_1^0 = \begin{bmatrix}
 1 & 0 & 0 & 0 \\ 
 0 & 1 & 0 & 0 \\ 
 0 & 0 & 1 & ℎ_1 \\ 
 0 & 0 & 0 & 1
 \end{bmatrix}$$
 
-$$T_2^1 = \begin{bmatrix}
+$$𝑇_2^1 = \begin{bmatrix}
 cos⁡(𝜃_1) & -sen⁡(𝜃_1) & 0 & 𝑙_1cos⁡(𝜃_1)\\ 
 sen⁡(𝜃_1) & cos⁡(𝜃_1) & 0 & 𝑙_1sen⁡(𝜃_1)\\ 
 0 & 0 & 1 & 0\\ 
 0 & 0 & 0 & 1
 \end{bmatrix}$$
 
-$$T_3^2 = \begin{bmatrix}
+$$𝑇_3^2 = \begin{bmatrix}
 cos⁡(𝜃_2) & -sen⁡(𝜃_2) & 0 & 𝑙_2cos⁡(𝜃_2)\\ 
 sen⁡(𝜃_2) & cos⁡(𝜃_2) & 0 & 𝑙_2sen⁡(𝜃_2)\\ 
 0 & 0 & 1 & 0\\ 
 0 & 0 & 0 & 1
 \end{bmatrix}$$
 
-$$T_4^3 = \begin{bmatrix}
+$$𝑇_4^3 = \begin{bmatrix}
 1 & 0 & 0 & 0 \\ 
 0 & 1 & 0 & 0 \\ 
 0 & 0 & 1 & -ℎ_2 \\ 
@@ -144,7 +144,7 @@ T04 = simplify(T01*T12*T23*T34)
 
 Resultado final de la cinemática directa
 
-$$T_4^0 = \begin{bmatrix}
+$$𝑇_4^0 = \begin{bmatrix}
 cos⁡(𝜃_1+𝜃_2) & -sen⁡(𝜃_1+𝜃_2) & 0 & 𝑙_1cos⁡(𝜃_1)+𝑙_2cos⁡(𝜃_1+𝜃_2)\\ 
 sen⁡(𝜃_1+𝜃_2) & cos⁡(𝜃_1+𝜃_2) & 0 & 𝑙_1sen⁡(𝜃_1)+𝑙_2sen⁡(𝜃_1+𝜃_2)\\ 
 0 & 0 & 1 & ℎ_1−ℎ_2\\ 

@@ -192,3 +192,10 @@ MTH = Robot.fkine([q1,q2,q3,q4])
 
 <h3>Matriz DH</h3>
 
+$$𝑇_𝑛^{𝑛−1}=𝑇𝑟𝑎𝑛𝑠_{𝑧_{𝑛−1}}(𝑑_𝑛) \cdot 𝑅𝑜𝑡_{𝑧_{𝑛−1}}(𝜃_𝑛) \cdot 𝑇𝑟𝑎𝑛𝑠_{𝑥_𝑛}(𝑎_𝑛) \cdot 𝑅𝑜𝑡_{𝑥_𝑛}(𝛼_𝑛)$$
+
+<h4>Ejemplo 1</h4>
+
+![Ejemplo 1 paso 2 DH](image-9.png)
+
+$$𝑇_1^0 = $$
