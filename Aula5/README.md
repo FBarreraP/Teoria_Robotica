@@ -12,6 +12,8 @@ El método Denavit Hartenberg (DH) fue propuesto en 1955 por Denavit y Hartenber
 
 $$𝑇_𝑛^{𝑛−1}=𝑇𝑟𝑎𝑛𝑠_{𝑧_{𝑛−1}}(𝑑_𝑛) \cdot 𝑅𝑜𝑡_{𝑧_{𝑛−1}}(𝜃_𝑛) \cdot 𝑇𝑟𝑎𝑛𝑠_{𝑥_𝑛}(𝑎_𝑛) \cdot 𝑅𝑜𝑡_{𝑥_𝑛}(𝛼_𝑛)$$
 
+$$𝑇_𝑛^{𝑛−1}= 𝑅𝑜𝑡_{𝑧_{𝑛−1}}(𝜃_𝑛) \cdot 𝑇𝑟𝑎𝑛𝑠_{𝑧_{𝑛−1}}(𝑑_𝑛) \cdot 𝑅𝑜𝑡_{𝑥_𝑛}(𝛼_𝑛) \cdot 𝑇𝑟𝑎𝑛𝑠_{𝑥_𝑛}(𝑎_𝑛)$$
+
 <h3>Asignación de sistemas coordenados</h3>
 
 Regla 1: El eje Z se debe ubicar en el eje de rotación si la articulación es rotacional o en la misma dirección de movimiento si es prismática.
@@ -194,6 +196,8 @@ MTH = Robot.fkine([q1,q2,q3,q4])
 
 $$𝑇_𝑛^{𝑛−1}=𝑇𝑟𝑎𝑛𝑠_{𝑧_{𝑛−1}}(𝑑_𝑛) \cdot 𝑅𝑜𝑡_{𝑧_{𝑛−1}}(𝜃_𝑛) \cdot 𝑇𝑟𝑎𝑛𝑠_{𝑥_𝑛}(𝑎_𝑛) \cdot 𝑅𝑜𝑡_{𝑥_𝑛}(𝛼_𝑛)$$
 
+$$𝑇_𝑛^{𝑛−1}= 𝑅𝑜𝑡_{𝑧_{𝑛−1}}(𝜃_𝑛) \cdot 𝑇𝑟𝑎𝑛𝑠_{𝑧_{𝑛−1}}(𝑑_𝑛) \cdot 𝑅𝑜𝑡_{𝑥_𝑛}(𝛼_𝑛) \cdot 𝑇𝑟𝑎𝑛𝑠_{𝑥_𝑛}(𝑎_𝑛)$$
+
 <h4>Ejemplo 1</h4>
 
 ![Ejemplo 1 paso 2 DH](image-9.png)
@@ -255,3 +259,235 @@ $$𝑇_2^0 = 𝑇_1^0 \cdot 𝑇_2^1 = \begin{bmatrix}
 0 & 0 & 0 & 1
 \end{bmatrix}$$
 
+<h4>Ejemplo 2</h4>
+
+![Ejemplo 2 paso 2 DH](image-10.png)
+
+$$𝑇_1^0 = \begin{bmatrix}
+1 & 0 & 0 & 0\\ 
+0 & 1 & 0 & 0\\ 
+0 & 0 & 1 & 6\\ 
+0 & 0 & 0 & 1
+\end{bmatrix}
+\begin{bmatrix}
+cos⁡(𝜃_1+𝜋/2) & -sen⁡(𝜃_1+𝜋/2) & 0 & 0\\ 
+sen⁡(𝜃_1+𝜋/2) & cos⁡(𝜃_1+𝜋/2) & 0 & 0\\ 
+0 & 0 & 1 & 0\\ 
+0 & 0 & 0 & 1
+\end{bmatrix}
+\begin{bmatrix}
+1 & 0 & 0 & 3\\ 
+0 & 1 & 0 & 0\\ 
+0 & 0 & 1 & 0\\ 
+0 & 0 & 0 & 1
+\end{bmatrix}
+\begin{bmatrix}
+1 & 0 & 0 & 0\\ 
+0 & cos⁡(𝜋/2) & -sen⁡(𝜋/2) & 0\\ 
+0 & sen⁡(𝜋/2) & cos⁡(𝜋/2) & 0\\ 
+0 & 0 & 0 & 1
+\end{bmatrix}$$
+
+$$𝑇_2^1 = \begin{bmatrix}
+1 & 0 & 0 & 0\\ 
+0 & 1 & 0 & 0\\ 
+0 & 0 & 1 & 𝑑_2+9\\ 
+0 & 0 & 0 & 1
+\end{bmatrix}
+\begin{bmatrix}
+cos⁡(0) & -sen⁡(0) & 0 & 0\\ 
+sen⁡(0) & cos⁡(0) & 0 & 0\\ 
+0 & 0 & 1 & 0\\ 
+0 & 0 & 0 & 1
+\end{bmatrix}
+\begin{bmatrix}
+1 & 0 & 0 & 0\\ 
+0 & 1 & 0 & 0\\ 
+0 & 0 & 1 & 0\\ 
+0 & 0 & 0 & 1
+\end{bmatrix}
+\begin{bmatrix}
+1 & 0 & 0 & 0\\ 
+0 & cos⁡(0) & -sen⁡(0) & 0\\ 
+0 & sen⁡(0) & cos⁡(0) & 0\\ 
+0 & 0 & 0 & 1
+\end{bmatrix}$$
+
+$$𝑇_2^0 = 𝑇_1^0 \cdot 𝑇_2^1 = \begin{bmatrix}
+0 & 0 & 1 & 9\\ 
+1 & 0 & 0 & 3\\ 
+0 & 1 & 0 & 6\\ 
+0 & 0 & 0 & 1
+\end{bmatrix}$$
+
+<h4>Ejercicio 1</h4>
+
+![Ejercicio 1 paso 2 DH](image-11.png)
+
+$$𝑇_1^0 = \begin{bmatrix}
+1 & 0 & 0 & 0\\ 
+0 & 1 & 0 & 0\\ 
+0 & 0 & 1 & 𝑎_1\\ 
+0 & 0 & 0 & 1
+\end{bmatrix}
+\begin{bmatrix}
+cos⁡(𝜃_1) & -sen⁡(𝜃_1) & 0 & 0\\ 
+sen⁡(𝜃_1) & cos⁡(𝜃_1) & 0 & 0\\ 
+0 & 0 & 1 & 0\\ 
+0 & 0 & 0 & 1
+\end{bmatrix}
+\begin{bmatrix}
+1 & 0 & 0 & 𝑎_2\\ 
+0 & 1 & 0 & 0\\ 
+0 & 0 & 1 & 0\\ 
+0 & 0 & 0 & 1
+\end{bmatrix}
+\begin{bmatrix}
+1 & 0 & 0 & 0\\ 
+0 & cos⁡(0) & -sen⁡(0) & 0\\ 
+0 & sen⁡(0) & cos⁡(0) & 0\\ 
+0 & 0 & 0 & 1
+\end{bmatrix}$$
+
+$$𝑇_2^1 = \begin{bmatrix}
+1 & 0 & 0 & 0\\ 
+0 & 1 & 0 & 0\\ 
+0 & 0 & 1 & 𝑎_3\\ 
+0 & 0 & 0 & 1
+\end{bmatrix}
+\begin{bmatrix}
+cos⁡(𝜃_2) & -sen⁡(𝜃_2) & 0 & 0\\ 
+sen⁡(𝜃_2) & cos⁡(𝜃_2) & 0 & 0\\ 
+0 & 0 & 1 & 0\\ 
+0 & 0 & 0 & 1
+\end{bmatrix}
+\begin{bmatrix}
+1 & 0 & 0 & 𝑎_4\\ 
+0 & 1 & 0 & 0\\ 
+0 & 0 & 1 & 0\\ 
+0 & 0 & 0 & 1
+\end{bmatrix}
+\begin{bmatrix}
+1 & 0 & 0 & 0\\ 
+0 & cos⁡(0) & -sen⁡(0) & 0\\ 
+0 & sen⁡(0) & cos⁡(0) & 0\\ 
+0 & 0 & 0 & 1
+\end{bmatrix}$$
+
+$$𝑇_2^0 = 𝑇_1^0 \cdot 𝑇_2^1 = \begin{bmatrix}
+1 & 0 & 0 & 23\\ 
+0 & 1 & 0 & 0\\ 
+0 & 0 & 1 & 15\\ 
+0 & 0 & 0 & 1
+\end{bmatrix}$$
+
+<h4>Ejercicio 2</h4>
+
+![Ejercicio 2 paso 2 DH](image-12.png)
+
+$$𝑇_1^0 = \begin{bmatrix}
+1 & 0 & 0 & 0\\ 
+0 & 1 & 0 & 0\\ 
+0 & 0 & 1 & 𝑎_1\\ 
+0 & 0 & 0 & 1
+\end{bmatrix}
+\begin{bmatrix}
+cos⁡(𝜃_1) & -sen⁡(𝜃_1) & 0 & 0\\ 
+sen⁡(𝜃_1) & cos⁡(𝜃_1) & 0 & 0\\ 
+0 & 0 & 1 & 0\\ 
+0 & 0 & 0 & 1
+\end{bmatrix}
+\begin{bmatrix}
+1 & 0 & 0 & 𝑎_2\\ 
+0 & 1 & 0 & 0\\ 
+0 & 0 & 1 & 0\\ 
+0 & 0 & 0 & 1
+\end{bmatrix}
+\begin{bmatrix}
+1 & 0 & 0 & 0\\ 
+0 & cos⁡(0) & -sen⁡(0) & 0\\ 
+0 & sen⁡(0) & cos⁡(0) & 0\\ 
+0 & 0 & 0 & 1
+\end{bmatrix}$$
+
+$$𝑇_2^1 = \begin{bmatrix}
+1 & 0 & 0 & 0\\ 
+0 & 1 & 0 & 0\\ 
+0 & 0 & 1 & 0\\ 
+0 & 0 & 0 & 1
+\end{bmatrix}
+\begin{bmatrix}
+cos⁡(𝜃_2) & -sen⁡(𝜃_2) & 0 & 0\\ 
+sen⁡(𝜃_2) & cos⁡(𝜃_2) & 0 & 0\\ 
+0 & 0 & 1 & 0\\ 
+0 & 0 & 0 & 1
+\end{bmatrix}
+\begin{bmatrix}
+1 & 0 & 0 & 𝑎_3\\ 
+0 & 1 & 0 & 0\\ 
+0 & 0 & 1 & 0\\ 
+0 & 0 & 0 & 1
+\end{bmatrix}
+\begin{bmatrix}
+1 & 0 & 0 & 0\\ 
+0 & cos⁡(-𝜋) & -sen⁡(-𝜋) & 0\\ 
+0 & sen⁡(-𝜋) & cos⁡(-𝜋) & 0\\ 
+0 & 0 & 0 & 1
+\end{bmatrix}$$
+
+$$𝑇_3^2 = \begin{bmatrix}
+1 & 0 & 0 & 0\\ 
+0 & 1 & 0 & 0\\ 
+0 & 0 & 1 & 𝑎_4+𝑑_3\\ 
+0 & 0 & 0 & 1
+\end{bmatrix}
+\begin{bmatrix}
+cos⁡(0) & -sen⁡(0) & 0 & 0\\ 
+sen⁡(0) & cos⁡(0) & 0 & 0\\ 
+0 & 0 & 1 & 0\\ 
+0 & 0 & 0 & 1
+\end{bmatrix}
+\begin{bmatrix}
+1 & 0 & 0 & 0\\ 
+0 & 1 & 0 & 0\\ 
+0 & 0 & 1 & 0\\ 
+0 & 0 & 0 & 1
+\end{bmatrix}
+\begin{bmatrix}
+1 & 0 & 0 & 0\\ 
+0 & cos⁡(0) & -sen⁡(0) & 0\\ 
+0 & sen⁡(0) & cos⁡(0) & 0\\ 
+0 & 0 & 0 & 1
+\end{bmatrix}$$
+
+$$𝑇_4^3 = \begin{bmatrix}
+1 & 0 & 0 & 0\\ 
+0 & 1 & 0 & 0\\ 
+0 & 0 & 1 & 𝑎_5\\ 
+0 & 0 & 0 & 1
+\end{bmatrix}
+\begin{bmatrix}
+cos⁡(𝜃_4) & -sen⁡(𝜃_4) & 0 & 0\\ 
+sen⁡(𝜃_4) & cos⁡(𝜃_4) & 0 & 0\\ 
+0 & 0 & 1 & 0\\ 
+0 & 0 & 0 & 1
+\end{bmatrix}
+\begin{bmatrix}
+1 & 0 & 0 & 0\\ 
+0 & 1 & 0 & 0\\ 
+0 & 0 & 1 & 0\\ 
+0 & 0 & 0 & 1
+\end{bmatrix}
+\begin{bmatrix}
+1 & 0 & 0 & 0\\ 
+0 & cos⁡(0) & -sen⁡(0) & 0\\ 
+0 & sen⁡(0) & cos⁡(0) & 0\\ 
+0 & 0 & 0 & 1
+\end{bmatrix}$$
+
+$$𝑇_4^0 = 𝑇_1^0 \cdot 𝑇_2^1 \cdot 𝑇_3^2 \cdot 𝑇_4^3 = \begin{bmatrix}
+1 & 0 & 0 & 13\\ 
+0 & -1 & 0 & 0\\ 
+0 & 0 & -1 & 4\\ 
+0 & 0 & 0 & 1
+\end{bmatrix}$$
