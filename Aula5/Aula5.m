@@ -40,7 +40,7 @@ T12 =  RZ1*TZ1*TX2*RZ2
 
 T02 = T01*T12
 
-%Confirmar la rotaci髇 en 羘gulos de Euler
+%Confirmar la rotaci贸n en 谩ngulos de Euler
 m = T02(1:3,1:3)
 r = rad2deg(tr2rpy(m,'zyx'))
 
@@ -86,7 +86,7 @@ T12 =  RZ1*TZ1*TX2*RZ2
 
 T02 = T01*T12
 
-%Confirmar la rotaci髇 en 羘gulos de Euler
+%Confirmar la rotaci贸n en 谩ngulos de Euler
 m = T02(1:3,1:3)
 r = rad2deg(tr2rpy(m,'zyx'))
 
@@ -131,7 +131,7 @@ T12 =  RZ1*TZ1*TX2*RZ2
 
 T02 = T01*T12
 
-%Confirmar la rotaci髇 en 羘gulos de Euler
+%Confirmar la rotaci贸n en 谩ngulos de Euler
 m = T02(1:3,1:3)
 r = rad2deg(tr2rpy(m,'zyx'))
 
@@ -196,6 +196,6 @@ T34 =  RZ3*TZ3*TX4*RZ4
 
 T04 = T01*T12*T23*T34
 
-%Confirmar la rotaci髇 en 羘gulos de Euler
+%Confirmar la rotaci贸n en 谩ngulos de Euler
 m = T04(1:3,1:3)
 r = rad2deg(tr2rpy(m,'zyx'))
