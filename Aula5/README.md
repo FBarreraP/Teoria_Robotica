@@ -799,16 +799,75 @@ sen⁡(0) & cos⁡(0) & 0 & 0\\
 \end{bmatrix}$$
 
 $$𝑇_4^0 = 𝑇_1^0 \cdot 𝑇_2^1 \cdot 𝑇_3^2 \cdot 𝑇_4^3 = \begin{bmatrix}
-1 & 0 & 0 & 13\\ 
-0 & -1 & 0 & 0\\ 
-0 & 0 & -1 & 4\\ 
+cos⁡(𝜃_1+𝜃_2) & -sen⁡(𝜃_1+𝜃_2) & 0 & 𝑙_1cos⁡(𝜃_1)+𝑙_2cos⁡(𝜃_1+𝜃_2)\\ 
+sen⁡(𝜃_1+𝜃_2) & cos⁡(𝜃_1+𝜃_2) & 0 & 𝑙_1sen⁡(𝜃_1)+𝑙_2sen⁡(𝜃_1+𝜃_2)\\ 
+0 & 0 & 1 & ℎ_1−ℎ_2\\ 
 0 & 0 & 0 & 1
 \end{bmatrix}$$
 
-
 ```matlab
+clear all
+close all
+clc
 
+h1 = 0;
+h2 = 0;
+l1 = 4;
+l2 = 4;
+
+q1 = 0;
+q2 = 0;
+
+R(1) = Link('revolute','d',0,'alpha',0,'a',l1,'offset',0);
+R(2) = Link('revolute','d',0,'alpha',0,'a',l2,'offset',0);
+
+Robot = SerialLink(R,'name','Bender')
+
+Robot.plot([q1,q2],'scale',1,'workspace',[-30 30 -30 30 -30 30]);
+zlim([-15,30]);
+Robot.teach([q1,q2],'rpy/zyx');
+MTH = Robot.fkine([q1,q2])
+
+% syms q1 q2 l1 l2 h1 h2
+
+%Matriz (DH)
+TZ0 = [1 0 0 0; 0 1 0 0; 0 0 1 h1; 0 0 0 1]
+RZ0 = [cos(0) -sin(0) 0 0; sin(0) cos(0) 0 0; 0 0 1 0; 0 0 0 1]
+TX1 = [1 0 0 0; 0 1 0 0; 0 0 1 0; 0 0 0 1]
+RZ1 = [1 0 0 0; 0 cos(0) -sin(0) 0; 0 sin(0) cos(0) 0; 0 0 0 1]
+% T01 =  TZ0*RZ0*TX1*RZ1
+T01 =  RZ0*TZ0*TX1*RZ1
+
+TZ1 = [1 0 0 0; 0 1 0 0; 0 0 1 0; 0 0 0 1]
+RZ1 = [cos(q1) -sin(q1) 0 0; sin(q1) cos(q1) 0 0; 0 0 1 0; 0 0 0 1]
+TX2 = [1 0 0 l1; 0 1 0 0; 0 0 1 0; 0 0 0 1]
+RZ2 = [1 0 0 0; 0 cos(0) -sin(0) 0; 0 sin(0) cos(0) 0; 0 0 0 1]
+% T12 =  TZ1*RZ1*TX2*RZ2
+T12 =  RZ1*TZ1*TX2*RZ2
+
+TZ2 = [1 0 0 0; 0 1 0 0; 0 0 1 0; 0 0 0 1]
+RZ2 = [cos(q2) -sin(q2) 0 0; sin(q2) cos(q2) 0 0; 0 0 1 0; 0 0 0 1]
+TX3 = [1 0 0 l2; 0 1 0 0; 0 0 1 0; 0 0 0 1]
+RZ3 = [1 0 0 0; 0 cos(0) -sin(0) 0; 0 sin(0) cos(0) 0; 0 0 0 1]
+% T01 =  TZ0*RZ0*TX1*RZ1
+T23 =  RZ2*TZ2*TX3*RZ3
+
+TZ3 = [1 0 0 0; 0 1 0 0; 0 0 1 -h2; 0 0 0 1]
+RZ3 = [cos(0) -sin(0) 0 0; sin(0) cos(0) 0 0; 0 0 1 0; 0 0 0 1]
+TX4 = [1 0 0 0; 0 1 0 0; 0 0 1 0; 0 0 0 1]
+RZ4 = [1 0 0 0; 0 cos(0) -sin(0) 0; 0 sin(0) cos(0) 0; 0 0 0 1]
+% T12 =  TZ1*RZ1*TX2*RZ2
+T34 =  RZ3*TZ3*TX4*RZ4
+
+% T04 = simplify(T01*T12*T23*T34)
+T04 = T01*T12*T23*T34
+
+%Confirmar la rotación en ángulos de Euler
+m = T04(1:3,1:3)
+r = rad2deg(tr2rpy(m,'zyx'))
 ```
+
+
 
 <h3>Ejercicios</h3>
 
