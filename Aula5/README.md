@@ -694,8 +694,124 @@ m = T04(1:3,1:3)
 r = rad2deg(tr2rpy(m,'zyx'))
 ```
 
+<h4>2R</h4>
+
+![2R](image.png)
+
+$$𝑇_1^0 = \begin{bmatrix}
+1 & 0 & 0 & 0\\ 
+0 & 1 & 0 & 0\\ 
+0 & 0 & 1 & ℎ_1\\ 
+0 & 0 & 0 & 1
+\end{bmatrix}
+\begin{bmatrix}
+cos⁡(0) & -sen⁡(0) & 0 & 0\\ 
+sen⁡(0) & cos⁡(0) & 0 & 0\\ 
+0 & 0 & 1 & 0\\ 
+0 & 0 & 0 & 1
+\end{bmatrix}
+\begin{bmatrix}
+1 & 0 & 0 & 0\\ 
+0 & 1 & 0 & 0\\ 
+0 & 0 & 1 & 0\\ 
+0 & 0 & 0 & 1
+\end{bmatrix}
+\begin{bmatrix}
+1 & 0 & 0 & 0\\ 
+0 & cos⁡(0) & -sen⁡(0) & 0\\ 
+0 & sen⁡(0) & cos⁡(0) & 0\\ 
+0 & 0 & 0 & 1
+\end{bmatrix}$$
+
+$$𝑇_2^1 = \begin{bmatrix}
+1 & 0 & 0 & 0\\ 
+0 & 1 & 0 & 0\\ 
+0 & 0 & 1 & 0\\ 
+0 & 0 & 0 & 1
+\end{bmatrix}
+\begin{bmatrix}
+cos⁡(𝜃_1) & -sen⁡(𝜃_1) & 0 & 0\\ 
+sen⁡(𝜃_1) & cos⁡(𝜃_1) & 0 & 0\\ 
+0 & 0 & 1 & 0\\ 
+0 & 0 & 0 & 1
+\end{bmatrix}
+\begin{bmatrix}
+1 & 0 & 0 & 𝑙_1\\ 
+0 & 1 & 0 & 0\\ 
+0 & 0 & 1 & 0\\ 
+0 & 0 & 0 & 1
+\end{bmatrix}
+\begin{bmatrix}
+1 & 0 & 0 & 0\\ 
+0 & cos⁡(0) & -sen⁡(0) & 0\\ 
+0 & sen⁡(0) & cos⁡(0) & 0\\ 
+0 & 0 & 0 & 1
+\end{bmatrix}$$
+
+$$𝑇_3^2 = \begin{bmatrix}
+1 & 0 & 0 & 0\\ 
+0 & 1 & 0 & 0\\ 
+0 & 0 & 1 & 0\\ 
+0 & 0 & 0 & 1
+\end{bmatrix}
+\begin{bmatrix}
+cos⁡(𝜃_2) & -sen⁡(𝜃_2) & 0 & 0\\ 
+sen⁡(𝜃_2) & cos⁡(𝜃_2) & 0 & 0\\ 
+0 & 0 & 1 & 0\\ 
+0 & 0 & 0 & 1
+\end{bmatrix}
+\begin{bmatrix}
+1 & 0 & 0 & 𝑙_2\\ 
+0 & 1 & 0 & 0\\ 
+0 & 0 & 1 & 0\\ 
+0 & 0 & 0 & 1
+\end{bmatrix}
+\begin{bmatrix}
+1 & 0 & 0 & 0\\ 
+0 & cos⁡(0) & -sen⁡(0) & 0\\ 
+0 & sen⁡(0) & cos⁡(0) & 0\\ 
+0 & 0 & 0 & 1
+\end{bmatrix}$$
+
+$$𝑇_4^3 = \begin{bmatrix}
+1 & 0 & 0 & 0\\ 
+0 & 1 & 0 & 0\\ 
+0 & 0 & 1 & -ℎ_2\\ 
+0 & 0 & 0 & 1
+\end{bmatrix}
+\begin{bmatrix}
+cos⁡(0) & -sen⁡(0) & 0 & 0\\ 
+sen⁡(0) & cos⁡(0) & 0 & 0\\ 
+0 & 0 & 1 & 0\\ 
+0 & 0 & 0 & 1
+\end{bmatrix}
+\begin{bmatrix}
+1 & 0 & 0 & 0\\ 
+0 & 1 & 0 & 0\\ 
+0 & 0 & 1 & 0\\ 
+0 & 0 & 0 & 1
+\end{bmatrix}
+\begin{bmatrix}
+1 & 0 & 0 & 0\\ 
+0 & cos⁡(0) & -sen⁡(0) & 0\\ 
+0 & sen⁡(0) & cos⁡(0) & 0\\ 
+0 & 0 & 0 & 1
+\end{bmatrix}$$
+
+$$𝑇_4^0 = 𝑇_1^0 \cdot 𝑇_2^1 \cdot 𝑇_3^2 \cdot 𝑇_4^3 = \begin{bmatrix}
+1 & 0 & 0 & 13\\ 
+0 & -1 & 0 & 0\\ 
+0 & 0 & -1 & 4\\ 
+0 & 0 & 0 & 1
+\end{bmatrix}$$
+
+
+```matlab
+
+```
+
 <h3>Ejercicios</h3>
 
-Realizar la asignación de sistemas coordenados para cada articulación,  obtener los parámetros DH y calcular la MTH final de los siguientes cinco tipos de robots: 1. Cartesiano, 2. Cilíndrico, 3. Esférico, 4. Scara y 5. Angular.
+Realizar la asignación de sistemas coordenados para cada articulación, obtener los parámetros DH y calcular la MTH final de los siguientes cinco tipos de robots: 1. Cartesiano, 2. Cilíndrico, 3. Esférico, 4. Scara y 5. Angular.
 
 ![Ejercicios](Imagenes/image-13.png)
