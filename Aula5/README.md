@@ -491,3 +491,9 @@ $$𝑇_4^0 = 𝑇_1^0 \cdot 𝑇_2^1 \cdot 𝑇_3^2 \cdot 𝑇_4^3 = \begin{bmat
 0 & 0 & -1 & 4\\ 
 0 & 0 & 0 & 1
 \end{bmatrix}$$
+
+<h3>Ejercicios</h3>
+
+Realizar la asignación de sistemas coordenados para cada articulación,  obtener los parámetros DH y calcular la MTH final de los siguientes cinco tipos de robots: 1. Cartesiano, 2. Cilíndrico, 3. Esférico, 4. Scara y 5. Angular.
+
+![Ejercicios](image-13.png)
