@@ -14,9 +14,9 @@ $$𝑇_𝑛^{𝑛−1}=𝑇𝑟𝑎𝑛𝑠_{𝑧_{𝑛−1}}(𝑑_𝑛) \cdot �
 
 $$𝑇_𝑛^{𝑛−1}= 𝑅𝑜𝑡_{𝑧_{𝑛−1}}(𝜃_𝑛) \cdot 𝑇𝑟𝑎𝑛𝑠_{𝑧_{𝑛−1}}(𝑑_𝑛) \cdot 𝑅𝑜𝑡_{𝑥_𝑛}(𝛼_𝑛) \cdot 𝑇𝑟𝑎𝑛𝑠_{𝑥_𝑛}(𝑎_𝑛)$$
 
-<h3>Asignación de sistemas coordenados</h3>
+<h3>Paso 1 - Asignación de sistemas coordenados</h3>
 
-Regla 1: El eje Z se debe ubicar en el eje de rotación si la articulación es rotacional o en la misma dirección de movimiento si es prismática.
+Regla 1: El eje Z se debe ubicar de manera positiva en el eje de rotación si la articulación es rotacional o en la misma dirección de movimiento si es prismática.
 
 Regla 2: El eje X debe ser perpendicular al eje Z de su mismo SC y al eje Z del anterior SC.
 
@@ -40,7 +40,7 @@ Regla 4: Cada eje X debe intersecar el eje Z del SC inmediatamente anterior.
 
 ![Ejercicio 2 paso 1 DH](Imagenes/image-3.png)
 
-<h3>Parámetros DH</h3>
+<h3>Paso 2 - Parámetros DH</h3>
 
 Los parámetros DH (𝑑,𝜃,𝑎,𝛼) son definidos por las articulaciones y los eslabones del robot. 
 
@@ -192,7 +192,7 @@ Robot.teach([q1,q2,q3,q4],'rpy/zyx');
 MTH = Robot.fkine([q1,q2,q3,q4])
 ```
 
-<h3>Matriz DH</h3>
+<h3>Paso 3 - Matriz DH</h3>
 
 $$𝑇_𝑛^{𝑛−1}=𝑇𝑟𝑎𝑛𝑠_{𝑧_{𝑛−1}}(𝑑_𝑛) \cdot 𝑅𝑜𝑡_{𝑧_{𝑛−1}}(𝜃_𝑛) \cdot 𝑇𝑟𝑎𝑛𝑠_{𝑥_𝑛}(𝑎_𝑛) \cdot 𝑅𝑜𝑡_{𝑥_𝑛}(𝛼_𝑛)$$
 
