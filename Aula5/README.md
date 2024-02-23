@@ -696,7 +696,7 @@ r = rad2deg(tr2rpy(m,'zyx'))
 
 <h4>2R</h4>
 
-![2R](image.png)
+![2R](Imagenes/image-14.png)
 
 $$𝑇_1^0 = \begin{bmatrix}
 1 & 0 & 0 & 0\\ 
