@@ -836,27 +836,27 @@ RZ0 = [cos(0) -sin(0) 0 0; sin(0) cos(0) 0 0; 0 0 1 0; 0 0 0 1]
 TX1 = [1 0 0 0; 0 1 0 0; 0 0 1 0; 0 0 0 1]
 RZ1 = [1 0 0 0; 0 cos(0) -sin(0) 0; 0 sin(0) cos(0) 0; 0 0 0 1]
 % T01 =  TZ0*RZ0*TX1*RZ1
-T01 =  RZ0*TZ0*TX1*RZ1
+T01 =  RZ0*TZ0*RZ1*TX1
 
 TZ1 = [1 0 0 0; 0 1 0 0; 0 0 1 0; 0 0 0 1]
 RZ1 = [cos(q1) -sin(q1) 0 0; sin(q1) cos(q1) 0 0; 0 0 1 0; 0 0 0 1]
 TX2 = [1 0 0 l1; 0 1 0 0; 0 0 1 0; 0 0 0 1]
 RZ2 = [1 0 0 0; 0 cos(0) -sin(0) 0; 0 sin(0) cos(0) 0; 0 0 0 1]
 % T12 =  TZ1*RZ1*TX2*RZ2
-T12 =  RZ1*TZ1*TX2*RZ2
+T12 =  RZ1*TZ1*RZ2*TX2
 
 TZ2 = [1 0 0 0; 0 1 0 0; 0 0 1 0; 0 0 0 1]
 RZ2 = [cos(q2) -sin(q2) 0 0; sin(q2) cos(q2) 0 0; 0 0 1 0; 0 0 0 1]
 TX3 = [1 0 0 l2; 0 1 0 0; 0 0 1 0; 0 0 0 1]
 RZ3 = [1 0 0 0; 0 cos(0) -sin(0) 0; 0 sin(0) cos(0) 0; 0 0 0 1]
-% T01 =  TZ0*RZ0*TX1*RZ1
-T23 =  RZ2*TZ2*TX3*RZ3
+% T23 =  TZ2*RZ2*TX3*RZ3
+T23 =  RZ2*TZ2*RZ3*TX3
 
 TZ3 = [1 0 0 0; 0 1 0 0; 0 0 1 -h2; 0 0 0 1]
 RZ3 = [cos(0) -sin(0) 0 0; sin(0) cos(0) 0 0; 0 0 1 0; 0 0 0 1]
 TX4 = [1 0 0 0; 0 1 0 0; 0 0 1 0; 0 0 0 1]
 RZ4 = [1 0 0 0; 0 cos(0) -sin(0) 0; 0 sin(0) cos(0) 0; 0 0 0 1]
-% T12 =  TZ1*RZ1*TX2*RZ2
+% T34 =  TZ3*RZ3*RZ4*TX4
 T34 =  RZ3*TZ3*TX4*RZ4
 
 % T04 = simplify(T01*T12*T23*T34)
@@ -866,8 +866,6 @@ T04 = T01*T12*T23*T34
 m = T04(1:3,1:3)
 r = rad2deg(tr2rpy(m,'zyx'))
 ```
-
-
 
 <h3>Ejercicios</h3>
 
