@@ -30,17 +30,19 @@ Fuente: Barrientos, A., Peñín, L.F., Balaguer, C., y Aracil, R., 2007, Fundame
 
 <h3>Método geométrico</h3>
 
-![2R 2D y 3D](Imagenes/Imagenes/image-4.png)
+![2R 2D y 3D](Imagenes/image-4.png)
 
 ![2D e identidades trigonométricas](Imagenes/image-5.png)
 
 <h4>Theta 2</h4>
 
-$$𝑏=sqrt{𝑃_𝑥^2+𝑃_𝑦^2}$$
+$$𝑏=\sqrt{𝑃_𝑥^2+𝑃_𝑦^2}$$
 
+$$sin⁡𝜃_2=±\sqrt{1−(cos𝜃_2)^2}$$
 
+$$cos𝜃_2=\frac{𝑏^2−𝑙_2^2−𝑙_1^2}{(2\cdot𝑙_1\cdot𝑙_2}$$
 
-
+$$𝜃_2=tan^(−1)\frac{sin𝜃_2/cos𝜃_2}$$
 
 <h4>Theta 1</h4>
 
