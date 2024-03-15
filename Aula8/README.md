@@ -32,6 +32,31 @@ Fuente: Barrientos, A., Peñín, L.F., Balaguer, C., y Aracil, R., 2007, Fundame
 
 ![2R 2D y 3D](Imagenes/image-4.png)
 
+```matlab
+%% Peter Corke 2R (planar)
+
+clear all
+close all
+clc
+
+l1 = 10;
+l2 = 10;
+
+q1 = 0;
+q2 = 0;
+
+R(1) = Link('revolute','d',0,'alpha',0,'a',l1,'offset',0);
+R(2) = Link('revolute','d',0,'alpha',0,'a',l2,'offset',0);
+
+Robot = SerialLink(R,'name','Bender')
+
+% Robot.plot([q1,q2],'scale',1.0,'workspace',[-30 30 -30 30 -30 30]);
+
+Robot.teach([q1,q2],'scale',1.0,'workspace',[-30 30 -30 30 -30 30],'rpy/zyx');
+zlim([-15,30]);
+%Robot.fkine([q1,q2])
+```
+
 ![2D e identidades trigonométricas](Imagenes/image-5.png)
 
 <h4>Theta 2</h4>
@@ -52,4 +77,43 @@ $$∅=tan^{−1}\frac{𝑙_2 \cdot sin⁡𝜃_2}{𝑙_1+𝑙_2 \cdot cos⁡𝜃_
 
 $$𝜃_1=𝛼−∅$$
 
+```matlab
+%% Cinemática Inversa 2R (planar)
 
+clear all
+close all
+clc
+
+l1 = 10;
+l2 = 10;
+
+% Cinemática inversa
+Px = -10.577;
+Py = -3.808;
+
+b = sqrt(Px^2+Py^2);
+% Theta 2
+cos_theta2 = (b^2-l2^2-l1^2)/(2*l1*l2);
+sen_theta2 = sqrt(1-(cos_theta2)^2);%(+)codo abajo y (-)codo arriba
+theta2 = atan2(sen_theta2, cos_theta2);
+fprintf('theta 2 = %.4f \n',radtodeg(theta2));
+% Theta 1
+alpha = atan2(Py,Px);
+phi = atan2(l2*sen_theta2, l1+l2*cos_theta2);
+theta1 = alpha - phi;
+fprintf('theta 1 = %.4f \n',radtodeg(theta1));
+%-------------
+
+q1 = theta1;
+q2 = theta2;
+
+R(1) = Link('revolute','d',0,'alpha',0,'a',l1,'offset',0);
+R(2) = Link('revolute','d',0,'alpha',0,'a',l2,'offset',0);
+
+Robot = SerialLink(R,'name','Bender')
+
+Robot.plot([q1,q2],'scale',1.0,'workspace',[-30 30 -30 30 -30 30]);
+zlim([-15,30]);
+Robot.teach([q1,q2]);
+Robot.fkine([q1,q2])
+```
