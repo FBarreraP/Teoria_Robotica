@@ -6,12 +6,6 @@ Esta clase consiste en comprender y analizar la cinemática inversa de dos robot
 
 ![3R planar](image-8.png)
 
-<h3>Theta 3</h3>
-
-$$𝜃_3=𝛽−𝜃_1−𝜃_2$$
-
-Siendo que $𝛽$ es el ángulo escogido para la rotación de la muñeca con respecto al eje horizontal.
-
 $$𝑚=𝑃_𝑥−𝑙_3 \cdot cos⁡𝛽$$
 
 $$𝑛=𝑃_𝑦−𝑙_3 \cdot 𝑠𝑒𝑛⁡𝛽$$
@@ -35,6 +29,69 @@ $$𝛼=tan^{−1}⁡\frac{𝑛}{𝑚}$$
 $$∅=tan^{−1}\frac{𝑙_2 \cdot sin⁡𝜃_2}{𝑙_1+𝑙_2 \cdot cos⁡𝜃_2}$$
 
 $$𝜃_1=𝛼−∅$$
+
+<h3>Theta 3</h3>
+
+$$𝜃_3=𝛽−𝜃_1−𝜃_2$$
+
+Siendo que $𝛽$ es el ángulo escogido para la rotación de la muñeca con respecto al eje horizontal.
+
+```matlab
+%% Robot 3R (planar)
+
+clear all
+close all
+clc
+
+l1 = 10;
+l2 = 10;
+l3 = 10;
+
+% Cinemática inversa
+Px = 27.071;
+Py = 7.071;
+beta = deg2rad(45)
+
+%Px = 7.739;
+%Py = 22.885;
+%beta = deg2rad(95.2)
+
+m = Px - l3*cos(beta)
+n = Py - l3*sin(beta)
+% Theta 2
+b = sqrt(m^2+n^2)
+cos_theta2 = (b^2-l2^2-l1^2)/(2*l1*l2);
+sen_theta2 = sqrt(1-(cos_theta2)^2);
+theta2 = atan2(sen_theta2, cos_theta2);
+fprintf('theta 2 = %.4f \n',rad2deg(theta2));
+% Theta 1
+alpha = atan2(n,m);
+phi = atan2(l2*sen_theta2, l1+l2*cos_theta2);
+theta1 = alpha - phi;
+if theta1 <= -pi
+    theta1 = (2*pi)+theta1;
+end
+fprintf('theta 1 = %.4f \n',rad2deg(theta1));
+%Theta 3
+theta3 = beta - theta1 - theta2;
+fprintf('theta 3 = %.4f \n',rad2deg(theta3));
+%
+
+q1 = theta1;
+q2 = theta2;
+q3 = theta3;
+
+R(1) = Link('revolute','d',0,'alpha',0,'a',l1,'offset',0);
+R(2) = Link('revolute','d',0,'alpha',0,'a',l2,'offset',0);
+R(3) = Link('revolute','d',0,'alpha',0,'a',l3,'offset',0);
+
+Robot = SerialLink(R,'name','Bender')
+
+%Robot.plot([q1,q2,q3],'scale',1.0,'workspace',[-30 30 -30 30 -30 30]);
+zlim([-15,30]);
+Robot.teach([q1,q2,q3],'scale',1.0,'workspace',[-30 30 -30 30 -30 30],'rpy/zyx');
+Robot.fkine([q1,q2,q3])
+```
 
 <h2>Robot 3R (3D)</h2>
 
