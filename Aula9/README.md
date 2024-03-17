@@ -37,7 +37,6 @@ $$∅=tan^{−1}\frac{𝑙_2 \cdot sin⁡𝜃_2}{𝑙_1+𝑙_2 \cdot cos⁡𝜃_
 $$𝜃_1=𝛼−∅$$
 
 <h2>Robot 3R (3D)</h2>
-hola
 
 ![3R 3D](image.png)
 
