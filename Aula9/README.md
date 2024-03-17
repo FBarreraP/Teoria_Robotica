@@ -4,7 +4,35 @@ Esta clase consiste en comprender y analizar la cinemática inversa de dos robot
 
 <h2>Robot 3R (planar)</h2>
 
+![3R planar](image-8.png)
 
+<h3>Theta 3</h3>
+
+$$𝜃_3=𝛽−𝜃_1−𝜃_2$$
+
+Siendo que $𝛽$ es el ángulo escogido para la rotación de la muñeca con respecto al eje horizontal.
+
+$$𝑚=𝑃_𝑥−𝑙_3 \cdot cos⁡𝛽$$
+
+$$𝑛=𝑃_𝑦−𝑙_3 \cdot 𝑠𝑒𝑛⁡𝛽$$
+
+<h3>Theta 2</h3>
+
+$$𝑏=\sqrt{𝑚^2+𝑛^2}$$
+
+$$cos𝜃_2=\frac{𝑏^2−𝑙_2^2−𝑙_1^2}{2\cdot𝑙_1\cdot𝑙_2}$$
+
+$$sin⁡𝜃_2=±\sqrt{1−(cos𝜃_2)^2}$$
+
+$$𝜃_2=tan^{−1}\frac{sin𝜃_2}{cos𝜃_2}$$
+
+<h4>Theta 1</h4>
+
+$$𝛼=tan^{−1}⁡\frac{𝑛}{𝑚}$$
+
+$$∅=tan^{−1}\frac{𝑙_2 \cdot sin⁡𝜃_2}{𝑙_1+𝑙_2 \cdot cos⁡𝜃_2}$$
+
+$$𝜃_1=𝛼−∅$$
 
 <h2>Robot 3R</h2>
 
