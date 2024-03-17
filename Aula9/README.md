@@ -16,6 +16,8 @@ $$𝑚=𝑃_𝑥−𝑙_3 \cdot cos⁡𝛽$$
 
 $$𝑛=𝑃_𝑦−𝑙_3 \cdot 𝑠𝑒𝑛⁡𝛽$$
 
+$𝜃_2$ y $𝜃_1$ son obtenidos a partir del análisis de la cinemática inversa del 2R
+
 <h3>Theta 2</h3>
 
 $$𝑏=\sqrt{𝑚^2+𝑛^2}$$
@@ -43,6 +45,8 @@ $$𝜃_1=𝛼−∅$$
 $$𝜃_1=tan^{−1}\frac{⁡𝑃_𝑦}{𝑃_𝑥}$$
 
 $$𝑒=\sqrt{𝑃_𝑥^2+𝑃_𝑦^2}$$
+
+$𝜃_3$ y $𝜃_2$ son obtenidos a partir del análisis de la cinemática inversa del 2R
 
 <h3>Theta 3</h3>
 
