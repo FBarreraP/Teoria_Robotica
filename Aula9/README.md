@@ -8,7 +8,7 @@ Esta clase consiste en comprender y analizar la cinemática inversa de dos robot
 
 <h2>Robot 3R</h2>
 
-![3R con DH](image.png)
+![3R](image.png)
 
 <h3>Theta 1</h3>
 
