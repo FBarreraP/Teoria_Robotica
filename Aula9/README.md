@@ -36,7 +36,42 @@ $$∅=tan^{−1}\frac{𝑙_3 \cdot sin⁡𝜃_3}{𝑙_2+𝑙_3 \cdot cos⁡𝜃_
 
 $$𝜃_2=𝛼−∅$$
 
-<h3>Ruta (<i>path</i>)</h3>
+<h2>Trayectorias</h2>
 
+Las trayectorias de los robots consisten en realizar tareas de movimiento del robot de un punto inicial a un punto final, en el espacio articular (espacio de movimientos de las articulaciones) o en el espacio operacional del robot (espacio (área o volumen) de trabajo).
 
-<h3>Trayectoria (<i>trajectory</i>)</h3>
+![Espacios de trabajo](image-1.png)
+
+![Diagrama de flujo](image-2.png)
+
+<h3>Planeación de ruta (<i>path planning</i>)</h3>
+
+Genera una ruta geométrica, desde un punto inicial hasta un punto final a través de puntos intermedios (waypoints) previamente definidos de manera discontinua (saltos bruscos), donde solo es relevante la posición.
+
+Las rutas con puntos intermedios a través de la interpolación de ángulos del punto A y B generan un resultado circular (MoveJ).
+
+![Interpolación de ángulos ruta 3R](image-3.png)
+
+Las rutas con puntos intermedios a través de la interpolación de posiciones del punto A y B generan un resultado lineal (MoveL).
+
+![Interpolación de posiciones ruta 3R](image-4.png)
+
+<h3>Planeación de trayectoria (<i>trajectory planning</i>)</h3>
+
+A partir de una ruta geométrica determinada, se genera una trayectoria continua (movimiento suave) en función del tiempo, es decir, contemplando las velocidades y las aceleraciones de las articulaciones.
+
+Las trayectorias se pueden obtener a través de diferentes métodos:
+
+- Polinomios
+- Perfil de velocidad trapezoidal
+- Jacobianos  
+
+<h4>Perfil de velocidad trapezoidal</h4>
+
+El perfil de velocidad trapezoidal es realizado en el espacio de las articulaciones. Una de las combinaciones más utilizadas en este perfil es 1/4, 1/2, 1/4; sin embargo, esto depende de la velocidad máxima y el tiempo final.
+
+![PVT](image-5.png)
+
+$$𝑉𝑚á𝑥=\frac{𝑑_1−𝑑_0}{𝑡_𝑓} \cdot 1.5$$
+
+![Interpolación de ángulos PVT 3R](image-6.png)
