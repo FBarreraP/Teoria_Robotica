@@ -8,7 +8,7 @@ El método Denavit Hartenberg (DH) fue propuesto en 1955 por Jacques Denavit y R
 
 1. Asignar el sistema coordenado para cada articulación del robot
 2. Determinar los parámetros DH (𝜃,𝑑,𝛼,𝑎), los cuales se utilizarán en el Toolbox Peter Corke de Matlab 
-3. Obtener la siguiente matriz :
+3. Obtener la siguiente matriz:
 
 $$𝑇_𝑛^{𝑛−1}=𝑇𝑟𝑎𝑛𝑠_{𝑧_{𝑛−1}}(𝑑_𝑛) \cdot 𝑅𝑜𝑡_{𝑧_{𝑛−1}}(𝜃_𝑛) \cdot 𝑇𝑟𝑎𝑛𝑠_{𝑥_𝑛}(𝑎_𝑛) \cdot 𝑅𝑜𝑡_{𝑥_𝑛}(𝛼_𝑛)$$
 
@@ -287,16 +287,16 @@ MTH = Robot.fkine([q1,q2])
 TZ0 = [1 0 0 0; 0 1 0 0; 0 0 1 a1; 0 0 0 1]
 RZ0 = [cos(q1) -sin(q1) 0 0; sin(q1) cos(q1) 0 0; 0 0 1 0; 0 0 0 1]
 TX1 = [1 0 0 a2; 0 1 0 0; 0 0 1 0; 0 0 0 1]
-RZ1 = [1 0 0 0; 0 cos(pi/2) -sin(pi/2) 0; 0 sin(pi/2) cos(pi/2) 0; 0 0 0 1]
-T01 =  TZ0*RZ0*TX1*RZ1
-T01 =  RZ0*TZ0*TX1*RZ1
+RX1 = [1 0 0 0; 0 cos(pi/2) -sin(pi/2) 0; 0 sin(pi/2) cos(pi/2) 0; 0 0 0 1]
+T01 =  TZ0*RZ0*TX1*RX1
+T01 =  RZ0*TZ0*RX1*TX1
 
 TZ1 = [1 0 0 0; 0 1 0 0; 0 0 1 a3; 0 0 0 1]
 RZ1 = [cos(q2) -sin(q2) 0 0; sin(q2) cos(q2) 0 0; 0 0 1 0; 0 0 0 1]
 TX2 = [1 0 0 a4; 0 1 0 0; 0 0 1 0; 0 0 0 1]
-RZ2 = [1 0 0 0; 0 cos(0) -sin(0) 0; 0 sin(0) cos(0) 0; 0 0 0 1]
-% T12 =  TZ1*RZ1*TX2*RZ2
-T12 =  RZ1*TZ1*TX2*RZ2
+RX2 = [1 0 0 0; 0 cos(0) -sin(0) 0; 0 sin(0) cos(0) 0; 0 0 0 1]
+T12 =  TZ1*RZ1*TX2*RX2
+T12 =  RZ1*TZ1*RX2*TX2
 
 T02 = T01*T12
 
