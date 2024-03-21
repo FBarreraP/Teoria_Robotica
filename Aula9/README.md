@@ -351,6 +351,8 @@ El perfil de velocidad trapezoidal es realizado en el espacio de las articulacio
 
 $$𝑉𝑚á𝑥=\frac{𝑑_1−𝑑_0}{𝑡_𝑓} \cdot 1.5$$
 
+Las trayectorias con puntos intermedios a través de la interpolación de ángulos del punto A y B generan un resultado circular (MoveJ).
+
 ![Interpolación de ángulos PVT 3R](image-6.png)
 
 ```matlab
@@ -464,8 +466,9 @@ legend(figB,'dq1','dq2','dq3','Location','southeast')
 legend(figC,'d2q1','d2q2','d2q3','Location','northeast')
 ```
 
+Las trayectorias con puntos intermedios a través de la interpolación de posiciones del punto A y B generan un resultado lineal (MoveL).
 
-
+![![Interpolación de posiciones PVT 3R]](image-9.png)
 
 ```matlab
 %% Trayectoria de perfil de velocidad trapezoidal 3R (MoveL)
@@ -576,104 +579,6 @@ end
 legend(figD,'q1','q2','q3','Location','northwest')
 legend(figE,'dq1','dq2','dq3','Location','southeast')
 legend(figF,'d2q1','d2q2','d2q3','Location','northeast')
-
-%% Trayectoria trapezoidal 2R
-
-clear all
-close all
-clc
-
-l1 = 5
-l2 = 5
-h1 = 2
-
-R(1) = Link('revolute','d',0,'alpha',0,'a',l1,'offset',0);
-R(2) = Link('revolute','d',0,'alpha',0,'a',l2,'offset',0);
-
-Robot = SerialLink(R,'name','Bender')
-
-%Trayectoria 1 - perfil trapezoidal
-t0 = 0
-tf = 1
-t = linspace(t0,tf,50)
-
-% v1 = [1 0.9]
-% v2 = [2 1.8]
-
-% Punto 1
-P1x = 10;
-P1y = 0;
-
-[theta1_P1, theta2_P1] = InverseKinematics2R(l1,l2,P1x,P1y);
-
-% Punto 2
-% P2x = -1.464;
-% P2y = 3.536;
-P2x = -5;
-P2y = 5;
-
-[theta1_P2, theta2_P2] = InverseKinematics2R(l1,l2,P2x,P2y);
-
-[q1T, dq1T, d2q1T] = lspb(theta1_P1,theta1_P2,t,2.5)
-[q2T, dq2T, d2q2T] = lspb(theta2_P1,theta2_P2,t,2)
-
-% AT = qf - q0
-% dq_max = AT*(2/(1.5*tf))*1.2 %Velocidad de la articulación
-
-figure(1)
-title('Articulación 1')
-figA = subplot(3,1,1);
-axis([t0 tf -Inf Inf])
-grid on
-hold on
-title('Posición')
-xlabel('tiempo (s)')
-ylabel('ángulo (grados)')
-figB = subplot(3,1,2);
-axis([t0 tf -Inf Inf])
-grid on
-hold on
-title('Velocidad angular')
-xlabel('tiempo (s)')
-ylabel('velocidad (rad/s)')
-figC = subplot(3,1,3);
-axis([t0 tf -Inf Inf])
-grid on
-hold on
-title('Aceleración angular')
-xlabel('tiempo (s)')
-ylabel('aceleración (rad/s^2)')
-
-for i=1:length(q1T)
-    t_(i,1) = t(i)
-    
-    q1T_(i,1) = rad2deg(q1T(i))
-    plot(figA,t_(:),q1T_(:,1),'-b')
-%     hold on
-    q2T_(i,1) = rad2deg(q2T(i))
-    plot(figA,t_(:),q2T_(:,1),'-g')
-
-    dq1T_(i,1) = dq1T(i)
-    plot(figB,t_(:),dq1T_(:,1),'-b')
-%     hold on
-    dq2T_(i,1) = dq2T(i)
-    plot(figB,t_(:),dq2T_(:,1),'-g')
-    
-    d2q1T_(i,1) = d2q1T(i)
-    plot(figC,t_(:),d2q1T_(:,1),'-b')
-%     hold on
-    d2q2T_(i,1) = d2q2T(i)
-    plot(figC,t_(:),d2q2T_(:,1),'-g')
-    
-    figure(2)
-%     Robot.plot([q1T(i),q2T(i)],'scale',1.0,'workspace',[-30 30 -30 30 -30 30]);
-    Robot.teach([q1T(i),q2T(i)],'scale',1.0,'workspace',[-30 30 -30 30 -30 30]);
-%     zlim([-15,30]);
-    MTH = Robot.fkine([q1T(i),q2T(i)])
-    hold on
-    plot3(MTH.t(1),MTH.t(2),MTH.t(3),'.r')
-end
-
 ```
 
 <h3>Ejercicios</h3>
