@@ -473,9 +473,9 @@ Las trayectorias con puntos intermedios a través de la interpolación de posici
 ```matlab
 %% Trayectoria de perfil de velocidad trapezoidal 3R (MoveL)
 
-% clear all
-% close all
-% clc
+clear all
+close all
+clc
 
 l1 = 10;
 l2 = 10;
@@ -489,7 +489,7 @@ Robot = SerialLink(R,'name','Bender')
 
 %Trayectoria 1 - perfil trapezoidal
 t0 = 0
-tf = 10
+tf = 1
 t = linspace(t0,tf,50)
 
 % v1 = [1 0.9]
@@ -518,7 +518,7 @@ figD = subplot(3,1,1);
 %axis([t0 tf -Inf Inf])
 grid on
 hold on
-title('Posición angular')
+title('Posición lineal')
 xlabel('tiempo (s)')
 ylabel('distancia (m)')
 
@@ -526,7 +526,7 @@ figE = subplot(3,1,2);
 %axis([t0 tf -Inf Inf])
 grid on
 hold on
-title('Velocidad angular')
+title('Velocidad lineal')
 xlabel('tiempo (s)')
 ylabel('velocidad (m/s)')
 
@@ -534,7 +534,7 @@ figF = subplot(3,1,3);
 %axis([t0 tf -Inf Inf])
 grid on
 hold on
-title('Aceleración angular')
+title('Aceleración lineal')
 xlabel('tiempo (s)')
 ylabel('aceleración (m/s^2)')
 
@@ -576,9 +576,9 @@ for i=1:length(x1T)
     plot3(MTH.t(1),MTH.t(2),MTH.t(3),'.m')
 end
 
-legend(figD,'q1','q2','q3','Location','northwest')
-legend(figE,'dq1','dq2','dq3','Location','southeast')
-legend(figF,'d2q1','d2q2','d2q3','Location','northeast')
+legend(figD,'X','Y','Z','Location','northwest')
+legend(figE,'dX','dy','dZ','Location','southeast')
+legend(figF,'d2X','d2Y','d2Z','Location','northeast')
 ```
 
 <h3>Ejercicios</h3>
