@@ -473,9 +473,9 @@ Las trayectorias con puntos intermedios a través de la interpolación de posici
 ```matlab
 %% Trayectoria de perfil de velocidad trapezoidal 3R (MoveL)
 
-clear all
-close all
-clc
+%clear all
+%close all
+%clc
 
 l1 = 10;
 l2 = 10;
