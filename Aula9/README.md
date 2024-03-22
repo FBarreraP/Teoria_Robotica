@@ -56,8 +56,8 @@ beta = deg2rad(45)
 %Py = 22.885;
 %beta = deg2rad(95.2)
 
-m = Px - l3*cos(beta)
-n = Py - l3*sin(beta)
+m = Px - l3*round(cos(beta),4)
+n = Py - l3*round(sin(beta),4)
 % Theta 2
 b = sqrt(m^2+n^2)
 cos_theta2 = (b^2-l2^2-l1^2)/(2*l1*l2);
