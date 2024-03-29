@@ -399,8 +399,6 @@ $$R_3^0 = \begin{bmatrix}
 \end{bmatrix}
 $$
 
-$R_6^3 = R_4^3 \cdot R_5^4 \cdot R_6^5$
-
 ```matlab
 % syms theta1 theta2 theta3 
 % R01 = RotarZ(theta1)*round(RotarX(pi/2))
