@@ -392,7 +392,7 @@ $$
 
 Igualar las matrices $𝑅_6^3$ 𝐴 y $𝑅_6^3$ 𝐵 para resolver las últimas tres articulaciones
 
-![alt text](image-13.png)
+![R36B](image-13.png)
 
 $$𝜃_4=tan^{−1}⁡\frac{𝑆(𝜃_4) \cdot 𝑆(𝜃_5)}{−(−𝐶(𝜃_4) \cdot 𝑆(𝜃_5))}=tan^{−1}\frac{𝑅_6^3 𝐴(1,3)}{(−𝑅_6^3 𝐴(2,3))} = 1.1938 𝑟𝑎𝑑$$
 
@@ -402,8 +402,18 @@ $$𝜃_6=tan^{−1}\frac{𝑆(𝜃_5) \cdot 𝑆(𝜃_6)}{−(−𝐶(𝜃_6) 
 
 $𝜃_6$ tiene singularidad para $𝜃_5=0°=180°=360°$
 
-$$𝜃_5=tan^{−1}⁡\frac{\sqrt{1−(𝐶(𝜃_5)^2)}}{𝐶(𝜃_5)}=tan^{−1}\frac{\sqrt{1−(𝑅_6^3 𝐴(3,3))^2}}{(𝑅_6^3 𝐴(3,3))} = 0.5236 𝑟𝑎𝑑$$
+$$𝜃_5=tan^{−1}⁡\frac{\sqrt{1−(𝐶(𝜃_5))^2}}{𝐶(𝜃_5)}=tan^{−1}\frac{\sqrt{1−(𝑅_6^3 𝐴(3,3))^2}}{(𝑅_6^3 𝐴(3,3))} = 0.5236 𝑟𝑎𝑑$$
 
 $𝜃_5$ tiene singularidad para $𝜃_5=90°=270°$
 
 <h4>Paso 8</h4>
+
+Verificar la cinemática inversa 6R por el método de desacople cinemático.
+
+![CI 6R](image-14.png)
+
+<h3>Ejercicios</h3>
+
+Realizar el desacople cinemático de un robot de 6 DOF con muñeca esférica y con las siguientes tres primeras articulaciones de los siguientes cinco tipos de robots: 1. Cartesiano, 2. Cilíndrico, 3. Esférico, 4. Scara.
+
+![Ejercicios](image-15.png)
