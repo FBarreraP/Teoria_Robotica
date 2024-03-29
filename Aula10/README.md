@@ -68,7 +68,12 @@ R01 = RotarZ(theta1)*round(RotarX(pi/2))
 
 $$R_2^1 = 𝑅_𝑍(𝜃_2)$$
 
-
+$$R_2^1 = \begin{bmatrix}
+𝐶𝜃_2 & -𝑆𝜃_2 & 0 \\ 
+𝑆𝜃_2 & 𝐶𝜃_2 & 0 \\ 
+0 & 0 & 1 \\ 
+\end{bmatrix}
+$$
 
 ```matlab
 clear all
@@ -86,6 +91,24 @@ R12 = RotarZ(theta2))
 
 $$𝑅_3^2 = 𝑅_𝑍(𝜃_3) \cdot 𝑅_𝑋(𝜋/2) \cdot 𝑅_𝑌(𝜋/2)$$
 
+$$R_3^2 = \begin{bmatrix}
+𝐶𝜃_3 & -𝑆𝜃_3 & 0 \\ 
+𝑆𝜃_3 & 𝐶𝜃_3 & 0 \\ 
+0 & 0 & 1 \\ 
+\end{bmatrix} \cdot \begin{bmatrix}
+1 & 0 & 0 \\ 
+0 & 0 & -1 \\ 
+0 & 1 & 0 \\ 
+\end{bmatrix} \cdot \begin{bmatrix}
+0 & 0 & 1 \\ 
+0 & 1 & 0 \\ 
+-1 & 0 & 0 \\ 
+\end{bmatrix}= \begin{bmatrix}
+-𝑆𝜃_3 & 0 & 𝐶𝜃_3 \\ 
+𝐶𝜃_3 & 0 & 𝑆𝜃_3 \\ 
+0 & 1 & 0 \\ 
+\end{bmatrix} 
+$$
 
 ```matlab
 clear all
