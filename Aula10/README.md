@@ -47,7 +47,7 @@ $$R_1^0 = \begin{bmatrix}
 0 & 1 & 0 \\ 
 \end{bmatrix} = \begin{bmatrix}
 𝐶𝜃_1 & 0 & 𝑆𝜃_1 \\ 
-𝑆𝜃_1 & 0 & 𝐶𝜃_1 \\ 
+𝑆𝜃_1 & 0 & -𝐶𝜃_1 \\ 
 0 & 1 & 0 \\ 
 \end{bmatrix} 
 $$
@@ -82,7 +82,7 @@ clc
 
 syms theta2
 
-R12 = RotarZ(theta2))
+R12 = RotarZ(theta2)
 ```
 
 <h4>$R_3^2$</h4>
