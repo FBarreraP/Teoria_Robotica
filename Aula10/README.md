@@ -17,21 +17,21 @@ La metodología de aplicación del desacople cinemático en un robot de 6 GDL co
 7. Igualar las matrices $𝑅_6^3 𝐴$ y $𝑅_6^3 𝐵$ para resolver las últimas tres articulaciones.
 8. Verificar la cinemática inversa 6R por el método de desacople cinemático.
 
-![Robot 6R](image.png)
+![Robot 6R](Imagenes/image.png)
 
 <h3>Robot 6R</h3>
 
 El centro de la muñeca es el punto donde las tres primeras articulaciones son las únicas que cambian la posición de dicho punto. En este punto se cruzan los tres ejes de movimiento ($𝑍_3$, $𝑍_4$, $𝑍_5$).
 
-![Desacople 6R](image-1.png)
+![Desacople 6R](Imagenes/image-1.png)
 
-![Paso 1 y 2 DH 6R](image-2.png)
+![Paso 1 y 2 DH 6R](Imagenes/image-2.png)
 
 <h3>$R_3^0 = R_1^0 \cdot R_2^1 \cdot R_3^2$</h3>
 
 <h4>$R_1^0$</h4>
 
-![SCs R01](image-3.png)
+![SCs R01](Imagenes/image-3.png)
 
 $$R_1^0 = 𝑅_𝑍(𝜃_1) \cdot 𝑅_𝑋(𝜋/2)$$
 
@@ -62,7 +62,7 @@ R01 = RotarZ(theta1)*round(RotarX(pi/2))
 
 <h4>$R_2^1$</h4>
 
-![SCs R12](image-4.png)
+![SCs R12](Imagenes/image-4.png)
 
 $$R_2^1 = 𝑅_𝑍(𝜃_2)$$
 
@@ -85,7 +85,7 @@ R12 = RotarZ(theta2)
 
 <h4>$R_3^2$</h4>
 
-![SCs R23](image-5.png)
+![SCs R23](Imagenes/image-5.png)
 
 $$𝑅_3^2 = 𝑅_𝑍(𝜃_3) \cdot 𝑅_𝑋(𝜋/2) \cdot 𝑅_𝑌(𝜋/2)$$
 
@@ -122,7 +122,7 @@ R23 = RotarZ(theta3)*round(RotarX(pi/2)*RotarY(pi/2))
 
 <h4>$R_4^3$</h4>
 
-![SCs R34](image-6.png)
+![SCs R34](Imagenes/image-6.png)
 
 $$𝑅_4^3 = 𝑅_𝑍(𝜃_4) \cdot 𝑅_𝑍(−𝜋/2) \cdot 𝑅_𝑋(−𝜋/2)$$
 
@@ -157,7 +157,7 @@ R34 = RotarZ(theta4)*round(RotarZ(-pi/2)*RotarX(-pi/2))
 
 <h4>$R_5^4$</h4>
 
-![SCs R45](image-7.png)
+![SCs R45](Imagenes/image-7.png)
 
 $$𝑅_5^4 = 𝑅_𝑍(𝜃_5) \cdot 𝑅_𝑋(𝜋/2)$$
 
@@ -188,7 +188,7 @@ R45 = RotarZ(theta5)*round(RotarX(pi/2))
 
 <h4>$R_6^5$</h4>
 
-![SCs R56](image-8.png)
+![SCs R56](Imagenes/image-8.png)
 
 $$𝑅_6^5 = 𝑅_𝑍(𝜃_6)$$
 
@@ -225,15 +225,15 @@ $$𝑃𝑖𝑡𝑐ℎ = 10.0935$$
 
 $$𝑌𝑎𝑤 = 51.7776$$
 
-![MTH06](image-9.png)
+![MTH06](Imagenes/image-9.png)
 
-![PosWrist](image-10.png)
+![PosWrist](Imagenes/image-10.png)
 
 <h4>Paso 2</h4>
 
 Realizar la cinemática inversa de las tres primeras articulaciones para determinar la posición en el centro de la muñeca esférica.
 
-![CI 3R (3D)](image-11.png)
+![CI 3R (3D)](Imagenes/image-11.png)
 
 <h3>Theta 1</h3>
 
@@ -261,7 +261,7 @@ $$∅=tan^{−1}\frac{𝑙_3 \cdot sin⁡𝜃_3}{𝑙_2+𝑙_3 \cdot cos⁡𝜃_
 
 $$𝜃_2=𝛼−∅ = 0.1571 𝑟𝑎𝑑$$
 
-![3R Peter Corke](image-12.png)
+![3R Peter Corke](Imagenes/image-12.png)
 
 <h4>Paso 3</h4>
 
@@ -392,7 +392,7 @@ $$
 
 Igualar las matrices $𝑅_6^3$ 𝐴 y $𝑅_6^3$ 𝐵 para resolver las últimas tres articulaciones
 
-![R36B](image-13.png)
+![R36B](Imagenes/image-13.png)
 
 $$𝜃_4=tan^{−1}⁡\frac{𝑆(𝜃_4) \cdot 𝑆(𝜃_5)}{−(−𝐶(𝜃_4) \cdot 𝑆(𝜃_5))}=tan^{−1}\frac{𝑅_6^3 𝐴(1,3)}{(−𝑅_6^3 𝐴(2,3))} = 1.1938 𝑟𝑎𝑑$$
 
@@ -410,10 +410,10 @@ $𝜃_5$ tiene singularidad para $𝜃_5=90°=270°$
 
 Verificar la cinemática inversa 6R por el método de desacople cinemático.
 
-![CI 6R](image-14.png)
+![CI 6R](Imagenes/image-14.png)
 
 <h3>Ejercicios</h3>
 
 Realizar el desacople cinemático de un robot de 6 DOF con muñeca esférica y con las siguientes tres primeras articulaciones de los siguientes cinco tipos de robots: 1. Cartesiano, 2. Cilíndrico, 3. Esférico, 4. Scara.
 
-![Ejercicios](image-15.png)
+![Ejercicios](Imagenes/image-15.png)
