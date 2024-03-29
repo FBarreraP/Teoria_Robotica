@@ -6,7 +6,7 @@ Esta clase consiste en comprender y analizar el desacople cinemático, el cual e
 
 El desacople cinemático consiste en calcular la cinemática inversa de un robot de 6 GDL a partir de la separación de las tres primeras articulaciones (posicionamiento en el centro de la muñeca), las cuales pueden ser cualquier configuración (Cartesiano, Scara, Cilíndrico, Esférico, Angular 3R) y de las tres últimas articulaciones (orientación del efector final), para lo cual, la configuración más utilizada es la muñeca esférica.
 
-La metodología de aplicación del desacople cinemático en un robot de 6 DOF es:
+La metodología de aplicación del desacople cinemático en un robot de 6 GDL consiste en los siguientes 8 pasos:
 
 1. Establecer la posición y orientación deseada del TCP y devolver el desplazamiento de l5 y l6 para encontrar la posición en el centro de la muñeca.
 2. Realizar la cinemática inversa de las tres primeras articulaciones para determinar la posición en el centro de la muñeca esférica.
@@ -208,3 +208,57 @@ syms theta6
 
 R45 = RotarZ(theta6)
 ```
+
+<h4>Paso 1</h4>
+
+Establecer la posición y orientación deseada del TCP y devolver el desplazamiento de l5 y l6 para encontrar la posición en el centro de la muñeca.
+
+$$𝑃_X = −9.4519$$
+
+$$𝑃_Y = 33.8090$$
+
+$$𝑃_Z = 42.7623$$
+
+$$𝑅𝑜𝑙𝑙 = −26.5610$$
+
+$$𝑃𝑖𝑡𝑐ℎ = 10.0935$$
+
+$$𝑌𝑎𝑤 = 51.7776$$
+
+![MTH06](image-9.png)
+
+![PosWrist](image-10.png)
+
+<h4>Paso 2</h4>
+
+Realizar la cinemática inversa de las tres primeras articulaciones para determinar la posición en el centro de la muñeca esférica.
+
+![CI 3R (3D)](image-11.png)
+
+<h3>Theta 1</h3>
+
+$$𝜃_1=tan^{−1}\frac{⁡𝑃_𝑦}{𝑃_𝑥}$$
+
+$$𝑒=\sqrt{𝑃_𝑥^2+𝑃_𝑦^2}$$
+
+$𝜃_3$ y $𝜃_2$ son obtenidos a partir del análisis de la cinemática inversa del 2R
+
+<h3>Theta 3</h3>
+
+$$𝑐=𝑃_𝑧−𝑙_1$$
+
+$$𝑏=\sqrt{𝑒^2+𝑐^2}$$
+
+$$cos𝜃_3=\frac{𝑏^2−𝑙_3^2−𝑙_2^2}{2\cdot𝑙_2\cdot𝑙_3}$$
+
+$$sin⁡𝜃_3=±\sqrt{1−(cos𝜃_3)^2}$$
+
+$$𝜃_3=tan^{−1}\frac{sin𝜃_3}{cos𝜃_3}$$
+
+<h3>Theta 2</h3>
+
+$$𝛼=tan^{−1}⁡\frac{𝑐}{𝑒}$$
+
+$$∅=tan^{−1}\frac{𝑙_3 \cdot sin⁡𝜃_3}{𝑙_2+𝑙_3 \cdot cos⁡𝜃_3}$$
+
+$$𝜃_2=𝛼−∅$$
