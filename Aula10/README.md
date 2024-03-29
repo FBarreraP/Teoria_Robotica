@@ -23,7 +23,7 @@ Fuente: Adaptado de https://www.chegg.com/homework-help/questions-and-answers/1-
 
 <h3>Robot 6R</h3>
 
-El centro de la muñeca es el punto donde las tres primeras articulaciones son las únicas que cambian la posición de dicho punto. En este punto se cruzan los tres ejes de movimiento ($𝑍_3$, $𝑍_4$,$𝑍_5$).
+El centro de la muñeca es el punto donde las tres primeras articulaciones son las únicas que cambian la posición de dicho punto. En este punto se cruzan los tres ejes de movimiento ($𝑍_3$, $𝑍_4$, $𝑍_5$).
 
 ![Desacople 6R](image-1.png)
 
@@ -31,4 +31,68 @@ El centro de la muñeca es el punto donde las tres primeras articulaciones son l
 
 <h3>$R_3^0 = R_1^0 \cdot R_2^1 \cdot R_3^2$</h3>
 
+<h4>$R_1^0$</h4>
 
+![SCs R01](image-3.png)
+
+$$R_1^0 = 𝑅_𝑍(𝜃_1) \cdot 𝑅_𝑋(𝜋/2)$$
+
+$$R_1^0 = \begin{bmatrix}
+𝐶𝜃_1 & -𝑆𝜃_1 & 0 \\ 
+𝑆𝜃_1 & 𝐶𝜃_1 & 0 \\ 
+0 & 0 & 1 \\ 
+\end{bmatrix} \cdot \begin{bmatrix}
+1 & 0 & 0 \\ 
+0 & 0 & -1 \\ 
+0 & 1 & 0 \\ 
+\end{bmatrix} = \begin{bmatrix}
+𝐶𝜃_1 & 0 & 𝑆𝜃_1 \\ 
+𝑆𝜃_1 & 0 & 𝐶𝜃_1 \\ 
+0 & 1 & 0 \\ 
+\end{bmatrix} 
+$$
+
+```matlab
+clear all
+close all
+clc
+
+syms theta1
+
+R01 = RotarZ(theta1)*round(RotarX(pi/2))
+```
+
+<h4>$R_2^1$</h4>
+
+![SCs R12](image-4.png)
+
+$$R_2^1 = 𝑅_𝑍(𝜃_2)$$
+
+
+
+```matlab
+clear all
+close all
+clc
+
+syms theta2
+
+R12 = RotarZ(theta2))
+```
+
+<h4>$R_3^2$</h4>
+
+![SCs R23](image-5.png)
+
+$$𝑅_3^2 = 𝑅_𝑍(𝜃_3) \cdot 𝑅_𝑋(𝜋/2) \cdot 𝑅_𝑌(𝜋/2)$$
+
+
+```matlab
+clear all
+close all
+clc
+
+syms theta3
+
+R23 = RotarZ(theta3)*round(RotarX(pi/2)*RotarY(pi/2))
+```
