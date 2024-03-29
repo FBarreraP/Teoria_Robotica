@@ -14,7 +14,7 @@ La metodología de aplicación del desacople cinemático en un robot de 6 DOF es
 4. Encontrar la matriz inversa de la rotación del SC{0} al SC{3}.
 5. Determinar la matriz numérica de rotación del SC{3} al SC{6}.
 6. Determinar la matriz simbólica de rotación del SC{3} al SC{6}.
-7. Igualar las matrices 𝑅_6^3 𝐴 y 𝑅_6^3 𝐵 para resolver las últimas tres articulaciones.
+7. Igualar las matrices $𝑅_6^3 𝐴$ y $𝑅_6^3 𝐵$ para resolver las últimas tres articulaciones.
 8. Verificar la cinemática inversa 6R por el método de desacople cinemático.
 
 ![Robot 6R](image.png)
