@@ -118,12 +118,93 @@ syms theta3
 R23 = RotarZ(theta3)*round(RotarX(pi/2)*RotarY(pi/2))
 ```
 
+<h3>$R_6^3 = R_4^3 \cdot R_5^4 \cdot R_6^5$</h3>
+
 <h4>$R_4^3$</h4>
 
+![SCs R34](image-6.png)
 
+$$𝑅_4^3 = 𝑅_𝑍(𝜃_4) \cdot 𝑅_𝑍(−𝜋/2) \cdot 𝑅_𝑋(−𝜋/2)$$
+
+$$R_4^3 = \begin{bmatrix}
+𝐶𝜃_4 & -𝑆𝜃_4 & 0 \\ 
+𝑆𝜃_4 & 𝐶𝜃_4 & 0 \\ 
+0 & 0 & 1 \\ 
+\end{bmatrix} \cdot \begin{bmatrix}
+0 & 1 & 0 \\ 
+-1 & 0 & 0 \\ 
+0 & 0 & 1 \\ 
+\end{bmatrix} \cdot \begin{bmatrix}
+1 & 0 & 0 \\ 
+0 & 0 & 1 \\ 
+0 & -1 & 0 \\ 
+\end{bmatrix}= \begin{bmatrix}
+𝑆𝜃_4 & 0 & 𝐶𝜃_4 \\ 
+-𝐶𝜃_4 & 0 & 𝑆𝜃_4 \\ 
+0 & -1 & 0 \\ 
+\end{bmatrix} 
+$$
+
+```matlab
+clear all
+close all
+clc
+
+syms theta4
+
+R34 = RotarZ(theta4)*round(RotarZ(-pi/2)*RotarX(-pi/2))
+```
 
 <h4>$R_5^4$</h4>
 
+![SCs R45](image-7.png)
 
+$$𝑅_5^4 = 𝑅_𝑍(𝜃_5) \cdot 𝑅_𝑋(𝜋/2)$$
+
+$$R_5^4 = \begin{bmatrix}
+𝐶𝜃_5 & -𝑆𝜃_5 & 0 \\ 
+𝑆𝜃_5 & 𝐶𝜃_5 & 0 \\ 
+0 & 0 & 1 \\ 
+\end{bmatrix} \cdot \begin{bmatrix}
+1 & 0 & 0 \\ 
+0 & 0 & -1 \\ 
+0 & 1 & 0 \\ 
+\end{bmatrix} = \begin{bmatrix}
+𝐶𝜃_5 & 0 & 𝑆𝜃_5 \\ 
+𝑆𝜃_5 & 0 & -𝐶𝜃_5 \\ 
+0 & 1 & 0 \\ 
+\end{bmatrix} 
+$$
+
+```matlab
+clear all
+close all
+clc
+
+syms theta5
+
+R45 = RotarZ(theta5)*round(RotarX(pi/2))
+```
 
 <h4>$R_6^5$</h4>
+
+![SCs R56](image-8.png)
+
+$$𝑅_6^5 = 𝑅_𝑍(𝜃_6)$$
+
+$$R_6^5 = \begin{bmatrix}
+𝐶𝜃_6 & -𝑆𝜃_6 & 0 \\ 
+𝑆𝜃_6 & 𝐶𝜃_6 & 0 \\ 
+0 & 0 & 1 \\ 
+\end{bmatrix}
+$$
+
+```matlab
+clear all
+close all
+clc
+
+syms theta6
+
+R45 = RotarZ(theta6)
+```
