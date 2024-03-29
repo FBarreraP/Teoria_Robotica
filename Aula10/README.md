@@ -237,11 +237,9 @@ Realizar la cinemática inversa de las tres primeras articulaciones para determi
 
 <h3>Theta 1</h3>
 
-$$𝜃_1=tan^{−1}\frac{⁡𝑃_𝑦}{𝑃_𝑥}$$
+$$𝜃_1=tan^{−1}\frac{⁡𝑃_𝑦}{𝑃_𝑥} = 1.7383 𝑟𝑎𝑑$$
 
 $$𝑒=\sqrt{𝑃_𝑥^2+𝑃_𝑦^2}$$
-
-$𝜃_3$ y $𝜃_2$ son obtenidos a partir del análisis de la cinemática inversa del 2R
 
 <h3>Theta 3</h3>
 
@@ -253,7 +251,7 @@ $$cos𝜃_3=\frac{𝑏^2−𝑙_3^2−𝑙_2^2}{2\cdot𝑙_2\cdot𝑙_3}$$
 
 $$sin⁡𝜃_3=±\sqrt{1−(cos𝜃_3)^2}$$
 
-$$𝜃_3=tan^{−1}\frac{sin𝜃_3}{cos𝜃_3}$$
+$$𝜃_3=tan^{−1}\frac{sin𝜃_3}{cos𝜃_3} = 0.4608 𝑟𝑎𝑑$$
 
 <h3>Theta 2</h3>
 
@@ -261,4 +259,33 @@ $$𝛼=tan^{−1}⁡\frac{𝑐}{𝑒}$$
 
 $$∅=tan^{−1}\frac{𝑙_3 \cdot sin⁡𝜃_3}{𝑙_2+𝑙_3 \cdot cos⁡𝜃_3}$$
 
-$$𝜃_2=𝛼−∅$$
+$$𝜃_2=𝛼−∅ = 0.1571 𝑟𝑎𝑑$$
+
+![3R Peter Corke](image-12.png)
+
+<h4>Paso 3</h4>
+
+Determinar la rotación del SC{0} al SC{3} para las tres primeras articulaciones.
+
+$$R_3^0 = R_1^0 \cdot R_2^1 \cdot R_3^2$$
+
+$$R_1^0 = \begin{bmatrix}
+𝐶𝜃_1 & 0 & 𝑆𝜃_1 \\ 
+𝑆𝜃_1 & 0 & -𝐶𝜃_1 \\ 
+0 & 1 & 0 \\ 
+\end{bmatrix}               R_2^1 = \begin{bmatrix}
+𝐶𝜃_2 & -𝑆𝜃_2 & 0 \\ 
+𝑆𝜃_2 & 𝐶𝜃_2 & 0 \\ 
+0 & 0 & 1 \\ 
+\end{bmatrix}               R_3^2 = \begin{bmatrix}
+-𝑆𝜃_3 & 0 & 𝐶𝜃_3 \\ 
+𝐶𝜃_3 & 0 & 𝑆𝜃_3 \\ 
+0 & 1 & 0 \\ 
+\end{bmatrix} 
+$$
+
+
+
+
+
+$R_6^3 = R_4^3 \cdot R_5^4 \cdot R_6^5$
