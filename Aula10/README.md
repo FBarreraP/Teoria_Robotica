@@ -273,15 +273,11 @@ $$R_1^0 = \begin{bmatrix}
 𝐶𝜃_1 & 0 & 𝑆𝜃_1 \\ 
 𝑆𝜃_1 & 0 & -𝐶𝜃_1 \\ 
 0 & 1 & 0 \\ 
-\end{bmatrix}
-
-R_2^1 = \begin{bmatrix}
+\end{bmatrix} R_2^1 = \begin{bmatrix}
 𝐶𝜃_2 & -𝑆𝜃_2 & 0 \\ 
 𝑆𝜃_2 & 𝐶𝜃_2 & 0 \\ 
 0 & 0 & 1 \\ 
-\end{bmatrix}
-
-R_3^2 = \begin{bmatrix}
+\end{bmatrix} R_3^2 = \begin{bmatrix}
 -𝑆𝜃_3 & 0 & 𝐶𝜃_3 \\ 
 𝐶𝜃_3 & 0 & 𝑆𝜃_3 \\ 
 0 & 1 & 0 \\ 
@@ -303,3 +299,32 @@ $$R_3^0 = \begin{bmatrix}
 $$
 
 $R_6^3 = R_4^3 \cdot R_5^4 \cdot R_6^5$
+
+<h4>Paso 4</h4>
+
+$$𝑅_6^0 = 𝑅_3^0 \cdot 𝑅_6^3$$
+
+
+
+<h4>Paso 5</h4>
+
+
+
+
+
+
+<h4>Paso 6</h4>
+
+
+
+
+
+
+<h4>Paso 7</h4>
+
+
+
+
+
+
+<h4>Paso 8</h4>
