@@ -19,8 +19,6 @@ La metodología de aplicación del desacople cinemático en un robot de 6 DOF es
 
 ![Robot 6R](image.png)
 
-Fuente: Adaptado de https://www.chegg.com/homework-help/questions-and-answers/1-derive-forward-kinematic-equations-following-elbow-manipulator-spherical-wrist-10-pts-2--q64621956
-
 <h3>Robot 6R</h3>
 
 El centro de la muñeca es el punto donde las tres primeras articulaciones son las únicas que cambian la posición de dicho punto. En este punto se cruzan los tres ejes de movimiento ($𝑍_3$, $𝑍_4$, $𝑍_5$).
@@ -87,7 +85,9 @@ R12 = RotarZ(theta2)
 
 <h4>$R_3^2$</h4>
 
+<p align="center">
 ![SCs R23](image-5.png)
+</p>
 
 $$𝑅_3^2 = 𝑅_𝑍(𝜃_3) \cdot 𝑅_𝑋(𝜋/2) \cdot 𝑅_𝑌(𝜋/2)$$
 
@@ -119,3 +119,13 @@ syms theta3
 
 R23 = RotarZ(theta3)*round(RotarX(pi/2)*RotarY(pi/2))
 ```
+
+<h4>$R_4^3$</h4>
+
+
+
+<h4>$R_5^4$</h4>
+
+
+
+<h4>$R_6^5$</h4>
