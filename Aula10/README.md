@@ -85,9 +85,7 @@ R12 = RotarZ(theta2)
 
 <h4>$R_3^2$</h4>
 
-<p align="center">
 ![SCs R23](image-5.png)
-</p>
 
 $$𝑅_3^2 = 𝑅_𝑍(𝜃_3) \cdot 𝑅_𝑋(𝜋/2) \cdot 𝑅_𝑌(𝜋/2)$$
 
