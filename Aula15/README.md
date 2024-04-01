@@ -23,10 +23,15 @@ $$
 \end{bmatrix}
 $$
 
+Siendo $𝐽$ la matriz Jacobiana, expresada por:
+
 $$
-\begin{bmatrix}
+𝐽 = \begin{bmatrix}
 \frac{𝑑𝑓_𝑥}{𝑑𝑞_1} & ⋯ & \frac{𝑑𝑓_𝑥}{𝑑𝑞_𝑛} \\ 
 ⋮ & ⋱ & ⋮ \\ 
 \frac{𝑑𝑓_{𝑅_𝑧}}{𝑑𝑞_1} & ⋯ & \frac{𝑑𝑓_{𝑅_𝑧}}{𝑑𝑞_𝑛}\\ 
 \end{bmatrix} 
 $$
+
+<h3>Ejemplo SCARA</h3>
+
