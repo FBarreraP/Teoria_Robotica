@@ -43,3 +43,17 @@ $$𝑦=𝑙_1sen⁡(𝜃_1)+𝑙_2sen⁡(𝜃_1+𝜃_2)$$
 
 $$𝑧=ℎ_1−ℎ_2$$
 
+Derivando cada función con respecto a las dos articulaciones, se obtiene la siguiente matriz Jacobiana:
+
+$$
+𝐽 = \begin{bmatrix}
+\frac{𝑑𝑓_𝑥}{𝑑𝜃_1} & \frac{𝑑𝑓_𝑥}{𝑑𝜃_2} \\ 
+\frac{𝑑𝑓_y}{𝑑𝜃_1} & \frac{𝑑𝑓_y}{𝑑𝜃_2} \\ 
+\frac{𝑑𝑓_z}{𝑑𝜃_1} & \frac{𝑑𝑓_z}{𝑑𝜃_2} \\ 
+\end{bmatrix} = \begin{bmatrix}
+-𝑙_1sen⁡(𝜃_1)-𝑙_2sen⁡(𝜃_1+𝜃_2) & -𝑙_2sen(𝜃_1+𝜃_2) \\ 
+𝑙_1cos(𝜃_1)+𝑙_2cos⁡(𝜃_1+𝜃_2) & 𝑙_2cos⁡(𝜃_1+𝜃_2)\\ 
+0 & 0\\ 
+\end{bmatrix} 
+$$
+
