@@ -10,14 +10,17 @@ Los jacobianos permiten obtener las velocidades de las articulaciones a partir d
 
 $$
 \begin{bmatrix}
-[x\\ 
-y \\ 
-z \\
-Rx \\
-Ry \\
-Rz \\
-]\\ 
-\end{bmatrix} = 𝐽 \cdot 
+\dot{x} \\ 
+\dot{y} \\ 
+\dot{z} \\
+\dot{R}_x \\
+\dot{R}_y \\
+\dot{R}_z \\ 
+\end{bmatrix} = 𝐽 \cdot \begin{bmatrix}
+\dot{q}_1 \\ 
+⋮ \\ 
+\dot{q}_n \\ 
+\end{bmatrix}
 $$
 
 $$
