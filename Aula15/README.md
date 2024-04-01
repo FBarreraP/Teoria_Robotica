@@ -33,5 +33,13 @@ $$
 \end{bmatrix} 
 $$
 
-<h3>Ejemplo SCARA</h3>
+<h3>Ejemplo 2R</h3>
+
+Teniendo en cuenta las siguientes ecuaciones de la cinemática directa de un robot 2R:
+
+$$𝑥=𝑙_1cos⁡(𝜃_1)+𝑙_2cos⁡(𝜃_1+𝜃_2)$$
+
+$$𝑦=𝑙_1sen⁡(𝜃_1)+𝑙_2sen⁡(𝜃_1+𝜃_2)$$
+
+$$𝑧=ℎ_1−ℎ_2$$
 
