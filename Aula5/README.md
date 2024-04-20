@@ -394,16 +394,16 @@ MTH = Robot.fkine([q1,q2])
 TZ0 = [1 0 0 0; 0 1 0 0; 0 0 1 l1; 0 0 0 1]
 RZ0 = [cos(q1+pi/2) -sin(q1+pi/2) 0 0; sin(q1+pi/2) cos(q1+pi/2) 0 0; 0 0 1 0; 0 0 0 1]
 TX1 = [1 0 0 l3; 0 1 0 0; 0 0 1 0; 0 0 0 1]
-RZ1 = [1 0 0 0; 0 cos(pi/2) -sin(pi/2) 0; 0 sin(pi/2) cos(+pi/2) 0; 0 0 0 1]
-% T01 =  TZ0*RZ0*TX1*RZ1
-T01 =  RZ0*TZ0*TX1*RZ1
+RX1 = [1 0 0 0; 0 cos(pi/2) -sin(pi/2) 0; 0 sin(pi/2) cos(+pi/2) 0; 0 0 0 1]
+T01 =  TZ0*RZ0*TX1*RX1
+T01 =  RZ0*TZ0*RX1*TX1
 
 TZ1 = [1 0 0 0; 0 1 0 0; 0 0 1 q2+l2+l4; 0 0 0 1]
 RZ1 = [cos(0) -sin(0) 0 0; sin(0) cos(0) 0 0; 0 0 1 0; 0 0 0 1]
 TX2 = [1 0 0 0; 0 1 0 0; 0 0 1 0; 0 0 0 1]
-RZ2 = [1 0 0 0; 0 cos(0) -sin(0) 0; 0 sin(0) cos(0) 0; 0 0 0 1]
-% T12 =  TZ1*RZ1*TX2*RZ2
-T12 =  RZ1*TZ1*TX2*RZ2
+RX2 = [1 0 0 0; 0 cos(0) -sin(0) 0; 0 sin(0) cos(0) 0; 0 0 0 1]
+T12 =  TZ1*RZ1*TX2*RX2
+T12 =  RZ1*TZ1*RX2*TX2
 
 T02 = T01*T12
 
@@ -501,15 +501,15 @@ TZ0 = [1 0 0 0; 0 1 0 0; 0 0 1 a1; 0 0 0 1]
 RZ0 = [cos(q1) -sin(q1) 0 0; sin(q1) cos(q1) 0 0; 0 0 1 0; 0 0 0 1]
 TX1 = [1 0 0 a2; 0 1 0 0; 0 0 1 0; 0 0 0 1]
 RZ1 = [1 0 0 0; 0 cos(0) -sin(0) 0; 0 sin(0) cos(0) 0; 0 0 0 1]
-% T01 =  TZ0*RZ0*TX1*RZ1
-T01 =  RZ0*TZ0*TX1*RZ1
+T01 =  TZ0*RZ0*TX1*RX1
+T01 =  RZ0*TZ0*RX1*TX1
 
 TZ1 = [1 0 0 0; 0 1 0 0; 0 0 1 a3; 0 0 0 1]
 RZ1 = [cos(q2) -sin(q2) 0 0; sin(q2) cos(q2) 0 0; 0 0 1 0; 0 0 0 1]
 TX2 = [1 0 0 a4; 0 1 0 0; 0 0 1 0; 0 0 0 1]
 RZ2 = [1 0 0 0; 0 cos(0) -sin(0) 0; 0 sin(0) cos(0) 0; 0 0 0 1]
-% T12 =  TZ1*RZ1*TX2*RZ2
-T12 =  RZ1*TZ1*TX2*RZ2
+T12 =  TZ1*RZ1*TX2*RX2
+T12 =  RZ1*TZ1*RX2*TX2
 
 T02 = T01*T12
 
@@ -663,29 +663,29 @@ TZ0 = [1 0 0 0; 0 1 0 0; 0 0 1 a1; 0 0 0 1]
 RZ0 = [cos(q1) -sin(q1) 0 0; sin(q1) cos(q1) 0 0; 0 0 1 0; 0 0 0 1]
 TX1 = [1 0 0 a2; 0 1 0 0; 0 0 1 0; 0 0 0 1]
 RZ1 = [1 0 0 0; 0 cos(0) -sin(0) 0; 0 sin(0) cos(0) 0; 0 0 0 1]
-% T01 =  TZ0*RZ0*TX1*RZ1
-T01 =  RZ0*TZ0*TX1*RZ1
+T01 =  TZ0*RZ0*TX1*RX1
+T01 =  RZ0*TZ0*RX1*TX1
 
 TZ1 = [1 0 0 0; 0 1 0 0; 0 0 1 0; 0 0 0 1]
 RZ1 = [cos(q2) -sin(q2) 0 0; sin(q2) cos(q2) 0 0; 0 0 1 0; 0 0 0 1]
 TX2 = [1 0 0 a3; 0 1 0 0; 0 0 1 0; 0 0 0 1]
 RZ2 = [1 0 0 0; 0 cos(-pi) -sin(-pi) 0; 0 sin(-pi) cos(-pi) 0; 0 0 0 1]
-% T12 =  TZ1*RZ1*TX2*RZ2
-T12 =  RZ1*TZ1*TX2*RZ2
+T12 =  TZ1*RZ1*TX2*RX2
+T12 =  RZ1*TZ1*RX2*TX2
 
 TZ2 = [1 0 0 0; 0 1 0 0; 0 0 1 a4+q3; 0 0 0 1]
 RZ2 = [cos(0) -sin(0) 0 0; sin(0) cos(0) 0 0; 0 0 1 0; 0 0 0 1]
 TX3 = [1 0 0 0; 0 1 0 0; 0 0 1 0; 0 0 0 1]
-RZ3 = [1 0 0 0; 0 cos(0) -sin(0) 0; 0 sin(0) cos(0) 0; 0 0 0 1]
-% T01 =  TZ0*RZ0*TX1*RZ1
-T23 =  RZ2*TZ2*TX3*RZ3
+RX3 = [1 0 0 0; 0 cos(0) -sin(0) 0; 0 sin(0) cos(0) 0; 0 0 0 1]
+T23 =  TZ2*RZ2*TX3*RX3
+T23 =  RZ2*TZ2*RX3*TX3
 
 TZ3 = [1 0 0 0; 0 1 0 0; 0 0 1 a5; 0 0 0 1]
 RZ3 = [cos(q4) -sin(q4) 0 0; sin(q4) cos(q4) 0 0; 0 0 1 0; 0 0 0 1]
 TX4 = [1 0 0 0; 0 1 0 0; 0 0 1 0; 0 0 0 1]
-RZ4 = [1 0 0 0; 0 cos(0) -sin(0) 0; 0 sin(0) cos(0) 0; 0 0 0 1]
-% T12 =  TZ1*RZ1*TX2*RZ2
-T34 =  RZ3*TZ3*TX4*RZ4
+RX4 = [1 0 0 0; 0 cos(0) -sin(0) 0; 0 sin(0) cos(0) 0; 0 0 0 1]
+T34 =  TZ3*RZ3*TX4*RX4
+T34 =  RZ3*TZ3*RX4*TX4
 
 T04 = T01*T12*T23*T34
 
@@ -834,30 +834,30 @@ MTH = Robot.fkine([q1,q2])
 TZ0 = [1 0 0 0; 0 1 0 0; 0 0 1 h1; 0 0 0 1]
 RZ0 = [cos(0) -sin(0) 0 0; sin(0) cos(0) 0 0; 0 0 1 0; 0 0 0 1]
 TX1 = [1 0 0 0; 0 1 0 0; 0 0 1 0; 0 0 0 1]
-RZ1 = [1 0 0 0; 0 cos(0) -sin(0) 0; 0 sin(0) cos(0) 0; 0 0 0 1]
-% T01 =  TZ0*RZ0*TX1*RZ1
-T01 =  RZ0*TZ0*RZ1*TX1
+RX1 = [1 0 0 0; 0 cos(0) -sin(0) 0; 0 sin(0) cos(0) 0; 0 0 0 1]
+T01 =  TZ0*RZ0*TX1*RX1
+T01 =  RZ0*TZ0*RX1*TX1
 
 TZ1 = [1 0 0 0; 0 1 0 0; 0 0 1 0; 0 0 0 1]
 RZ1 = [cos(q1) -sin(q1) 0 0; sin(q1) cos(q1) 0 0; 0 0 1 0; 0 0 0 1]
 TX2 = [1 0 0 l1; 0 1 0 0; 0 0 1 0; 0 0 0 1]
-RZ2 = [1 0 0 0; 0 cos(0) -sin(0) 0; 0 sin(0) cos(0) 0; 0 0 0 1]
-% T12 =  TZ1*RZ1*TX2*RZ2
-T12 =  RZ1*TZ1*RZ2*TX2
+RX2 = [1 0 0 0; 0 cos(0) -sin(0) 0; 0 sin(0) cos(0) 0; 0 0 0 1]
+T12 =  TZ1*RZ1*TX2*RX2
+T12 =  RZ1*TZ1*RX2*TX2
 
 TZ2 = [1 0 0 0; 0 1 0 0; 0 0 1 0; 0 0 0 1]
 RZ2 = [cos(q2) -sin(q2) 0 0; sin(q2) cos(q2) 0 0; 0 0 1 0; 0 0 0 1]
 TX3 = [1 0 0 l2; 0 1 0 0; 0 0 1 0; 0 0 0 1]
-RZ3 = [1 0 0 0; 0 cos(0) -sin(0) 0; 0 sin(0) cos(0) 0; 0 0 0 1]
-% T23 =  TZ2*RZ2*TX3*RZ3
-T23 =  RZ2*TZ2*RZ3*TX3
+RX3 = [1 0 0 0; 0 cos(0) -sin(0) 0; 0 sin(0) cos(0) 0; 0 0 0 1]
+T23 =  TZ2*RZ2*TX3*RX3
+T23 =  RZ2*TZ2*RX3*TX3
 
 TZ3 = [1 0 0 0; 0 1 0 0; 0 0 1 -h2; 0 0 0 1]
 RZ3 = [cos(0) -sin(0) 0 0; sin(0) cos(0) 0 0; 0 0 1 0; 0 0 0 1]
 TX4 = [1 0 0 0; 0 1 0 0; 0 0 1 0; 0 0 0 1]
-RZ4 = [1 0 0 0; 0 cos(0) -sin(0) 0; 0 sin(0) cos(0) 0; 0 0 0 1]
-% T34 =  TZ3*RZ3*RZ4*TX4
-T34 =  RZ3*TZ3*TX4*RZ4
+RX4 = [1 0 0 0; 0 cos(0) -sin(0) 0; 0 sin(0) cos(0) 0; 0 0 0 1]
+T34 =  TZ3*RZ3*RX4*TX4
+T34 =  RZ3*TZ3*TX4*RX4
 
 % T04 = simplify(T01*T12*T23*T34)
 T04 = T01*T12*T23*T34
