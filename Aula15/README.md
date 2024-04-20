@@ -6,9 +6,13 @@ Esta clase consiste en comprender y analizar los Jacobianos.
 
 Los jacobianos permiten obtener las velocidades de las articulaciones a partir de las velocidades del TCP y viceversa, además, es posible realizar el análisis a través de jacobiano análitico y geométrico.
 
+1. Calcular las velocidades del TCP y/o articulaciones
+2. Calcular la cinemática inversa
+3. Calcular trayectorias
+
 ![Jacobianos](image.png)
 
-<h3>Jacobiano analítico</h3>
+<h3>Jacobiano analítico directo</h3>
 
 Los jacobianos analíticos tanto el directo como el inverso con solucionados a partir de derivadas parciales de las funciones.
 
@@ -41,7 +45,7 @@ $$
 
 ![2R 2D y 3D](image-1.png)
 
-Teniendo en cuenta las siguientes ecuaciones de la cinemática directa de un robot 2R (aulas 4 y 5):
+Teniendo en cuenta las siguientes ecuaciones de la cinemática directa de un robot 2R:
 
 $$𝑥=𝑙_1cos⁡(𝜃_1)+𝑙_2cos⁡(𝜃_1+𝜃_2)$$
 
@@ -99,3 +103,26 @@ Jn = [-l2*sin(theta1+theta2)-l1*sin(theta1) -l2*sin(theta1 + theta2);
 
 Vxyz = Jn*[theta1_dot; theta2_dot]
 ```
+
+<h3>Jacobiano analítico inverso</h3>
+
+Hay dos maneras de calcualr el Jacobiano analítico inverso:
+
+1. A partir de la matriz inversa del Jacobiano analítico directo
+2. Con la cinemática inversa analítica (no geométrica)
+
+$$
+𝐽^-1 = \begin{bmatrix}
+\frac{𝑑𝑓_𝑥}{𝑑𝜃_1} & \frac{𝑑𝑓_𝑥}{𝑑𝜃_2} \\ 
+\frac{𝑑𝑓_y}{𝑑𝜃_1} & \frac{𝑑𝑓_y}{𝑑𝜃_2} \\ 
+\frac{𝑑𝑓_z}{𝑑𝜃_1} & \frac{𝑑𝑓_z}{𝑑𝜃_2} \\ 
+\end{bmatrix} = \begin{bmatrix}
+-𝑙_1sen⁡(𝜃_1)-𝑙_2sen⁡(𝜃_1+𝜃_2) & -𝑙_2sen(𝜃_1+𝜃_2) \\ 
+𝑙_1cos(𝜃_1)+𝑙_2cos⁡(𝜃_1+𝜃_2) & 𝑙_2cos⁡(𝜃_1+𝜃_2)\\ 
+0 & 0\\ 
+\end{bmatrix} 
+$$
+
+$$\left(\begin{array}{cc} \frac{\cos\left(\theta _{1}+\theta _{2}\right)}{l_{1}\,\sin\left(\theta _{2}\right)} & \frac{\sin\left(\theta _{1}+\theta _{2}\right)}{l_{1}\,\sin\left(\theta _{2}\right)}\\ -\frac{l_{2}\,\cos\left(\theta _{1}+\theta _{2}\right)+l_{1}\,\cos\left(\theta _{1}\right)}{l_{1}\,l_{2}\,\sin\left(\theta _{2}\right)} & -\frac{l_{2}\,\sin\left(\theta _{1}+\theta _{2}\right)+l_{1}\,\sin\left(\theta _{1}\right)}{l_{1}\,l_{2}\,\sin\left(\theta _{2}\right)} \end{array}\right)$$
+
+<h4>Ejemplo</h4>
