@@ -39,6 +39,8 @@ $$
 
 <h3>Robot 2R (planar)</h3>
 
+![2R 2D y 3D](image-1.png)
+
 Teniendo en cuenta las siguientes ecuaciones de la cinemática directa de un robot 2R (aulas 4 y 5):
 
 $$𝑥=𝑙_1cos⁡(𝜃_1)+𝑙_2cos⁡(𝜃_1+𝜃_2)$$
