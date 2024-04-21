@@ -87,6 +87,21 @@ Js = [diff(x,theta1) diff(x,theta2);
 
 Si el robot 2R tiene las siguientes características: $𝜃_1=𝜋/2, 𝜃_2=𝜋/2, \dot{𝜃}_1=𝜋/6, \dot{𝜃}_2=𝜋/4$, cuáles son las velocidades lineales del TCP?
 
+$$
+\begin{bmatrix}
+\dot{x} \\ 
+\dot{y} \\ 
+\dot{z} \\
+\end{bmatrix} = \begin{bmatrix}
+-𝑙_1sen⁡(𝜋/2)-𝑙_2sen⁡(𝜋/2+𝜋/2) & -𝑙_2sen(𝜋/2+𝜋/2) \\ 
+𝑙_1cos(𝜋/2)+𝑙_2cos⁡(𝜋/2+𝜋/2) & 𝑙_2cos⁡(𝜋/2+𝜋/2)\\ 
+0 & 0\\ 
+\end{bmatrix} \cdot \begin{bmatrix}
+𝜋/6 \\ 
+𝜋/4 \\ 
+\end{bmatrix}
+$$
+
 ```matlab
 l1 = 5
 l2 = 5
@@ -122,7 +137,7 @@ $$𝐽^-1 \cdot \begin{bmatrix}
 \end{bmatrix}
 $$
 
-1. A partir de la matriz inversa del Jacobiano analítico directo
+1. A partir de la matriz inversa del Jacobiano analítico directo, sin embargo, se debe tener en cuenta que la matriz $J$ debe ser cuadradada.
 
 $$
 𝐽^{-1} = \begin{bmatrix}
@@ -135,7 +150,7 @@ $$
 Js_1 = simplify(inv(Js))
 ```
 
-2. Con la cinemática inversa analítica (no geométrica)
+2. Con la cinemática inversa analítica (no geométrica).
 
 $$𝐽^{-1} = \begin{bmatrix}
 \frac{𝑑𝑓_{𝑞_1}}{𝑑f_𝑥} & ⋯ & \frac{𝑑𝑓_{𝑞_1}}{𝑑f_{R_z}} \\ 
