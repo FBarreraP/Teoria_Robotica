@@ -106,13 +106,39 @@ Vxyz = Jn*[theta1_dot; theta2_dot]
 
 <h3>Jacobiano analítico inverso</h3>
 
-Hay dos maneras de calcualr el Jacobiano analítico inverso:
+Hay dos maneras de calcular el Jacobiano analítico inverso:
+
+$$𝐽^-1 \cdot \begin{bmatrix}
+\dot{x} \\ 
+\dot{y} \\ 
+\dot{z} \\
+\dot{R}_x \\
+\dot{R}_y \\
+\dot{R}_z \\ 
+\end{bmatrix} = \begin{bmatrix}
+\dot{q}_1 \\ 
+⋮ \\ 
+\dot{q}_n \\ 
+\end{bmatrix}
+$$
 
 1. A partir de la matriz inversa del Jacobiano analítico directo
+
+$$
+𝐽^{-1} = \begin{bmatrix}
+\frac{cos⁡(𝜃_1+𝜃_2)}{l_1sen⁡(𝜃_2)} & \frac{sen(𝜃_1+𝜃_2)}{l_1sen⁡(𝜃_2)} \\ 
+\frac{l_2cos⁡(𝜃_1+𝜃_2)+l1cos⁡(𝜃_1)}{l_1l_2sen⁡(𝜃_2)} & \frac{l_2sen(𝜃_1+𝜃_2)+l1sen⁡(𝜃_1)}{l_1l_2sen⁡(𝜃_2)} \\  
+\end{bmatrix}
+$$
+
+```matlab
+Js_1 = simplify(inv(Js))
+```
+
 2. Con la cinemática inversa analítica (no geométrica)
 
 $$
-𝐽^-1 = \begin{bmatrix}
+𝐽^{-1} = \begin{bmatrix}
 \frac{𝑑𝑓_𝑥}{𝑑𝜃_1} & \frac{𝑑𝑓_𝑥}{𝑑𝜃_2} \\ 
 \frac{𝑑𝑓_y}{𝑑𝜃_1} & \frac{𝑑𝑓_y}{𝑑𝜃_2} \\ 
 \frac{𝑑𝑓_z}{𝑑𝜃_1} & \frac{𝑑𝑓_z}{𝑑𝜃_2} \\ 
@@ -122,7 +148,5 @@ $$
 0 & 0\\ 
 \end{bmatrix} 
 $$
-
-$$\left(\begin{array}{cc} \frac{\cos\left(\theta _{1}+\theta _{2}\right)}{l_{1}\,\sin\left(\theta _{2}\right)} & \frac{\sin\left(\theta _{1}+\theta _{2}\right)}{l_{1}\,\sin\left(\theta _{2}\right)}\\ -\frac{l_{2}\,\cos\left(\theta _{1}+\theta _{2}\right)+l_{1}\,\cos\left(\theta _{1}\right)}{l_{1}\,l_{2}\,\sin\left(\theta _{2}\right)} & -\frac{l_{2}\,\sin\left(\theta _{1}+\theta _{2}\right)+l_{1}\,\sin\left(\theta _{1}\right)}{l_{1}\,l_{2}\,\sin\left(\theta _{2}\right)} \end{array}\right)$$
 
 <h4>Ejemplo</h4>
