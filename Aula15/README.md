@@ -142,7 +142,7 @@ Vxyz = Jn*[theta1_dot; theta2_dot]
 
 Hay dos maneras de calcular el Jacobiano analítico inverso:
 
-$$𝐽^-1 \cdot \begin{bmatrix}
+$$𝐽{^-1} \cdot \begin{bmatrix}
 \dot{x} \\ 
 \dot{y} \\ 
 \dot{z} \\
@@ -179,3 +179,58 @@ $$𝐽^{-1} = \begin{bmatrix}
 $$
 
 <h4>Ejemplo</h4>
+
+
+
+<h3>Jacobiano geométrico directo</h3>
+
+```matlab
+clc
+clear all
+close all
+
+syms theta1 theta2 l1 l2
+
+%% SIMBÓLICO
+
+R00 = eye(3,3)
+d00 = zeros(3,1)
+
+%Matriz (DH)
+TZ0 = [1 0 0 0; 0 1 0 0; 0 0 1 0; 0 0 0 1]
+RZ0 = [cos(theta1) -sin(theta1) 0 0; sin(theta1) cos(theta1) 0 0; 0 0 1 0; 0 0 0 1]
+TX1 = [1 0 0 l1; 0 1 0 0; 0 0 1 0; 0 0 0 1]
+RZ1 = [1 0 0 0; 0 cos(0) -sin(0) 0; 0 sin(0) cos(0) 0; 0 0 0 1]
+%T01 =  TZ0*RZ0*TX1*RZ1
+T01 =  RZ0*TZ0*TX1*RZ1
+
+TZ1 = [1 0 0 0; 0 1 0 0; 0 0 1 0; 0 0 0 1]
+RZ1 = [cos(theta2) -sin(theta2) 0 0; sin(theta2) cos(theta2) 0 0; 0 0 1 0; 0 0 0 1]
+TX2 = [1 0 0 l2; 0 1 0 0; 0 0 1 0; 0 0 0 1]
+RZ2 = [1 0 0 0; 0 cos(0) -sin(0) 0; 0 sin(0) cos(0) 0; 0 0 0 1]
+% T12 =  TZ1*RZ1*TX2*RZ2
+T12 =  RZ1*TZ1*TX2*RZ2
+
+T02 = simplify(T01*T12)
+d02 = T02(1:3,4)
+
+R01 = RotarZ(theta1)
+d01 = T01(1:3,4)
+
+% Jacobianos con las 6 velocidades (vx, vy, vz, wx, wy y wz)
+j11 = cross((R00*[0;0;1]),(d02-d00))
+j21 = R00*[0;0;1]
+j12 = cross((R01*[0;0;1]),(d02-d01))
+j22 = R01*[0;0;1]
+j = [j11 j12; j21 j22]
+
+%Jacobianos con las 2 primeras velocidades (vx y vy)
+J11 = j(1,1)
+J21 = j(2,1)
+% J31 = j(3,1)
+J12 = j(1,2)
+J22 = j(2,2)
+% J32 = j(3,2)
+% Js = [J11 J12; J21 J22; J31; J32]
+Js = [J11 J12; J21 J22]
+```
