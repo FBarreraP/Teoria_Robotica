@@ -85,7 +85,7 @@ Js = [diff(x,theta1) diff(x,theta2);
 
 <h4>Ejemplo</h4>
 
-Si el robot 2R tiene las siguientes características: $𝜃_1=𝜋/2, 𝜃_2=𝜋/2, \dot{𝜃}_1=𝜋/6, \dot{𝜃}_2=𝜋/4$, cuáles son las velocidades lineales del TCP?
+Si el robot 2R tiene las siguientes características: $𝜃_1=𝜋/6, 𝜃_2=𝜋/4, \dot{𝜃}_1=𝜋/2, \dot{𝜃}_2=𝜋/2$, cuáles son las velocidades lineales del TCP?
 
 $$
 \begin{bmatrix}
@@ -93,12 +93,31 @@ $$
 \dot{y} \\ 
 \dot{z} \\
 \end{bmatrix} = \begin{bmatrix}
--𝑙_1sen⁡(𝜋/2)-𝑙_2sen⁡(𝜋/2+𝜋/2) & -𝑙_2sen(𝜋/2+𝜋/2) \\ 
-𝑙_1cos(𝜋/2)+𝑙_2cos⁡(𝜋/2+𝜋/2) & 𝑙_2cos⁡(𝜋/2+𝜋/2)\\ 
+-𝑙_1sen⁡(𝜋/6)-𝑙_2sen⁡(5𝜋/12) & -𝑙_2sen(5𝜋/12) \\ 
+𝑙_1cos(𝜋/6)+𝑙_2cos⁡(5𝜋/12) & 𝑙_2cos⁡(5𝜋/12)\\ 
 0 & 0\\ 
 \end{bmatrix} \cdot \begin{bmatrix}
-𝜋/6 \\ 
-𝜋/4 \\ 
+𝜋/2 \\ 
+𝜋/2 \\ 
+\end{bmatrix}
+$$
+
+$$
+\begin{bmatrix}
+\dot{x} \\ 
+\dot{y} \\ 
+\dot{z} \\
+\end{bmatrix} = \begin{bmatrix}
+-7.3296 & -4.8296 \\ 
+5.6242 & 1.2941 \\ 
+0 & 0\\ 
+\end{bmatrix} \cdot \begin{bmatrix}
+1.5708 \\ 
+1.5708 \\ 
+\end{bmatrix} = \begin{bmatrix}
+-19.0997 \\ 
+10.8673 \\ 
+0 \\
 \end{bmatrix}
 $$
 
