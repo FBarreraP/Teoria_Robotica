@@ -70,7 +70,7 @@ $𝑉_𝑃=\frac{𝑟_𝑟(𝜔_𝐷+𝜔_𝐼)}{2}$ y $𝜔_𝑃=\frac{𝑟_�
 
 $𝜔_𝐼=−\frac{𝐿𝜔_𝑃}{2𝑟_𝑟}+\frac{𝑉_𝑃}{𝑟_𝑟}$ y $𝜔_𝐷=\frac{𝐿𝜔_𝑃}{2𝑟_𝑟}+\frac{𝑉_𝑃}{𝑟_𝑟}$
 
-<h3>Ejercicio 1</h3>
+<h3>Ejercicio 3</h3>
 
 Recorrido 1: Un robot móvil diferencial de ancho de 15 𝑐𝑚 se desplaza a 40° con respecto al eje X durante 7.4𝑠 y gira en las ruedas (𝑟=3.5𝑐𝑚) derecha e izquierda a 28 𝑅𝑃𝑀. Así mismo, las posiciones iniciales de la plataforma en X y Y son de 4 𝑚 y 3 𝑚, respectivamente. Sin aceleración lineal y angular, determinar:
 
@@ -80,7 +80,7 @@ Recorrido 1: Un robot móvil diferencial de ancho de 15 𝑐𝑚 se desplaza a 4
     <li>El ángulo final de la plataforma</li>
 </ol>
 
-<h3>Ejercicio 2</h3>
+<h3>Ejercicio 4</h3>
 
 Recorrido 2: A partir de la trayectoria 1 (ejercicio 1) un robot móvil diferencial gira en las ruedas derecha e izquierda a 20 𝑅𝑃𝑀 y −20 𝑅𝑃𝑀, respectivamente; durante 0.5𝑠. Sin aceleración lineal y angular, determinar:
 
@@ -90,7 +90,7 @@ Recorrido 2: A partir de la trayectoria 1 (ejercicio 1) un robot móvil diferenc
     <li>El ángulo final de la plataforma</li>
 </ol>
 
-<h3>Ejercicio 3</h3>
+<h3>Ejercicio 5</h3>
 
 Recorrido 3: A partir de la trayectoria 2 (ejercicio 2) un robot móvil diferencial gira en las ruedas derecha e izquierda a −10 𝑅𝑃𝑀; durante 1.5𝑠. Sin aceleración lineal y angular, determinar:
 
@@ -100,7 +100,7 @@ Recorrido 3: A partir de la trayectoria 2 (ejercicio 2) un robot móvil diferenc
     <li>El ángulo final de la plataforma</li>
 </ol>
 
-<h3>Ejercicio 4</h3>
+<h3>Ejercicio 6</h3>
 
 Recorrido 4: A partir de la trayectoria 3 (ejercicio 3) un robot móvil diferencial gira en las ruedas derecha e izquierda a −5 𝑅𝑃𝑀 y 5 𝑅𝑃𝑀, respectivamente; durante 3𝑠. Sin aceleración lineal y angular, determinar:
 
@@ -138,7 +138,7 @@ $$𝑉_{𝑃_{𝑋_𝑘}}=𝑉_𝑃 \cdot cos⁡𝜃_𝑘$$
 
 $$𝑉_{𝑃_{𝑌_𝑘}}=𝑉_𝑃 \cdot sin𝜃_𝑘$$
 
-<h3>Ejercicio 1</h3>
+<h3>Ejercicio 7</h3>
 
 Trayectoria 1: Un robot móvil diferencial de ancho de 15 𝑐𝑚 se desplaza a 30° con respecto al eje X durante 4𝑠 y gira en las ruedas (𝑟=3𝑐𝑚) derecha a 35 𝑅𝑃𝑀 e izquierda a 25 𝑅𝑃𝑀. Así mismo, las posiciones iniciales de la plataforma en X y Y son de 3 𝑚 y 2 𝑚, respectivamente. Tener en cuenta un tiempo de muestreo de 1s. Sin aceleración lineal y angular, determinar:
 
@@ -148,7 +148,7 @@ Trayectoria 1: Un robot móvil diferencial de ancho de 15 𝑐𝑚 se desplaza a
     <li>El ángulo final de la plataforma</li>
 </ol>
 
-<h3>Ejercicio 2</h3>
+<h3>Ejercicio 8</h3>
 
 Trayectoria 2: A partir del recorrido 1 (ejercicio 1) un robot móvil diferencial gira en las ruedas derecha a 25 𝑅𝑃𝑀 e izquierda a 35 𝑅𝑃𝑀, respectivamente; durante 4𝑠. Tener en cuenta un tiempo de muestreo de 0.25s. Sin aceleración lineal y angular, determinar:
 
