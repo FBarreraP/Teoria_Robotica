@@ -77,17 +77,29 @@ Teniendo en cuenta que una plataforma omnidireccional (holonómica), gira en la 
 Teniendo en cuenta la plataforma omnidireccional (holonómica) “robotino” en Coppelia Sim, simular el comportamiento de dicho robot con diferentes velocidades en las ruedas y determinar a través de Matlab:
 
 $$𝜔_1=𝜔_2=𝜔_3$$
+
 $$𝜔_1>𝜔_2>𝜔_3$$
+
 $$𝜔_1>𝜔_3>𝜔_2$$
+
 $$𝜔_3>𝜔_1>𝜔_2$$
+
 $$𝜔_2>𝜔_1>𝜔_3$$
+
 $$𝜔_2>𝜔_3>𝜔_1$$
+
 $$𝜔_3>𝜔_2>𝜔_1$$
+
 $$𝜔_1=𝜔_2>𝜔_3$$
+
 $$𝜔_1=𝜔_2<𝜔_3$$
+
 $$𝜔_1>𝜔_2=𝜔_3$$
+
 $$𝜔_1<𝜔_2=𝜔_3$$
+
 $$𝜔_1=𝜔_3>𝜔_2$$
+
 $$𝜔_1=𝜔_3<𝜔_2$$
 
 <ol type="a">
