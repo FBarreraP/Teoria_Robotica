@@ -76,7 +76,7 @@ Teniendo en cuenta que una plataforma omnidireccional (holonómica), gira en la 
 
 Teniendo en cuenta la plataforma omnidireccional (holonómica) “robotino” en Coppelia Sim, simular el comportamiento de dicho robot con diferentes velocidades en las ruedas y determinar a través de Matlab:
 
-<ol start="50">
+<ol start="a">
     <li> La velocidad lineal de la plataforma en el eje X</li>
     <li> La velocidad lineal de la plataforma en el eje Y</li>
     <li> La velocidad angular de la plataforma</li>
