@@ -64,9 +64,11 @@ c) La velocidad angular de la plataforma
 
 Teniendo en cuenta que una plataforma omnidireccional (holonómica), gira en la rueda 1 a 30 𝑅𝑃𝑀, en la rueda 2 a 20 𝑅𝑃𝑀 y en la rueda 3 a 10 𝑅𝑃𝑀. Así mismo, la distancia del centro de la plataforma a las ruedas y el radio de las ruedas es de 12 𝑐𝑚 y 3.5 𝑐𝑚, respectivamente. Determinar:
 
-a) La velocidad lineal de la plataforma en el eje X
-b) La velocidad lineal de la plataforma en el eje Y
-c) La velocidad angular de la plataforma
+<ol item=a>
+    <li> La velocidad lineal de la plataforma en el eje X</li>
+    <li> La velocidad lineal de la plataforma en el eje Y</li>
+    <li> La velocidad angular de la plataforma</li>
+</ol>
 
 <h3>Ejercicio 3</h3>
 
