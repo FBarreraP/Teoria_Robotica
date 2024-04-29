@@ -11,12 +11,12 @@ Una plataforma omnidireccional (holonómica) no tiene restricciones de movimient
 Fuente: Introduction to Autonomous Mobile Robots. Roland Siegwart and Illah R. Nourbakhsh. 2004
 
 $$ \begin{bmatrix}
-𝑉_𝑝𝑥\\ 
-𝑉_𝑝𝑦\\ 
-𝜔_𝑝\\ 
+𝑉_{𝑝𝑥}\\ 
+𝑉_{𝑝𝑦}\\ 
+𝜔_{𝑝}\\ 
 \end{bmatrix} = \begin{bmatrix}
 -1 & 1/2 & 1/2\\ 
-0 & -\sqrt(3/2) & \sqrt(3/2)\\ 
+0 & -\sqrt{3/2} & \sqrt{3/2}\\ 
 1/d & 1/d & 1/d \\ 
 \end{bmatrix} \cdot \begin{bmatrix}
 𝑉_1\\ 
