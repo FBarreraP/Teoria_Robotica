@@ -160,7 +160,7 @@ $$\begin{bmatrix}
 0 \\
 \end{bmatrix}$$
 
-<h4>Articulación geométrica</h4>
+<h4>Articulación rotacional</h4>
 
 $$R_{i-1}^{0} \cdot \begin{bmatrix}
 0 \\ 
