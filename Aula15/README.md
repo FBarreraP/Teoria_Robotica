@@ -179,9 +179,9 @@ Donde:
 i = articulación actual
 n = número de articulaciones
 
-La matriz Jacobiana es:
+La matriz Jacobiana es $J_{mxn}$:
 
-J_{mxn}, donde n = número de articulaciones y m = número de velocidades del TCP
+Donde, n = número de articulaciones y m = número de velocidades del TCP
 
 $$J = \begin{bmatrix}
 R_{i-1}^{0} \cdot \begin{bmatrix}
