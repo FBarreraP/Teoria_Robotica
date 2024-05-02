@@ -10,11 +10,15 @@ Los jacobianos permiten obtener las velocidades de las articulaciones a partir d
 2. Calcular la cinemática inversa
 3. Calcular trayectorias
 
+<h3>Jacobiano directo</h3>
+
+El Jacobiano directo permite determinar las velocidades del efector final a partir de las velocidades de las articulaciones.
+
 ![Jacobiano directo](image-2.png)
 
 <h3>Jacobiano analítico directo</h3>
 
-Los jacobianos analíticos tanto el directo como el inverso con solucionados a partir de derivadas parciales de las funciones.
+El Jacobiano analítico directo consiste en calcular la matriz Jacobiana, la cual se compone de las derivadas parciales de las funciones del efector final con respecto a los movimientos de las articulaciones.
 
 $$
 \begin{bmatrix}
@@ -140,11 +144,13 @@ Vxyz = Jn*[theta1_dot; theta2_dot]
 
 <h3>Jacobiano inverso</h3>
 
+El Jacobiano inverso permite determinar las velocidades de las articulaciones a partir de las velocidades del efector final.
+
 ![Jacobiano inverso](image.png)
 
 <h3>Jacobiano analítico inverso</h3>
 
-Hay dos maneras de calcular el Jacobiano analítico inverso:
+El Jacobiano analítico inverso consiste en calcular la matriz inversa Jacobiana, la cual se compone de las derivadas parciales de las funciones de los movimientos de las articulaciones con respecto a las variables del efector final.
 
 $$𝐽{^-1} \cdot \begin{bmatrix}
 \dot{x} \\ 
@@ -160,7 +166,7 @@ $$𝐽{^-1} \cdot \begin{bmatrix}
 \end{bmatrix}
 $$
 
-1. A partir de la matriz inversa del Jacobiano analítico directo, sin embargo, se debe tener en cuenta que la matriz $J$ debe ser cuadradada.
+<!-- 1. A partir de la matriz inversa del Jacobiano analítico directo, sin embargo, se debe tener en cuenta que la matriz $J$ debe ser cuadradada.
 
 $$
 𝐽^{-1} = \begin{bmatrix}
@@ -171,9 +177,9 @@ $$
 
 ```matlab
 Js_1 = simplify(inv(Js))
-```
+``` -->
 
-2. Con la cinemática inversa analítica (no geométrica).
+Siendo J^{-1} la matriz inversa Jacobiana, expresada por:
 
 $$𝐽^{-1} = \begin{bmatrix}
 \frac{𝑑𝑓_{𝑞_1}}{𝑑f_𝑥} & ⋯ & \frac{𝑑𝑓_{𝑞_1}}{𝑑f_{R_z}} \\ 
