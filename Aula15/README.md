@@ -144,6 +144,20 @@ Vxyz = Jn*[theta1_dot; theta2_dot]
 
 <h3>Jacobiano geométrico directo</h3>
 
+El Jacobiano geométrico directo consiste en aplicar la generalidad para cada articulación.
+
+<h4>Articulación prismática</h4>
+
+$$R_{i-1}^{0} \cdot \begin{bmatrix}
+\dot{0} \\ 
+\dot{0} \\ 
+\dot{1} \\
+\end{bmatrix}$$
+
+<h4>Articulación geométrica</h4>
+
+
+
 ```matlab
 clc
 clear all
