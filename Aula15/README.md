@@ -4,7 +4,7 @@ Esta clase consiste en comprender y analizar los Jacobianos.
 
 <h2>Jacobianos</h2>
 
-Los jacobianos permiten obtener las velocidades de las articulaciones a partir de las velocidades del TCP y viceversa, además, es posible realizar el análisis a través de jacobiano análitico y geométrico.
+Los jacobianos directo e inverso permiten obtener las velocidades del TCP a partir de las velocidades de las articulaciones y viceversa, respectivamente; además, es posible realizar el análisis a través de jacobiano análitico y geométrico.
 
 1. Calcular las velocidades del TCP y/o articulaciones
 2. Calcular la cinemática inversa
@@ -142,56 +142,6 @@ Jn = [-l2*sin(theta1+theta2)-l1*sin(theta1) -l2*sin(theta1 + theta2);
 Vxyz = Jn*[theta1_dot; theta2_dot]
 ```
 
-<h3>Jacobiano inverso</h3>
-
-El Jacobiano inverso permite determinar las velocidades de las articulaciones a partir de las velocidades del efector final.
-
-![Jacobiano inverso](image.png)
-
-<h3>Jacobiano analítico inverso</h3>
-
-El Jacobiano analítico inverso consiste en calcular la matriz inversa Jacobiana, la cual se compone de las derivadas parciales de las funciones de los movimientos de las articulaciones con respecto a las variables del efector final.
-
-$$𝐽{^-1} \cdot \begin{bmatrix}
-\dot{x} \\ 
-\dot{y} \\ 
-\dot{z} \\
-\dot{R}_x \\
-\dot{R}_y \\
-\dot{R}_z \\ 
-\end{bmatrix} = \begin{bmatrix}
-\dot{q}_1 \\ 
-⋮ \\ 
-\dot{q}_n \\ 
-\end{bmatrix}
-$$
-
-<!-- 1. A partir de la matriz inversa del Jacobiano analítico directo, sin embargo, se debe tener en cuenta que la matriz $J$ debe ser cuadradada.
-
-$$
-𝐽^{-1} = \begin{bmatrix}
-\frac{cos⁡(𝜃_1+𝜃_2)}{l_1sen⁡(𝜃_2)} & \frac{sen(𝜃_1+𝜃_2)}{l_1sen⁡(𝜃_2)} \\ 
-\frac{l_2cos⁡(𝜃_1+𝜃_2)+l1cos⁡(𝜃_1)}{l_1l_2sen⁡(𝜃_2)} & \frac{l_2sen(𝜃_1+𝜃_2)+l1sen⁡(𝜃_1)}{l_1l_2sen⁡(𝜃_2)} \\  
-\end{bmatrix}
-$$
-
-```matlab
-Js_1 = simplify(inv(Js))
-``` -->
-
-Siendo J^{-1} la matriz inversa Jacobiana, expresada por:
-
-$$𝐽^{-1} = \begin{bmatrix}
-\frac{𝑑𝑓_{𝑞_1}}{𝑑f_𝑥} & ⋯ & \frac{𝑑𝑓_{𝑞_1}}{𝑑f_{R_z}} \\ 
-⋮ & ⋱ & ⋮ \\ 
-\frac{𝑑𝑓_{𝑞_n}}{𝑑f_x} & ⋯ & \frac{𝑑𝑓_{𝑞_𝑛}}{𝑑f_{R_𝑧}}\\ 
-\end{bmatrix} 
-$$
-
-<h4>Ejemplo</h4>
-
-
-
 <h3>Jacobiano geométrico directo</h3>
 
 ```matlab
@@ -244,3 +194,49 @@ J22 = j(2,2)
 % Js = [J11 J12; J21 J22; J31; J32]
 Js = [J11 J12; J21 J22]
 ```
+
+<h3>Jacobiano inverso</h3>
+
+El Jacobiano inverso permite determinar las velocidades de las articulaciones a partir de las velocidades del efector final.
+
+![Jacobiano inverso](image.png)
+
+<h3>Jacobiano analítico inverso</h3>
+
+El Jacobiano analítico inverso consiste en calcular la matriz inversa Jacobiana, la cual se compone de las derivadas parciales de las funciones de los movimientos de las articulaciones con respecto a las variables del efector final.
+
+$$𝐽{^-1} \cdot \begin{bmatrix}
+\dot{x} \\ 
+\dot{y} \\ 
+\dot{z} \\
+\dot{R}_x \\
+\dot{R}_y \\
+\dot{R}_z \\ 
+\end{bmatrix} = \begin{bmatrix}
+\dot{q}_1 \\ 
+⋮ \\ 
+\dot{q}_n \\ 
+\end{bmatrix}
+$$
+
+<!-- 1. A partir de la matriz inversa del Jacobiano analítico directo, sin embargo, se debe tener en cuenta que la matriz $J$ debe ser cuadradada.
+
+$$
+𝐽^{-1} = \begin{bmatrix}
+\frac{cos⁡(𝜃_1+𝜃_2)}{l_1sen⁡(𝜃_2)} & \frac{sen(𝜃_1+𝜃_2)}{l_1sen⁡(𝜃_2)} \\ 
+\frac{l_2cos⁡(𝜃_1+𝜃_2)+l1cos⁡(𝜃_1)}{l_1l_2sen⁡(𝜃_2)} & \frac{l_2sen(𝜃_1+𝜃_2)+l1sen⁡(𝜃_1)}{l_1l_2sen⁡(𝜃_2)} \\  
+\end{bmatrix}
+$$
+
+```matlab
+Js_1 = simplify(inv(Js))
+``` -->
+
+Siendo J^{-1} la matriz inversa Jacobiana, expresada por:
+
+$$𝐽^{-1} = \begin{bmatrix}
+\frac{𝑑𝑓_{𝑞_1}}{𝑑f_𝑥} & ⋯ & \frac{𝑑𝑓_{𝑞_1}}{𝑑f_{R_z}} \\ 
+⋮ & ⋱ & ⋮ \\ 
+\frac{𝑑𝑓_{𝑞_n}}{𝑑f_x} & ⋯ & \frac{𝑑𝑓_{𝑞_𝑛}}{𝑑f_{R_𝑧}}\\ 
+\end{bmatrix} 
+$$
