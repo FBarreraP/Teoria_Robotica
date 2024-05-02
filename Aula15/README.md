@@ -205,6 +205,30 @@ R_{i-1}^{0} \cdot \begin{bmatrix}
 \end{bmatrix}
 $$
 
+La primera fila y la segunda columna son equivalentes a la primera articulación y segunda articulación, respectivamente.
+
+$$J = \begin{bmatrix}
+R_{0}^{0} \cdot \begin{bmatrix}
+0 \\ 
+0 \\ 
+1 \\
+\end{bmatrix}x(d_2^0-d_{0}^0) & R_{1}^{0} \cdot \begin{bmatrix}
+0 \\ 
+0 \\ 
+1 \\
+\end{bmatrix}x(d_2^0-d_{1}^0) \\ 
+R_{0}^{0} \cdot \begin{bmatrix}
+0 \\ 
+0 \\ 
+1 \\
+\end{bmatrix} & R_{1}^{0} \cdot \begin{bmatrix}
+0 \\ 
+0 \\ 
+1 \\
+\end{bmatrix}\\ 
+\end{bmatrix}
+$$
+
 
 ```matlab
 clc
