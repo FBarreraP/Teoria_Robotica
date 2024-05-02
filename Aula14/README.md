@@ -10,6 +10,8 @@ Una plataforma omnidireccional (holonómica) no tiene restricciones de movimient
 
 Fuente: Introduction to Autonomous Mobile Robots. Roland Siegwart and Illah R. Nourbakhsh. 2004
 
+La cinemática directa de la plataforma omnidireccional es el cálculo de las velocidades de la plataforma, a partir de las velocidades de las ruedas.
+
 $$ \begin{bmatrix}
 𝑉_{𝑝𝑥}\\ 
 𝑉_{𝑝𝑦}\\ 
@@ -24,6 +26,8 @@ $$ \begin{bmatrix}
 V_3\\ 
 \end{bmatrix}$$
 
+Aplicando la relación de velocidades $𝑣=𝜔\cdot 𝑟$
+
 $$ \begin{bmatrix}
 𝑉_{𝑝𝑥}\\ 
 𝑉_{𝑝𝑦}\\ 
@@ -37,6 +41,8 @@ $$ \begin{bmatrix}
 𝜔_2\\ 
 𝜔_3\\ 
 \end{bmatrix}$$
+
+La cinemática inversa de la plataforma diferencial es el cálculo de las velocidades de las ruedas, a partir de las velocidades de la plataforma.
 
 $$ \begin{bmatrix}
 𝜔_1\\ 
