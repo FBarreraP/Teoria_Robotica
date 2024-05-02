@@ -10,7 +10,7 @@ Los jacobianos permiten obtener las velocidades de las articulaciones a partir d
 2. Calcular la cinemática inversa
 3. Calcular trayectorias
 
-![Jacobianos](image.png)
+![Jacobiano directo](image-2.png)
 
 <h3>Jacobiano analítico directo</h3>
 
@@ -137,6 +137,10 @@ Jn = [-l2*sin(theta1+theta2)-l1*sin(theta1) -l2*sin(theta1 + theta2);
 
 Vxyz = Jn*[theta1_dot; theta2_dot]
 ```
+
+<h3>Jacobiano inverso</h3>
+
+![Jacobiano inverso](image.png)
 
 <h3>Jacobiano analítico inverso</h3>
 
