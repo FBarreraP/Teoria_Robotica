@@ -149,13 +149,61 @@ El Jacobiano geométrico directo consiste en aplicar la generalidad para cada ar
 <h4>Articulación prismática</h4>
 
 $$R_{i-1}^{0} \cdot \begin{bmatrix}
-\dot{0} \\ 
-\dot{0} \\ 
-\dot{1} \\
+0 \\ 
+0 \\ 
+1 \\
+\end{bmatrix}$$
+
+$$\begin{bmatrix}
+0 \\ 
+0 \\ 
+0 \\
 \end{bmatrix}$$
 
 <h4>Articulación geométrica</h4>
 
+$$R_{i-1}^{0} \cdot \begin{bmatrix}
+0 \\ 
+0 \\ 
+1 \\
+\end{bmatrix}x(d_n^0-d_{i-1}^0)$$
+
+$$R_{i-1}^{0} \cdot \begin{bmatrix}
+0 \\ 
+0 \\ 
+1 \\
+\end{bmatrix}$$
+
+Donde: 
+
+i = articulación actual
+n = número de articulaciones
+
+La matriz Jacobiana es:
+
+J_{mxn}, donde n = número de articulaciones y m = número de velocidades del TCP
+
+$$J = \begin{bmatrix}
+R_{i-1}^{0} \cdot \begin{bmatrix}
+0 \\ 
+0 \\ 
+1 \\
+\end{bmatrix}x(d_n^0-d_{i-1}^0) & R_{i-1}^{0} \cdot \begin{bmatrix}
+0 \\ 
+0 \\ 
+1 \\
+\end{bmatrix}x(d_n^0-d_{i-1}^0) \\ 
+R_{i-1}^{0} \cdot \begin{bmatrix}
+0 \\ 
+0 \\ 
+1 \\
+\end{bmatrix} & R_{i-1}^{0} \cdot \begin{bmatrix}
+0 \\ 
+0 \\ 
+1 \\
+\end{bmatrix}\\ 
+\end{bmatrix}
+$$
 
 
 ```matlab
