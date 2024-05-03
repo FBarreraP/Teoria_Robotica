@@ -252,8 +252,8 @@ clear all
 close all
 clc
 
-r = 0.26;
-d = 2.56;
+r = 0.026;
+d = 0.256;
 Vpx = -0.5; 
 Vpy = 0; 
 Wp = 0;
@@ -272,8 +272,8 @@ clear all
 close all
 clc
 
-r = 0.26;
-d = 2.56;
+r = 0.026;
+d = 0.256;
 Vpx = 0.5; 
 Vpy = 0; 
 Wp = 0;
@@ -352,5 +352,15 @@ clear all
 close all
 clc
 
+r = 0.026;
+d = 0.256;
+Vpx = -0.2;
+Vpy = 0.2;
+Wp = -1;
 
+T_1 = [-2/3       0       d/3;
+     1/3    -sqrt(3)/3  d/3;
+     1/3     sqrt(3)/3  d/3];
+VW = [Vpx; Vpy; Wp];
+W = (1/r)*T_1*VW
 ```
