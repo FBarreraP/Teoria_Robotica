@@ -334,7 +334,10 @@ $$
 \end{bmatrix} = \begin{bmatrix}
 -7.3296 & -4.8296 \\ 
 5.6242 & 1.2941 \\ 
-0 & 0\\ 
+0 & 0\\
+0 & 0\\
+0 & 0\\
+1 & 1\\ 
 \end{bmatrix} \cdot \begin{bmatrix}
 1.5708 \\ 
 1.5708 \\ 
@@ -342,6 +345,9 @@ $$
 -19.0997 \\ 
 10.8673 \\ 
 0 \\
+0 \\
+0 \\
+3.1416 \\
 \end{bmatrix}
 $$
 
@@ -357,7 +363,10 @@ theta2_dot = pi/2 %rad/s
 
 Jn = [-l2*sin(theta1+theta2)-l1*sin(theta1) -l2*sin(theta1 + theta2);
       l2*cos(theta1+theta2)+l1*cos(theta1)  l2*cos(theta1 + theta2);
-      0 0]
+      0 0
+      0 0
+      0 0
+      1 1]
 
 Vxyz = Jn*[theta1_dot; theta2_dot]
 ```
