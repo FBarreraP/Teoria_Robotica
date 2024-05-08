@@ -309,6 +309,18 @@ sen⁡(𝜃_1) & cos⁡(𝜃_1) & 0 \\
 $$
 
 
+$$
+𝐽 = \begin{bmatrix}
+\frac{𝑑𝑓_𝑥}{𝑑𝜃_1} & \frac{𝑑𝑓_𝑥}{𝑑𝜃_2} \\ 
+\frac{𝑑𝑓_y}{𝑑𝜃_1} & \frac{𝑑𝑓_y}{𝑑𝜃_2} \\ 
+\frac{𝑑𝑓_z}{𝑑𝜃_1} & \frac{𝑑𝑓_z}{𝑑𝜃_2} \\ 
+\end{bmatrix} = \begin{bmatrix}
+-𝑙_1sen⁡(𝜃_1)-𝑙_2sen⁡(𝜃_1+𝜃_2) & -𝑙_2sen(𝜃_1+𝜃_2) \\ 
+𝑙_1cos(𝜃_1)+𝑙_2cos⁡(𝜃_1+𝜃_2) & 𝑙_2cos⁡(𝜃_1+𝜃_2)\\ 
+0 & 0\\ 
+\end{bmatrix} 
+$$
+
 ```matlab
 clc
 clear all
@@ -350,16 +362,6 @@ j21 = R00*[0;0;1]
 j12 = cross((R01*[0;0;1]),(d02-d01))
 j22 = R01*[0;0;1]
 j = [j11 j12; j21 j22]
-
-%Jacobianos con las 2 primeras velocidades (vx y vy)
-J11 = j(1,1)
-J21 = j(2,1)
-% J31 = j(3,1)
-J12 = j(1,2)
-J22 = j(2,2)
-% J32 = j(3,2)
-% Js = [J11 J12; J21 J22; J31; J32]
-Js = [J11 J12; J21 J22]
 ```
 
 <h3>Jacobiano inverso</h3>
@@ -399,7 +401,7 @@ $$
 Js_1 = simplify(inv(Js))
 ``` -->
 
-Siendo J^{-1} la matriz inversa Jacobiana, expresada por:
+Siendo $J^{-1}$ la matriz inversa Jacobiana, expresada por:
 
 $$𝐽^{-1} = \begin{bmatrix}
 \frac{𝑑𝑓_{𝑞_1}}{𝑑f_𝑥} & ⋯ & \frac{𝑑𝑓_{𝑞_1}}{𝑑f_{R_z}} \\ 
