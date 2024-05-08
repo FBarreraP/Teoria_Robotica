@@ -229,26 +229,85 @@ R_{0}^{0} \cdot \begin{bmatrix}
 \end{bmatrix}
 $$
 
-$$𝑇_0^1 = 𝑇_2^1 = \begin{bmatrix}
+Las MTHs de la primera y segunda articulación son:
+
+$$ 𝑇_2^1 = 𝑇_0^1 = \begin{bmatrix}
 cos⁡(𝜃_1) & -sen⁡(𝜃_1) & 0 & 𝑙_1 \cdot cos⁡(𝜃_1)\\ 
 sen⁡(𝜃_1) & cos⁡(𝜃_1) & 0 & 𝑙_1 \cdot sen⁡(𝜃_1)\\ 
 0 & 0 & 1 & 0\\ 
 0 & 0 & 0 & 1
 \end{bmatrix}$$
 
-$$𝑇_2^1 =𝑇_3^2 = \begin{bmatrix}
+$$𝑇_3^2 = 𝑇_2^1 = \begin{bmatrix}
 cos⁡(𝜃_2) & -sen⁡(𝜃_2) & 0 & 𝑙_2 \cdot cos⁡(𝜃_2)\\ 
 sen⁡(𝜃_2) & cos⁡(𝜃_2) & 0 & 𝑙_2 \cdot sen⁡(𝜃_2)\\ 
 0 & 0 & 1 & 0\\ 
 0 & 0 & 0 & 1
 \end{bmatrix}$$
 
-$$𝑇_2^0 =𝑇_3^1 = \begin{bmatrix}
+$$𝑇_3^1 = 𝑇_2^0 = \begin{bmatrix}
 cos⁡(𝜃_1+𝜃_2) & -sen⁡(𝜃_1+𝜃_2) & 0 & 𝑙_1 \cdot cos(𝜃_1) + 𝑙_2 \cdot cos⁡(𝜃_1+𝜃_2)\\ 
 sen⁡(𝜃_1+𝜃_2) & cos⁡(𝜃_1+𝜃_2) & 0 & 𝑙_1 \cdot sen(𝜃_1) + 𝑙_2 \cdot sen⁡(𝜃_1+𝜃_2)\\ 
 0 & 0 & 1 & 0\\ 
 0 & 0 & 0 & 1
 \end{bmatrix}$$
+
+Por tanto, la matriz Jacobiana es:
+
+$$J = \begin{bmatrix}
+\begin{bmatrix}
+1 & 0 & 0 \\ 
+0 & 1 & 0\\ 
+0 & 0 & 1 \\
+\end{bmatrix} \cdot \begin{bmatrix}
+0 \\ 
+0 \\ 
+1 \\
+\end{bmatrix}\times(\begin{bmatrix}
+𝑙_1 \cdot cos(𝜃_1) + 𝑙_2 \cdot cos⁡(𝜃_1+𝜃_2) \\ 
+𝑙_1 \cdot sen(𝜃_1) + 𝑙_2 \cdot sen(𝜃_1+𝜃_2) \\ 
+1 \\
+\end{bmatrix}-\begin{bmatrix}
+0 \\ 
+0 \\ 
+0 \\
+\end{bmatrix}) & \begin{bmatrix}
+cos⁡(𝜃_1) & -sen⁡(𝜃_1) & 0 \\ 
+sen⁡(𝜃_1) & cos⁡(𝜃_1) & 0 \\ 
+0 & 0 & 1 \\
+\end{bmatrix} \cdot \begin{bmatrix}
+0 \\ 
+0 \\ 
+1 \\
+\end{bmatrix}\times(\begin{bmatrix}
+𝑙_1 \cdot cos(𝜃_1) + 𝑙_2 \cdot cos⁡(𝜃_1+𝜃_2) \\ 
+𝑙_1 \cdot sen(𝜃_1) + 𝑙_2 \cdot sen(𝜃_1+𝜃_2) \\ 
+1 \\
+\end{bmatrix}-\begin{bmatrix}
+𝑙_1 \cdot cos(𝜃_1) \\ 
+𝑙_1 \cdot sen(𝜃_1) \\ 
+0 \\
+\end{bmatrix}) \\ 
+\begin{bmatrix}
+1 & 0 & 0 \\ 
+0 & 1 & 0\\ 
+0 & 0 & 1 \\
+\end{bmatrix} \cdot \begin{bmatrix}
+0 \\ 
+0 \\ 
+1 \\
+\end{bmatrix} & \begin{bmatrix}
+cos⁡(𝜃_1) & -sen⁡(𝜃_1) & 0 \\ 
+sen⁡(𝜃_1) & cos⁡(𝜃_1) & 0 \\ 
+0 & 0 & 1 \\
+\end{bmatrix} \cdot \begin{bmatrix}
+0 \\ 
+0 \\ 
+1 \\
+\end{bmatrix}\\ 
+\end{bmatrix}
+$$
+
 
 ```matlab
 clc
