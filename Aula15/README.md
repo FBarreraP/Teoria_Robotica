@@ -263,7 +263,7 @@ $$J = \begin{bmatrix}
 0 \\ 
 0 \\ 
 1 \\
-\end{bmatrix}\times(\begin{bmatrix}
+\end{bmatrix} \times \left( \begin{bmatrix}
 𝑙_1 \cdot cos(𝜃_1) + 𝑙_2 \cdot cos⁡(𝜃_1+𝜃_2) \\ 
 𝑙_1 \cdot sen(𝜃_1) + 𝑙_2 \cdot sen(𝜃_1+𝜃_2) \\ 
 1 \\
@@ -271,7 +271,7 @@ $$J = \begin{bmatrix}
 0 \\ 
 0 \\ 
 0 \\
-\end{bmatrix}) & \begin{bmatrix}
+\end{bmatrix} \right) & \begin{bmatrix}
 cos⁡(𝜃_1) & -sen⁡(𝜃_1) & 0 \\ 
 sen⁡(𝜃_1) & cos⁡(𝜃_1) & 0 \\ 
 0 & 0 & 1 \\
@@ -279,7 +279,7 @@ sen⁡(𝜃_1) & cos⁡(𝜃_1) & 0 \\
 0 \\ 
 0 \\ 
 1 \\
-\end{bmatrix}\times(\begin{bmatrix}
+\end{bmatrix} \times \left( \begin{bmatrix}
 𝑙_1 \cdot cos(𝜃_1) + 𝑙_2 \cdot cos⁡(𝜃_1+𝜃_2) \\ 
 𝑙_1 \cdot sen(𝜃_1) + 𝑙_2 \cdot sen(𝜃_1+𝜃_2) \\ 
 1 \\
@@ -287,7 +287,7 @@ sen⁡(𝜃_1) & cos⁡(𝜃_1) & 0 \\
 𝑙_1 \cdot cos(𝜃_1) \\ 
 𝑙_1 \cdot sen(𝜃_1) \\ 
 0 \\
-\end{bmatrix}) \\ 
+\end{bmatrix} \right) \\ 
 \begin{bmatrix}
 1 & 0 & 0 \\ 
 0 & 1 & 0\\ 
