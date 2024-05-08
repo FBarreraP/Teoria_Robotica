@@ -87,61 +87,6 @@ Js = [diff(x,theta1) diff(x,theta2);
       diff(z,theta1) diff(z,theta2);]
 ```
 
-<h4>Ejemplo</h4>
-
-Si el robot 2R tiene las siguientes características: $l_1=l_2=5cm, 𝜃_1=𝜋/6, 𝜃_2=𝜋/4, \dot{𝜃}_1=𝜋/2, \dot{𝜃}_2=𝜋/2$, cuáles son las velocidades lineales del TCP?
-
-$$
-\begin{bmatrix}
-\dot{x} \\ 
-\dot{y} \\ 
-\dot{z} \\
-\end{bmatrix} = \begin{bmatrix}
--𝑙_1sen⁡(𝜋/6)-𝑙_2sen⁡(5𝜋/12) & -𝑙_2sen(5𝜋/12) \\ 
-𝑙_1cos(𝜋/6)+𝑙_2cos⁡(5𝜋/12) & 𝑙_2cos⁡(5𝜋/12)\\ 
-0 & 0\\ 
-\end{bmatrix} \cdot \begin{bmatrix}
-𝜋/2 \\ 
-𝜋/2 \\ 
-\end{bmatrix}
-$$
-
-$$
-\begin{bmatrix}
-\dot{x} \\ 
-\dot{y} \\ 
-\dot{z} \\
-\end{bmatrix} = \begin{bmatrix}
--7.3296 & -4.8296 \\ 
-5.6242 & 1.2941 \\ 
-0 & 0\\ 
-\end{bmatrix} \cdot \begin{bmatrix}
-1.5708 \\ 
-1.5708 \\ 
-\end{bmatrix} = \begin{bmatrix}
--19.0997 \\ 
-10.8673 \\ 
-0 \\
-\end{bmatrix}
-$$
-
-```matlab
-l1 = 5
-l2 = 5
-
-theta1 = pi/6
-theta2 = pi/4
-
-theta1_dot = pi/2 %rad/s
-theta2_dot = pi/2 %rad/s
-
-Jn = [-l2*sin(theta1+theta2)-l1*sin(theta1) -l2*sin(theta1 + theta2);
-      l2*cos(theta1+theta2)+l1*cos(theta1)  l2*cos(theta1 + theta2);
-      0 0]
-
-Vxyz = Jn*[theta1_dot; theta2_dot]
-```
-
 <h3>Jacobiano geométrico directo</h3>
 
 El Jacobiano geométrico directo consiste en aplicar la generalidad para cada articulación.
@@ -308,7 +253,6 @@ sen⁡(𝜃_1) & cos⁡(𝜃_1) & 0 \\
 \end{bmatrix}
 $$
 
-
 $$
 𝐽 = \begin{bmatrix}
 -𝑙_1sen⁡(𝜃_1)-𝑙_2sen⁡(𝜃_1+𝜃_2) & -𝑙_2sen(𝜃_1+𝜃_2) \\ 
@@ -361,6 +305,61 @@ j21 = R00*[0;0;1]
 j12 = cross((R01*[0;0;1]),(d02-d01))
 j22 = R01*[0;0;1]
 j = [j11 j12; j21 j22]
+```
+
+<h4>Ejemplo</h4>
+
+Si el robot 2R tiene las siguientes características: $l_1=l_2=5cm, 𝜃_1=𝜋/6, 𝜃_2=𝜋/4, \dot{𝜃}_1=𝜋/2, \dot{𝜃}_2=𝜋/2$, cuáles son las velocidades lineales del TCP?
+
+$$
+\begin{bmatrix}
+\dot{x} \\ 
+\dot{y} \\ 
+\dot{z} \\
+\end{bmatrix} = \begin{bmatrix}
+-𝑙_1sen⁡(𝜋/6)-𝑙_2sen⁡(5𝜋/12) & -𝑙_2sen(5𝜋/12) \\ 
+𝑙_1cos(𝜋/6)+𝑙_2cos⁡(5𝜋/12) & 𝑙_2cos⁡(5𝜋/12)\\ 
+0 & 0\\ 
+\end{bmatrix} \cdot \begin{bmatrix}
+𝜋/2 \\ 
+𝜋/2 \\ 
+\end{bmatrix}
+$$
+
+$$
+\begin{bmatrix}
+\dot{x} \\ 
+\dot{y} \\ 
+\dot{z} \\
+\end{bmatrix} = \begin{bmatrix}
+-7.3296 & -4.8296 \\ 
+5.6242 & 1.2941 \\ 
+0 & 0\\ 
+\end{bmatrix} \cdot \begin{bmatrix}
+1.5708 \\ 
+1.5708 \\ 
+\end{bmatrix} = \begin{bmatrix}
+-19.0997 \\ 
+10.8673 \\ 
+0 \\
+\end{bmatrix}
+$$
+
+```matlab
+l1 = 5
+l2 = 5
+
+theta1 = pi/6
+theta2 = pi/4
+
+theta1_dot = pi/2 %rad/s
+theta2_dot = pi/2 %rad/s
+
+Jn = [-l2*sin(theta1+theta2)-l1*sin(theta1) -l2*sin(theta1 + theta2);
+      l2*cos(theta1+theta2)+l1*cos(theta1)  l2*cos(theta1 + theta2);
+      0 0]
+
+Vxyz = Jn*[theta1_dot; theta2_dot]
 ```
 
 <h3>Jacobiano inverso</h3>
