@@ -150,6 +150,18 @@ R_{i-1}^{0} \cdot \begin{bmatrix}
 \end{bmatrix}
 $$
 
+<h3>Robot 2R (planar)</h3>
+
+![2R 2D y 3D](image-1.png)
+
+Teniendo en cuenta las siguientes ecuaciones de la cinemática directa de un robot 2R:
+
+$$𝑥=𝑙_1cos⁡(𝜃_1)+𝑙_2cos⁡(𝜃_1+𝜃_2)$$
+
+$$𝑦=𝑙_1sen⁡(𝜃_1)+𝑙_2sen⁡(𝜃_1+𝜃_2)$$
+
+$$𝑧=ℎ_1−ℎ_2$$
+
 La primera y la segunda columna son equivalentes a la primera articulación y segunda articulación, respectivamente.
 
 $$J = \begin{bmatrix}
