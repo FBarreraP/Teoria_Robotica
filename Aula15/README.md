@@ -230,29 +230,6 @@ R_{0}^{0} \cdot \begin{bmatrix}
 $$
 
 $$𝑇_0^1 = 𝑇_2^1 = \begin{bmatrix}
-1 & 0 & 0 & 0\\ 
-0 & 1 & 0 & 0\\ 
-0 & 0 & 1 & 0\\ 
-0 & 0 & 0 & 1
-\end{bmatrix}
-\begin{bmatrix}
-cos⁡(𝜃_1) & -sen⁡(𝜃_1) & 0 & 0\\ 
-sen⁡(𝜃_1) & cos⁡(𝜃_1) & 0 & 0\\ 
-0 & 0 & 1 & 0\\ 
-0 & 0 & 0 & 1
-\end{bmatrix}
-\begin{bmatrix}
-1 & 0 & 0 & 𝑙_1\\ 
-0 & 1 & 0 & 0\\ 
-0 & 0 & 1 & 0\\ 
-0 & 0 & 0 & 1
-\end{bmatrix}
-\begin{bmatrix}
-1 & 0 & 0 & 0\\ 
-0 & cos⁡(0) & -sen⁡(0) & 0\\ 
-0 & sen⁡(0) & cos⁡(0) & 0\\ 
-0 & 0 & 0 & 1
-\end{bmatrix} = \begin{bmatrix}
 cos⁡(𝜃_1) & -sen⁡(𝜃_1) & 0 & 𝑙_1 \cdot cos⁡(𝜃_1)\\ 
 sen⁡(𝜃_1) & cos⁡(𝜃_1) & 0 & 𝑙_1 \cdot sen⁡(𝜃_1)\\ 
 0 & 0 & 1 & 0\\ 
@@ -260,29 +237,6 @@ sen⁡(𝜃_1) & cos⁡(𝜃_1) & 0 & 𝑙_1 \cdot sen⁡(𝜃_1)\\
 \end{bmatrix}$$
 
 $$𝑇_2^1 =𝑇_3^2 = \begin{bmatrix}
-1 & 0 & 0 & 0\\ 
-0 & 1 & 0 & 0\\ 
-0 & 0 & 1 & 0\\ 
-0 & 0 & 0 & 1
-\end{bmatrix}
-\begin{bmatrix}
-cos⁡(𝜃_2) & -sen⁡(𝜃_2) & 0 & 0\\ 
-sen⁡(𝜃_2) & cos⁡(𝜃_2) & 0 & 0\\ 
-0 & 0 & 1 & 0\\ 
-0 & 0 & 0 & 1
-\end{bmatrix}
-\begin{bmatrix}
-1 & 0 & 0 & 𝑙_2\\ 
-0 & 1 & 0 & 0\\ 
-0 & 0 & 1 & 0\\ 
-0 & 0 & 0 & 1
-\end{bmatrix}
-\begin{bmatrix}
-1 & 0 & 0 & 0\\ 
-0 & cos⁡(0) & -sen⁡(0) & 0\\ 
-0 & sen⁡(0) & cos⁡(0) & 0\\ 
-0 & 0 & 0 & 1
-\end{bmatrix} = \begin{bmatrix}
 cos⁡(𝜃_2) & -sen⁡(𝜃_2) & 0 & 𝑙_2 \cdot cos⁡(𝜃_2)\\ 
 sen⁡(𝜃_2) & cos⁡(𝜃_2) & 0 & 𝑙_2 \cdot sen⁡(𝜃_2)\\ 
 0 & 0 & 1 & 0\\ 
