@@ -252,6 +252,11 @@ sen⁡(𝜃_1) & cos⁡(𝜃_1) & 0 & 0\\
 0 & cos⁡(0) & -sen⁡(0) & 0\\ 
 0 & sen⁡(0) & cos⁡(0) & 0\\ 
 0 & 0 & 0 & 1
+\end{bmatrix} = \begin{bmatrix}
+cos⁡(𝜃_1) & -sen⁡(𝜃_1) & 0 & 𝑙_1 \cdot cos⁡(𝜃_1)\\ 
+sen⁡(𝜃_1) & cos⁡(𝜃_1) & 0 & 𝑙_1 \cdot sen⁡(𝜃_1)\\ 
+0 & 0 & 1 & 0\\ 
+0 & 0 & 0 & 1
 \end{bmatrix}$$
 
 $$𝑇_2^1 =𝑇_3^2 = \begin{bmatrix}
@@ -277,6 +282,18 @@ sen⁡(𝜃_2) & cos⁡(𝜃_2) & 0 & 0\\
 0 & cos⁡(0) & -sen⁡(0) & 0\\ 
 0 & sen⁡(0) & cos⁡(0) & 0\\ 
 0 & 0 & 0 & 1
+\end{bmatrix} = \begin{bmatrix}
+cos⁡(𝜃_2) & -sen⁡(𝜃_2) & 0 & 𝑙_2 \cdot cos⁡(𝜃_2)\\ 
+sen⁡(𝜃_2) & cos⁡(𝜃_2) & 0 & 𝑙_2 \cdot sen⁡(𝜃_2)\\ 
+0 & 0 & 1 & 0\\ 
+0 & 0 & 0 & 1
+\end{bmatrix}$$
+
+$$𝑇_2^0 =𝑇_3^1 = \begin{bmatrix}
+cos⁡(𝜃_1+𝜃_2) & -sen⁡(𝜃_1+𝜃_2) & 0 & 𝑙_1 \cdot cos(𝜃_1) + 𝑙_2 \cdot cos⁡(𝜃_1+𝜃_2)\\ 
+sen⁡(𝜃_1+𝜃_2) & cos⁡(𝜃_1+𝜃_2) & 0 & 𝑙_1 \cdot sen(𝜃_1) + 𝑙_2 \cdot sen⁡(𝜃_1+𝜃_2)\\ 
+0 & 0 & 1 & 0\\ 
+0 & 0 & 0 & 1
 \end{bmatrix}$$
 
 ```matlab
@@ -291,7 +308,8 @@ syms theta1 theta2 l1 l2
 R00 = eye(3,3)
 d00 = zeros(3,1)
 
-%Matriz (DH)
+%Matriz (DH) 
+% MTH T12
 TZ0 = [1 0 0 0; 0 1 0 0; 0 0 1 0; 0 0 0 1]
 RZ0 = [cos(theta1) -sin(theta1) 0 0; sin(theta1) cos(theta1) 0 0; 0 0 1 0; 0 0 0 1]
 TX1 = [1 0 0 l1; 0 1 0 0; 0 0 1 0; 0 0 0 1]
@@ -299,6 +317,7 @@ RZ1 = [1 0 0 0; 0 cos(0) -sin(0) 0; 0 sin(0) cos(0) 0; 0 0 0 1]
 %T01 =  TZ0*RZ0*TX1*RZ1
 T01 =  RZ0*TZ0*TX1*RZ1
 
+% MTH T23
 TZ1 = [1 0 0 0; 0 1 0 0; 0 0 1 0; 0 0 0 1]
 RZ1 = [cos(theta2) -sin(theta2) 0 0; sin(theta2) cos(theta2) 0 0; 0 0 1 0; 0 0 0 1]
 TX2 = [1 0 0 l2; 0 1 0 0; 0 0 1 0; 0 0 0 1]
