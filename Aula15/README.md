@@ -407,3 +407,137 @@ $$𝐽^{-1} = \begin{bmatrix}
 \frac{𝑑𝑓_{𝑞_n}}{𝑑f_x} & ⋯ & \frac{𝑑𝑓_{𝑞_𝑛}}{𝑑f_{R_𝑧}}\\ 
 \end{bmatrix} 
 $$
+
+<h3>Trayectorias</h3>
+
+```matlab
+clc
+clear all
+close all
+
+l1 = 5
+l2 = 5
+
+%PeterCorke
+R(1) = Link('revolute','d',0,'alpha',0,'a',l1,'offset',0);
+R(2) = Link('revolute','d',0,'alpha',0,'a',l2,'offset',0);
+Robot = SerialLink(R,'name','Bender')
+
+% Jacobiano
+m = 2%Número de velocidades del TCP(vx, vy, vz, wx, wy y wz)
+n = 2%Número de articulaciones
+J = zeros(m,n)
+dt = 10e-2%10ms
+Vx = 0;%Vx
+Vy = 1;%Vy
+
+i = 1 
+q1d(i,1) = 0
+q2d(i,1) = 90
+
+q1r(i,1) = deg2rad(q1d(i,1))
+q2r(i,1) = deg2rad(q2d(i,1))
+
+while q1d(i,1) <= 180.0 && q1d(i,1) >= 0.0 && q2d(i,1) <= 180.0 && q2d(i,1) >= 0.0
+
+    Robot.teach([q1r(i,1),q2r(i,1)],'scale',1.0,'workspace',[-10 10 -10 10 -10 10]);
+%     zlim([-15,30]);
+    MTH = Robot.fkine([q1r(i,1),q2r(i,1)]);
+    hold on
+    plot3(MTH.t(1),MTH.t(2),MTH.t(3),'.r')
+    
+    J(1,1) = -l2*sin(q1r(i,1)+q2r(i,1))-l1*sin(q1r(i,1));
+    J(2,1) = l2*cos(q1r(i,1)+q2r(i,1))+l1*cos(q1r(i,1));
+    J(1,2) = -l2*sin(q1r(i,1)+q2r(i,1));
+    J(2,2) = l2*cos(q1r(i,1)+q2r(i,1));
+    
+    J_1 = inv(J);
+       
+    Vq = J_1*[Vx; Vy];%J/[x_dot; y_dot]
+    Vq1(i,1) = Vq(1,1);
+    Vq2(i,1) = Vq(2,1);
+    
+    %Posición angular (Integración)
+    q1_increment(i,1) = Vq1(i,1)*dt;
+    q2_increment(i,1) = Vq2(i,1)*dt;
+    
+    q1r(i+1,1) = q1r(i,1) + q1_increment(i,1);
+    q2r(i+1,1) = q2r(i,1) + q2_increment(i,1);
+    
+    q1d(i+1,1) = rad2deg(q1r(i+1,1));
+    q2d(i+1,1) = rad2deg(q2r(i+1,1));
+    
+    i = i + 1;
+%     pause(dt)
+end
+```
+
+De igual manera, es posible realizar la trayectoria durante un tiempo específico
+
+```matlab
+clc
+clear all
+close all
+
+l1 = 5
+l2 = 5
+
+%PeterCorke
+R(1) = Link('revolute','d',0,'alpha',0,'a',l1,'offset',0);
+R(2) = Link('revolute','d',0,'alpha',0,'a',l2,'offset',0);
+Robot = SerialLink(R,'name','Bender')
+
+% Jacobiano
+m = 2%Número de velocidades del TCP(vx, vy, vz, wx, wy y wz)
+n = 2%Número de articulaciones
+J = zeros(m,n)
+dt = 10e-2%10ms
+Vx = 1;%Vx
+Vy = 0;%Vy
+
+i = 1 
+q1d(i,1) = 0
+q2d(i,1) = 90
+
+q1r(i,1) = deg2rad(q1d(i,1))
+q2r(i,1) = deg2rad(q2d(i,1))
+
+d = 3%cm
+V = sqrt(Vx^2+Vy^2)%cm/s
+t = d/V
+
+T = 0;
+while T<=t
+
+    Robot.teach([q1r(i,1),q2r(i,1)],'scale',1.0,'workspace',[-10 10 -10 10 -10 10]);
+%     zlim([-15,30]);
+    MTH = Robot.fkine([q1r(i,1),q2r(i,1)]);
+    hold on
+    plot3(MTH.t(1),MTH.t(2),MTH.t(3),'.r')
+    
+    J(1,1) = -l2*sin(q1r(i,1)+q2r(i,1))-l1*sin(q1r(i,1));
+    J(2,1) = l2*cos(q1r(i,1)+q2r(i,1))+l1*cos(q1r(i,1));
+    J(1,2) = -l2*sin(q1r(i,1)+q2r(i,1));
+    J(2,2) = l2*cos(q1r(i,1)+q2r(i,1));
+    
+    J_1 = inv(J);
+       
+    Vq = J_1*[Vx; Vy];%J/[x_dot; y_dot]
+    Vq1(i,1) = Vq(1,1);
+    Vq2(i,1) = Vq(2,1);
+    
+    %Posición angular (Integración)
+    q1_increment(i,1) = Vq1(i,1)*dt;
+    q2_increment(i,1) = Vq2(i,1)*dt;
+    
+    q1r(i+1,1) = q1r(i,1) + q1_increment(i,1);
+    q2r(i+1,1) = q2r(i,1) + q2_increment(i,1);
+    
+    q1d(i+1,1) = rad2deg(q1r(i+1,1));
+    q2d(i+1,1) = rad2deg(q2r(i+1,1));
+    
+    i = i + 1;
+    T = T + dt; 
+%     pause(dt)
+end
+```
