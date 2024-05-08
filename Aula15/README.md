@@ -89,7 +89,7 @@ Js = [diff(x,theta1) diff(x,theta2);
 
 <h4>Ejemplo</h4>
 
-Si el robot 2R tiene las siguientes características: $𝜃_1=𝜋/6, 𝜃_2=𝜋/4, \dot{𝜃}_1=𝜋/2, \dot{𝜃}_2=𝜋/2$, cuáles son las velocidades lineales del TCP?
+Si el robot 2R tiene las siguientes características: $l_1=l_2=5cm, 𝜃_1=𝜋/6, 𝜃_2=𝜋/4, \dot{𝜃}_1=𝜋/2, \dot{𝜃}_2=𝜋/2$, cuáles son las velocidades lineales del TCP?
 
 $$
 \begin{bmatrix}
