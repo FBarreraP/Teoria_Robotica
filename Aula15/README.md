@@ -166,7 +166,7 @@ $$R_{i-1}^{0} \cdot \begin{bmatrix}
 0 \\ 
 0 \\ 
 1 \\
-\end{bmatrix}x(d_k^0-d_{i-1}^0)$$
+\end{bmatrix}\times(d_k^0-d_{i-1}^0)$$
 
 $$R_{i-1}^{0} \cdot \begin{bmatrix}
 0 \\ 
@@ -179,7 +179,7 @@ Donde:
 i = articulación actual<br>
 k = número de articulaciones
 
-Siendo $$J_{mxn}$ la matriz Jacobiana, expresada por:
+Siendo $J_{mxn}$ la matriz Jacobiana, expresada por:
 
 Donde, n = número de articulaciones y m = número de velocidades del TCP
 
@@ -188,11 +188,11 @@ R_{i-1}^{0} \cdot \begin{bmatrix}
 0 \\ 
 0 \\ 
 1 \\
-\end{bmatrix}x(d_k^0-d_{i-1}^0) & R_{i-1}^{0} \cdot \begin{bmatrix}
+\end{bmatrix}\times(d_k^0-d_{i-1}^0) & R_{i-1}^{0} \cdot \begin{bmatrix}
 0 \\ 
 0 \\ 
 1 \\
-\end{bmatrix}x(d_k^0-d_{i-1}^0) \\ 
+\end{bmatrix}\times(d_k^0-d_{i-1}^0) \\ 
 R_{i-1}^{0} \cdot \begin{bmatrix}
 0 \\ 
 0 \\ 
@@ -205,18 +205,18 @@ R_{i-1}^{0} \cdot \begin{bmatrix}
 \end{bmatrix}
 $$
 
-La primera fila y la segunda columna son equivalentes a la primera articulación y segunda articulación, respectivamente.
+La primera y la segunda columna son equivalentes a la primera articulación y segunda articulación, respectivamente.
 
 $$J = \begin{bmatrix}
 R_{0}^{0} \cdot \begin{bmatrix}
 0 \\ 
 0 \\ 
 1 \\
-\end{bmatrix}x(d_2^0-d_{0}^0) & R_{1}^{0} \cdot \begin{bmatrix}
+\end{bmatrix}\times(d_2^0-d_{0}^0) & R_{1}^{0} \cdot \begin{bmatrix}
 0 \\ 
 0 \\ 
 1 \\
-\end{bmatrix}x(d_2^0-d_{1}^0) \\ 
+\end{bmatrix}\times(d_2^0-d_{1}^0) \\ 
 R_{0}^{0} \cdot \begin{bmatrix}
 0 \\ 
 0 \\ 
