@@ -166,7 +166,7 @@ $$R_{i-1}^{0} \cdot \begin{bmatrix}
 0 \\ 
 0 \\ 
 1 \\
-\end{bmatrix}x(d_n^0-d_{i-1}^0)$$
+\end{bmatrix}x(d_k^0-d_{i-1}^0)$$
 
 $$R_{i-1}^{0} \cdot \begin{bmatrix}
 0 \\ 
@@ -176,10 +176,10 @@ $$R_{i-1}^{0} \cdot \begin{bmatrix}
 
 Donde: 
 
-i = articulación actual
-n = número de articulaciones
+i = articulación actual<br>
+k = número de articulaciones
 
-La matriz Jacobiana es $J_{mxn}$:
+Siendo $$J_{mxn}$ la matriz Jacobiana, expresada por:
 
 Donde, n = número de articulaciones y m = número de velocidades del TCP
 
@@ -188,11 +188,11 @@ R_{i-1}^{0} \cdot \begin{bmatrix}
 0 \\ 
 0 \\ 
 1 \\
-\end{bmatrix}x(d_n^0-d_{i-1}^0) & R_{i-1}^{0} \cdot \begin{bmatrix}
+\end{bmatrix}x(d_k^0-d_{i-1}^0) & R_{i-1}^{0} \cdot \begin{bmatrix}
 0 \\ 
 0 \\ 
 1 \\
-\end{bmatrix}x(d_n^0-d_{i-1}^0) \\ 
+\end{bmatrix}x(d_k^0-d_{i-1}^0) \\ 
 R_{i-1}^{0} \cdot \begin{bmatrix}
 0 \\ 
 0 \\ 
