@@ -429,6 +429,42 @@ $$𝐽^{-1} = \begin{bmatrix}
 \end{bmatrix} 
 $$
 
+<h3>Robot 2R (planar)</h3>
+
+![2R 2D y 3D](image-1.png)
+
+Teniendo en cuenta las siguientes ecuaciones de la cinemática directa de un robot 2R:
+
+$$𝑥=𝑙_1cos⁡(𝜃_1)+𝑙_2cos⁡(𝜃_1+𝜃_2)$$
+
+$$𝑦=𝑙_1sen⁡(𝜃_1)+𝑙_2sen⁡(𝜃_1+𝜃_2)$$
+
+$$𝑧=ℎ_1−ℎ_2$$
+
+Derivando cada función con respecto a las dos articulaciones, se obtiene la siguiente matriz Jacobiana:
+
+$$𝐽 = \begin{bmatrix}
+-𝑙_1sen⁡(𝜃_1)-𝑙_2sen⁡(𝜃_1+𝜃_2) & -𝑙_2sen(𝜃_1+𝜃_2) \\ 
+𝑙_1cos(𝜃_1)+𝑙_2cos⁡(𝜃_1+𝜃_2) & 𝑙_2cos⁡(𝜃_1+𝜃_2)\\ 
+0 & 0\\ 
+\end{bmatrix} 
+$$
+
+$$𝐽^{-1} = \begin{bmatrix}
+\frac{cos(𝜃_1+𝜃_2)}{l1 \cdot sen(𝜃_2)} & \frac{sen(𝜃_1+𝜃_2)}{l1 \cdot sen(𝜃_2)} \\ 
+\frac{l2 \cdot cos(𝜃_1+𝜃_2) + 𝑙_1cos(𝜃_1)}{l1 \cdot l2 \cdot sen(𝜃_2)} & 𝑙_2cos⁡(𝜃_1+𝜃_2)\\ 
+0 & 0\\ 
+\end{bmatrix} 
+$$
+
+```matlab
+syms q1 q2 l1 l2
+
+J = [-l2*sin(q1+q2)-l1*sin(q1) -l2*sin(q1+q2);
+     l2*cos(q1+q2)+l1*cos(q1) l2*cos(q1+q2)]
+J_1 = simplify(inv(J))
+```
+
 <h3>Trayectorias</h3>
 
 ```matlab
