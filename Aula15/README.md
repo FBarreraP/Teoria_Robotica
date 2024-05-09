@@ -469,7 +469,7 @@ Si el robot 2R tiene las siguientes características: $l_1=l_2=5cm, 𝜃_1=𝜋/
 
 $$\begin{bmatrix}
 \frac{cos(5𝜋/12)}{l1 \cdot sen(𝜋/4)} & \frac{sen(5𝜋/12)}{l1 \cdot sen(𝜋/4)} \\ 
--\frac{l2 \cdot cos(5𝜋/12) + 𝑙_1 \cdot cos(𝜋/6)}{l1 \cdot l2 \cdot sen(𝜋/4)} & -\frac{l2 \cdot sen(5𝜋/12) + 𝑙_1 \cdot sen(𝜋/6)}{l1 \cdot l2 \cdot sen(𝜋/4)}
+-\frac{l2 \cdot cos(5𝜋/12) + 𝑙_1 \cdot cos(𝜋/6)}{l1 \cdot l2 \cdot sen(𝜋/4)} & -\frac{l2 \cdot sen(5𝜋/12) + 𝑙_1 \cdot sen(𝜋/6)}{l1 \cdot l2 \cdot sen(𝜋/4)} \\
 \end{bmatrix} \cdot \begin{bmatrix}
 -19.0997 \\ 
 10.8673 \\ 
@@ -477,8 +477,24 @@ $$\begin{bmatrix}
 \end{bmatrix} = \begin{bmatrix}
 \dot{q}_1 \\ 
 \dot{q}_2 \\ 
+\end{bmatrix}$$
+
+$$\begin{bmatrix}
+\dot{q}_1 \\ 
+\dot{q}_2 \\  = \begin{bmatrix}
+0.0732 & 0.2732 \\ 
+-0.3182 & -0.4146\\
+\end{bmatrix} \cdot \begin{bmatrix}
+-19.0997 \\ 
+10.8673 \\ 
+0 \\
+\end{bmatrix} = \begin{bmatrix}
+1.5708 \\ 
+1.5708 \\ 
 \end{bmatrix}
-$$
+\end{bmatrix}$$
+
+
 
 <h3>Trayectorias</h3>
 
