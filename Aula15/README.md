@@ -473,7 +473,6 @@ $$\begin{bmatrix}
 \end{bmatrix} \cdot \begin{bmatrix}
 -19.0997 \\ 
 10.8673 \\ 
-0 \\
 \end{bmatrix} = \begin{bmatrix}
 \dot{q}_1 \\ 
 \dot{q}_2 \\ 
