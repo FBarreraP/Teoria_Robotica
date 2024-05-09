@@ -451,7 +451,7 @@ $$
 
 $$𝐽^{-1} = \begin{bmatrix}
 \frac{cos(𝜃_1+𝜃_2)}{l1 \cdot sen(𝜃_2)} & \frac{sen(𝜃_1+𝜃_2)}{l1 \cdot sen(𝜃_2)} \\ 
-\frac{l2 \cdot cos(𝜃_1+𝜃_2) + 𝑙_1 \cdot cos(𝜃_1)}{l1 \cdot l2 \cdot sen(𝜃_2)} & \frac{l2 \cdot sen(𝜃_1+𝜃_2) + 𝑙_1 \cdot sen(𝜃_1)}{l1 \cdot l2 \cdot sen(𝜃_2)}\\ 
+-\frac{l2 \cdot cos(𝜃_1+𝜃_2) + 𝑙_1 \cdot cos(𝜃_1)}{l1 \cdot l2 \cdot sen(𝜃_2)} & -\frac{l2 \cdot sen(𝜃_1+𝜃_2) + 𝑙_1 \cdot sen(𝜃_1)}{l1 \cdot l2 \cdot sen(𝜃_2)}\\ 
 \end{bmatrix} 
 $$
 
@@ -465,19 +465,18 @@ J_1 = simplify(inv(J))
 
 <h4>Ejemplo</h4>
 
-Si el robot 2R tiene las siguientes características: $l_1=l_2=5cm, 𝜃_1=𝜋/6, 𝜃_2=𝜋/4, \dot{x}=-19.0997, \dot{y}=10.8673$, cuáles son las velocidades rotacionales de las articulaciones?
+Si el robot 2R tiene las siguientes características: $l_1=l_2=5cm, 𝜃_1=𝜋/6, 𝜃_2=𝜋/4, \dot{x}=-19.0997 m/s, \dot{y}=10.8673 m/s$, cuáles son las velocidades rotacionales de las articulaciones?
 
 $$\begin{bmatrix}
--𝑙_1sen⁡(𝜋/6)-𝑙_2sen⁡(5𝜋/12) & -𝑙_2sen(5𝜋/12) \\ 
-𝑙_1cos(𝜋/6)+𝑙_2cos⁡(5𝜋/12) & 𝑙_2cos⁡(5𝜋/12)\\ 
-0 & 0\\ 
+\frac{cos(5𝜋/12)}{l1 \cdot sen(𝜋/4)} & \frac{sen(5𝜋/12)}{l1 \cdot sen(𝜋/4)} \\ 
+-\frac{l2 \cdot cos(5𝜋/12) + 𝑙_1 \cdot cos(𝜋/6)}{l1 \cdot l2 \cdot sen(𝜋/4)} & -\frac{l2 \cdot sen(5𝜋/12) + 𝑙_1 \cdot sen(𝜋/6)}{l1 \cdot l2 \cdot sen(𝜋/4)}
 \end{bmatrix} \cdot \begin{bmatrix}
 -19.0997 \\ 
 10.8673 \\ 
 0 \\
 \end{bmatrix} = \begin{bmatrix}
-\dot{q}1 \\ 
-\dot{q}2 \\ 
+\dot{q}_1 \\ 
+\dot{q}_2 \\ 
 \end{bmatrix}
 $$
 
