@@ -452,7 +452,7 @@ $$
 
 $$𝐽^{-1} = \begin{bmatrix}
 \frac{cos(𝜃_1+𝜃_2)}{l1 \cdot sen(𝜃_2)} & \frac{sen(𝜃_1+𝜃_2)}{l1 \cdot sen(𝜃_2)} \\ 
-\frac{l2 \cdot cos(𝜃_1+𝜃_2) + 𝑙_1cos(𝜃_1)}{l1 \cdot l2 \cdot sen(𝜃_2)} & 𝑙_2cos⁡(𝜃_1+𝜃_2)\\ 
+\frac{l2 \cdot cos(𝜃_1+𝜃_2) + 𝑙_1 \cdot cos(𝜃_1)}{l1 \cdot l2 \cdot sen(𝜃_2)} & \frac{l2 \cdot sen(𝜃_1+𝜃_2) + 𝑙_1 \cdot sen(𝜃_1)}{l1 \cdot l2 \cdot sen(𝜃_2)}\\ 
 0 & 0\\ 
 \end{bmatrix} 
 $$
