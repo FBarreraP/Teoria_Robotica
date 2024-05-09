@@ -491,7 +491,6 @@ $$\begin{bmatrix}
 \end{bmatrix} = \begin{bmatrix}
 1.5708 \\ 
 1.5708 \\ 
-\end{bmatrix}
 \end{bmatrix}$$
 
 ```matlab
