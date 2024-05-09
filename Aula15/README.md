@@ -480,7 +480,8 @@ $$\begin{bmatrix}
 
 $$\begin{bmatrix}
 \dot{q}_1 \\ 
-\dot{q}_2 \\  = \begin{bmatrix}
+\dot{q}_2 \\  
+\end{bmatrix} = \begin{bmatrix}
 0.0732 & 0.2732 \\ 
 -0.3182 & -0.4146\\
 \end{bmatrix} \cdot \begin{bmatrix}
