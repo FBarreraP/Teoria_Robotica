@@ -494,7 +494,25 @@ $$\begin{bmatrix}
 \end{bmatrix}
 \end{bmatrix}$$
 
+```matlab
+clear all 
+close all
+clc
 
+l1 = 5
+l2 = 5
+
+theta1 = pi/6
+theta2 = pi/4
+
+Vx = -19.0997
+Vy = 10.8673
+
+J_1 = [(cos(theta1+theta2))/(l1*sin(theta2)) (sin(theta1+theta2))/(l1*sin(theta2));
+      -(l2*cos(theta1+theta2)+l1*cos(theta1))/(l1*l2*sin(theta2)) -(l2*sin(theta1+theta2)+l1*sin(theta1))/(l1*l2*sin(theta2))]
+
+Vq = J_1*[Vx; Vy]
+```
 
 <h3>Trayectorias</h3>
 
