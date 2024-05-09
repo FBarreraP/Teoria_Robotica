@@ -441,7 +441,7 @@ $$𝑦=𝑙_1sen⁡(𝜃_1)+𝑙_2sen⁡(𝜃_1+𝜃_2)$$
 
 $$𝑧=ℎ_1−ℎ_2$$
 
-Derivando cada función con respecto a las dos articulaciones, se obtiene la siguiente matriz Jacobiana:
+Teniendo en cuenta la siguiente matriz Jacobiana directa es posible calcular la matriz Jacobiana inversa:
 
 $$𝐽 = \begin{bmatrix}
 -𝑙_1sen⁡(𝜃_1)-𝑙_2sen⁡(𝜃_1+𝜃_2) & -𝑙_2sen(𝜃_1+𝜃_2) \\ 
@@ -465,7 +465,21 @@ J_1 = simplify(inv(J))
 
 <h4>Ejemplo</h4>
 
-Si el robot 2R tiene las siguientes características: $l_1=l_2=5cm, 𝜃_1=𝜋/6, 𝜃_2=𝜋/4, Vx=-19.0997, Vy=10.8673$, cuáles son las velocidades rotacionales de las articulaciones?
+Si el robot 2R tiene las siguientes características: $l_1=l_2=5cm, 𝜃_1=𝜋/6, 𝜃_2=𝜋/4, \dot{x}=-19.0997, \dot{y}=10.8673$, cuáles son las velocidades rotacionales de las articulaciones?
+
+$$\begin{bmatrix}
+-𝑙_1sen⁡(𝜋/6)-𝑙_2sen⁡(5𝜋/12) & -𝑙_2sen(5𝜋/12) \\ 
+𝑙_1cos(𝜋/6)+𝑙_2cos⁡(5𝜋/12) & 𝑙_2cos⁡(5𝜋/12)\\ 
+0 & 0\\ 
+\end{bmatrix} \cdot \begin{bmatrix}
+-19.0997 \\ 
+10.8673 \\ 
+0 \\
+\end{bmatrix} = \begin{bmatrix}
+\dot{q}1 \\ 
+\dot{q}2 \\ 
+\end{bmatrix}
+$$
 
 <h3>Trayectorias</h3>
 
