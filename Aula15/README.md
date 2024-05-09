@@ -514,6 +514,8 @@ Vq = J_1*[x_dot; y_dot]
 
 <h3>Trayectorias</h3>
 
+A partir de los Jacobianos es posible calcular las trayectorias del robot, en este caso hasta que las articulaciones lleguen al límite de movimiento.
+
 ```matlab
 clc
 clear all
