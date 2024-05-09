@@ -503,13 +503,13 @@ l2 = 5
 theta1 = pi/6
 theta2 = pi/4
 
-Vx = -19.0997
-Vy = 10.8673
+x_dot = -19.0997
+y_dot = 10.8673
 
 J_1 = [(cos(theta1+theta2))/(l1*sin(theta2)) (sin(theta1+theta2))/(l1*sin(theta2));
       -(l2*cos(theta1+theta2)+l1*cos(theta1))/(l1*l2*sin(theta2)) -(l2*sin(theta1+theta2)+l1*sin(theta1))/(l1*l2*sin(theta2))]
 
-Vq = J_1*[Vx; Vy]
+Vq = J_1*[x_dot; y_dot]
 ```
 
 <h3>Trayectorias</h3>
