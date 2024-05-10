@@ -128,6 +128,10 @@ Siendo $J_{m \times n}$ la matriz Jacobiana, expresada por:
 
 Donde, n = número de articulaciones y m = número de velocidades del TCP
 
+<h3>Robot 2R (planar)</h3>
+
+![2R 2D y 3D](image-1.png)
+
 $$J = \begin{bmatrix}
 R_{i-1}^{0} \cdot \begin{bmatrix}
 0 \\ 
@@ -149,10 +153,6 @@ R_{i-1}^{0} \cdot \begin{bmatrix}
 \end{bmatrix}\\ 
 \end{bmatrix}
 $$
-
-<h3>Robot 2R (planar)</h3>
-
-![2R 2D y 3D](image-1.png)
 
 Teniendo en cuenta las siguientes ecuaciones de la cinemática directa de un robot 2R:
 
@@ -613,7 +613,7 @@ V = sqrt(Vx^2+Vy^2)%cm/s
 t = d/V
 
 T = 0;
-while T<=t
+while T<=t+dt
 
     Robot.teach([q1r(i,1),q2r(i,1)],'scale',1.0,'workspace',[-10 10 -10 10 -10 10]);
 %     zlim([-15,30]);
