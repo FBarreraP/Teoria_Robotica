@@ -277,13 +277,13 @@ $$
 $$
 
 ```matlab
+%% SIMBÓLICO
+
 clc
 clear all
 close all
 
 syms theta1 theta2 l1 l2
-
-%% SIMBÓLICO
 
 R00 = eye(3,3)
 d00 = zeros(3,1)
