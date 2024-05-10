@@ -188,7 +188,7 @@ $$
 
 Las MTHs de la primera y segunda articulación son:
 
-$$ 𝑇_2^1 = 𝑇_0^1 = \begin{bmatrix}
+$$ 𝑇_2^1 = 𝑇_1^0 = \begin{bmatrix}
 cos⁡(𝜃_1) & -sen⁡(𝜃_1) & 0 & 𝑙_1 \cdot cos⁡(𝜃_1)\\ 
 sen⁡(𝜃_1) & cos⁡(𝜃_1) & 0 & 𝑙_1 \cdot sen⁡(𝜃_1)\\ 
 0 & 0 & 1 & 0\\ 
