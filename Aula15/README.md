@@ -328,6 +328,9 @@ $$
 \dot{x} \\ 
 \dot{y} \\ 
 \dot{z} \\
+\dot{R}_x \\
+\dot{R}_y \\
+\dot{R}_z \\ 
 \end{bmatrix} = \begin{bmatrix}
 -𝑙_1sen⁡(𝜋/6)-𝑙_2sen⁡(5𝜋/12) & -𝑙_2sen(5𝜋/12) \\ 
 𝑙_1cos(𝜋/6)+𝑙_2cos⁡(5𝜋/12) & 𝑙_2cos⁡(5𝜋/12)\\ 
@@ -346,6 +349,9 @@ $$
 \dot{x} \\ 
 \dot{y} \\ 
 \dot{z} \\
+\dot{R}_x \\
+\dot{R}_y \\
+\dot{R}_z \\ 
 \end{bmatrix} = \begin{bmatrix}
 -7.3296 & -4.8296 \\ 
 5.6242 & 1.2941 \\ 
