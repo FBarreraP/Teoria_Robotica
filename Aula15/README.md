@@ -128,8 +128,6 @@ Siendo $J_{m \times n}$ la matriz Jacobiana, donde, n = número de articulacione
 
 <h3>Robot 2R (planar)</h3>
 
-![2R 2D y 3D](image-1.png)
-
 $$J = \begin{bmatrix}
 R_{i-1}^{0} \cdot \begin{bmatrix}
 0 \\ 
@@ -151,6 +149,8 @@ R_{i-1}^{0} \cdot \begin{bmatrix}
 \end{bmatrix}\\ 
 \end{bmatrix}
 $$
+
+![2R 2D y 3D](image-1.png)
 
 Teniendo en cuenta las siguientes ecuaciones de la cinemática directa de un robot 2R:
 
