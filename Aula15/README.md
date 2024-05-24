@@ -124,9 +124,7 @@ Donde:
 i = articulación actual<br>
 k = número de articulaciones
 
-Siendo $J_{m \times n}$ la matriz Jacobiana, expresada por:
-
-Donde, n = número de articulaciones y m = número de velocidades del TCP
+Siendo $J_{m \times n}$ la matriz Jacobiana, donde, n = número de articulaciones y m = número de velocidades del TCP
 
 <h3>Robot 2R (planar)</h3>
 
