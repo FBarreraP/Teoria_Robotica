@@ -126,8 +126,6 @@ k = número de articulaciones
 
 Siendo $J_{m \times n}$ la matriz Jacobiana, donde, n = número de articulaciones y m = número de velocidades del TCP
 
-<h3>Robot 2R (planar)</h3>
-
 $$J = \begin{bmatrix}
 R_{i-1}^{0} \cdot \begin{bmatrix}
 0 \\ 
@@ -149,6 +147,8 @@ R_{i-1}^{0} \cdot \begin{bmatrix}
 \end{bmatrix}\\ 
 \end{bmatrix}
 $$
+
+<h3>Robot 2R (planar)</h3>
 
 ![2R 2D y 3D](image-1.png)
 
