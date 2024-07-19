@@ -20,25 +20,25 @@ En esta clase se presenta la materia, en cuanto al contenido temático, los mét
 		<td>Fecha</td> <td>Horas</td> <td>Clase</td> <td>Semana</td> <td>Actividades</td>
 	</tr>
 	<tr>
-		<td>26/01/2024</td> <td>2</td> <td>1</td> <td>1</td> <td>Presentación de la materia</td>
+		<td>26/07/2024</td> <td>2</td> <td>1</td> <td>1</td> <td>Presentación de la materia</td>
 	</tr>
 	<tr>
-		<td>02/02/2024</td> <td>2</td> <td>2</td> <td>2</td> <td>Posición y orientación del cuerpo rígido y matrices de rotación</td>
+		<td>02/08/2024</td> <td>2</td> <td>2</td> <td>2</td> <td>Posición y orientación del cuerpo rígido y matrices de rotación</td>
 	</tr>
 	<tr>
-		<td>09/02/2024</td> <td>2</td> <td>3</td> <td>3</td> <td>Matrices de transformación homogénea</td>
+		<td>09/08/2024</td> <td>2</td> <td>3</td> <td>3</td> <td>Matrices de transformación homogénea</td>
 	</tr>
 	<tr>
-		<td>16/02/2024</td> <td>2</td> <td>4</td> <td>4</td> <td>Introducción a la cinemática directa</td>
+		<td>16/08/2024</td> <td>2</td> <td>4</td> <td>4</td> <td>Introducción a la cinemática directa</td>
 	</tr>
 	<tr>
-		<td>23/02/2024</td> <td>2</td> <td>5</td> <td>5</td> <td>Convención Denavit Hartenberg para robots manipuladores</td>
+		<td>23/08/2024</td> <td>2</td> <td>5</td> <td>5</td> <td>Convención Denavit Hartenberg para robots manipuladores</td>
 	</tr>
 	<tr>
-		<td>01/03/2024</td> <td>2</td> <td>6</td> <td>6</td> <td>Parcial primer corte</td><!--semana de parciales del primer corte-->
+		<td>30/08/2024</td> <td>2</td> <td>6</td> <td>6</td> <td>Parcial primer corte</td><!--semana de parciales del primer corte-->
 	</tr>
 	<tr>
-		<td>08/03/2024</td> <td>2</td> <td>7</td> <td>7</td> <td> Retroalimentación del parcial primer corte y entrega de notas primer corte</td>
+		<td>06/09/2024</td> <td>2</td> <td>7</td> <td>7</td> <td> Retroalimentación del parcial primer corte y entrega de notas primer corte</td>
 	</tr><!--última semana de registro de notas del primer corte-->
 
 </table>
@@ -50,22 +50,25 @@ En esta clase se presenta la materia, en cuanto al contenido temático, los mét
 		<td>Fecha</td> <td>Horas</td> <td>Clase</td> <td>Semana</td> <td>Actividades</td>
 	</tr>
 	<tr>
-		<td>15/03/2024</td> <td>2</td> <td>8</td> <td>8</td> <td>Introducción a la cinemática inversa con 2R</td>
+		<td>13/09/2024</td> <td>2</td> <td>8</td> <td>8</td> <td>Introducción a la cinemática inversa con 2R</td>
 	</tr>
 	<tr>
-		<td>22/03/2024</td> <td>2</td> <td>9</td> <td>9</td> <td>Cinemática inversa de robot manipulador 3R, rutas y trayectorias</td>
+		<td>20/09/2024</td> <td>2</td> <td>9</td> <td>9</td> <td>Cinemática inversa de robot manipulador 3R, rutas y trayectorias</td>
 	</tr>
 	<tr>
-		<td>29/03/2024</td> <td></td> <td></td> <td></td> <td>SEMANA SANTA</td>
+		<td>27/09/2024</td> <td>2</td> <td>10</td> <td>10</td> <td>Desacople cinemático 6R</td>
 	</tr>
 	<tr>
-		<td>05/04/2024</td> <td>2</td> <td>10</td> <td>10</td> <td>Desacople cinemático 6R</td>
+		<td>04/10/2024</td> <td>2</td> <td>11</td> <td>11</td> <td>Jacobianos</td>
 	</tr>
 	<tr>
-		<td>12/04/2024</td> <td>2</td> <td>11</td> <td>11</td> <td>Parcial segundo corte</td>
+		<td>11/10/2024</td> <td>2</td> <td>12</td> <td>12</td> <td>SEMANA DE RECESO</td>
 	</tr><!--semana de parciales del segundo corte-->
 	<tr>
-		<td>19/04/2024</td> <td>2</td> <td>12</td> <td>12</td> <td>Retroalimentación del parcial segundo corte y entrega de notas segundo corte</td>
+		<td>18/10/2024</td> <td>2</td> <td>13</td> <td>13</td> <td>Parcial segundo corte</td>
+	</tr><!--semana de parciales del segundo corte-->
+	<tr>
+		<td>25/10/2024</td> <td>2</td> <td>14</td> <td>14</td> <td>Retroalimentación del parcial segundo corte y entrega de notas segundo corte</td>
 	</tr><!--última semana de registro de notas del primer corte-->
 
 </table>
@@ -77,22 +80,19 @@ En esta clase se presenta la materia, en cuanto al contenido temático, los mét
 		<td>Fecha</td> <td>Horas</td> <td>Clase</td> <td>Semana</td> <td>Actividades</td>
 	</tr>
 	<tr>
-		<td>26/04/2024</td> <td>2</td> <td>13</td> <td>13</td> <td>Plataforma diferencial</td>
+		<td>01/11/2024</td> <td>2</td> <td>15</td> <td>15</td> <td>Control cinemático</td>
 	</tr>
 	<tr>
-		<td>03/05/2024</td> <td>2</td> <td>14</td> <td>14</td> <td>Plataforma omnidireccional</td>
+		<td>08/11/2024</td> <td>2</td> <td>16</td> <td>16</td> <td>Aplicación de control cinemático</td>
 	</tr>
 	<tr>
-		<td>10/05/2024</td> <td>2</td> <td>15</td> <td>15</td> <td>Jacobianos</td>
+		<td>15/11/2024</td> <td>2</td> <td>17</td> <td>17</td> <td>Plataforma diferencial</td>
 	</tr>
 	<tr>
-		<td>17/05/2024</td> <td>2</td> <td>16</td> <td>16</td> <td>Dudas</td>
+		<td>22/11/2024</td> <td>2</td> <td>16</td> <td>17</td> <td>Examen final</td>
 	</tr><!--Finalización de clases-->
 	<tr>
-		<td>24/05/2024</td> <td>2</td> <td>17</td> <td>17</td> <td>Examen final</td>
-	</tr>
-	<tr>
-		<td>31/05/2024</td> <td>2</td> <td>18</td> <td>18</td> <td>Retroalimentación del parcial segundo corte y entrega de notas segundo corte</td>
+		<td>29/11/2024</td> <td>2</td> <td>17</td> <td>18</td> <td>Retroalimentación del parcial segundo corte y entrega de notas segundo corte</td>
 	</tr>
 
 </table>
