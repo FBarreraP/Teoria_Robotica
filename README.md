@@ -3,7 +3,7 @@ Materia: Teoría de robótica 🦾<br>
 Universidad: UMNG 🏫<br>
 Año: 2024 📅</h1><br>
 
-La teoría de robótica está enfocado al estudio y desarrollo de plataformas móviles y brazos manipuladores teniendo en cuenta las cinemáticas directas e inversas de cada robot. Este curso tiene un valor del 70% en la nota del primer y segundo corte del curso y del 50% en la nota del tercer corte del curso.
+La teoría de robótica está enfocado al estudio y desarrollo de brazos manipuladores teniendo en cuenta las cinemáticas directas e inversas de cada robot de configuración serial. Este curso tiene un valor del 70% en la nota del primer y segundo corte del curso y del 50% en la nota del tercer corte del curso.
 
 <h1>Aula 1</h1>
 
