@@ -106,42 +106,42 @@ En esta clase se presenta la materia, en cuanto al contenido temático, los mét
 		<td>Metodología</td>
 	</tr>
 	<tr>
-		<td rowspan="2">Primer (19.5%)</td>
+		<td rowspan="2">Primer (21%)</td>
 		<td>Parcial</td>
-		<td>12.675%</td>
-		<td>01/03/2024</td>
+		<td>13.65%</td>
+		<td>23/08/2024</td>
 		<td rowspan="7">Presencial</td>
 	</tr>
 	<tr>
 		<td>Quices y/o talleres</td>
-		<td>6.825%</td>
-		<td>09/02/2024<br>16/02/2024<br>23/02/2024</td>
+		<td>7.35%</td>
+		<td>09/08/2024<br>16/08/2024</td>
 	</tr>
 	<tr>
-		<td rowspan="2">Segundo (19.5%)</td>
+		<td rowspan="2">Segundo (21%)</td>
 		<td>Parcial</td>
-		<td>12.675%</td>
-		<td>12/04/2024</td>
+		<td>13.65%</td>
+		<td>04/10/2024</td>
 	</tr>
 	<tr>
 		<td>Quices y/o talleres</td>
-		<td>6.825%</td>
-		<td>22/03/2024<br>05/04/2024<br></td>
+		<td>7.35%</td>
+		<td>13/09/2024<br>20/09/2024<br>27/09/2024</td>
 	</tr>
 	<tr>
 		<td rowspan="3">Tercer (20%)</td>
 		<td>Examen final</td>
-		<td>12%</td>
-		<td>24/05/2024</td>
+		<td>15%</td>
+		<td>22/11/2024</td>
 	</tr>
 	<tr>
 		<td>Quices y/o talleres</td>
-		<td>8%</td>
-		<td>03/05/2024<br>10/05/2024<br>17/05/2024</td>
+		<td>5%</td>
+		<td>01/11/2024<br>08/11/2024<br>15/11/2024</td>
 	</tr>
 </table>
 
-Nota del curso = (***0.195***+0.105)*NotaCorte1 + (***0.195***+0.105)*NotaCorte2 + (***0.2***+0.2)*NotaCorte3
+Nota del curso = (***0.21***+0.09)*NotaCorte1 + (***0.21***+0.09)*NotaCorte2 + (***0.2***+0.2)*NotaCorte3
 
 <h3>OBSERVACIONES ⚠️</h3>
 
@@ -159,6 +159,7 @@ Nota del curso = (***0.195***+0.105)*NotaCorte1 + (***0.195***+0.105)*NotaCorte2
 		<li> Los montajes realizados en protoboard no son aceptados con jumpers, por tanto, deben ser realizados con cable UTP y no son compartidos, es decir, un montaje por grupo 🤷‍♂️</li>
 		<li> Los talleres se calificarán con rúbricas de 0.0 a 5.0 con intervalo de 1.0; las cuales tendrán diferentes entregables con fechas fijas de entrega y el orden de entrega de los grupos será definida por el profesor 💥</li> 
 		<li> Los parciales y el examen final serán solucionados en hoja examen 📄</li> 
+		<li> Quien llegue tarde se adelanta en el tema visto hasta el momento 🏃‍♂️</li> 
 	</ul>
 
 <h4>Observaciones de reglamento estudiantil</h4>
