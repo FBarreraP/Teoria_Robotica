@@ -187,7 +187,7 @@ Nota del curso = (***0.21***+0.09)*NotaCorte1 + (***0.21***+0.09)*NotaCorte2 + (
 	<li> Computador 💻</li>
 	<li> Matlab</li>
 	<li> STM-32</li>
-	<img src="image.png" alt="Imagen de Raspberrys Pi 3B y 4B" caption="Hola"/>
+	<img src="Imagenes/image.png" alt="Imagen de Raspberrys Pi 3B y 4B" caption="Hola"/>
 	<!--
 	<li> Plataforma diferencial</li>
     <img src="https://down-id.img.susercontent.com/file/4707898d5ce46da11955f0269f3f5468" alt="plataforma diferencial" caption="Hola"/>
@@ -196,9 +196,9 @@ Nota del curso = (***0.21***+0.09)*NotaCorte1 + (***0.21***+0.09)*NotaCorte2 + (
 	<img src="https://3dbots.co/wp-content/uploads/2023/05/LUXURY-TIRE.jpg" alt="motoreductor" caption="Hola"/>
 	-->
 	<li> Brazo robótico 5 GDL</li>
-	<img src="image-1.png" alt="brazo robótico 5 GDL" caption="Hola"/>
+	<img src="Imagenes/image-1.png" alt="brazo robótico 5 GDL" caption="Hola"/>
 	<li> Servomotores SG90 o MG90</li>
-    <img src="image-2.png" alt="servomotores" caption="Hola"/>
+    <img src="Imagenes/image-2.png" alt="servomotores" caption="Hola"/>
 </ul>
 
 <h3>Bibliografía </h3>
