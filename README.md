@@ -29,13 +29,13 @@ En esta clase se presenta la materia, en cuanto al contenido temático, los mét
 		<td>09/08/2024</td> <td>2</td> <td>3</td> <td>3</td> <td>Matrices de transformación homogénea</td>
 	</tr>
 	<tr>
-		<td>16/08/2024</td> <td>2</td> <td>4</td> <td>4</td> <td>Introducción a la cinemática directa</td>
+		<td>16/08/2024</td> <td>2</td> <td>4</td> <td>4</td> <td>Introducción a la cinemática directa y convención Denavit Hartenberg para robots manipuladores</td>
 	</tr>
 	<tr>
-		<td>23/08/2024</td> <td>2</td> <td>5</td> <td>5</td> <td>Convención Denavit Hartenberg para robots manipuladores</td>
+		<td>23/08/2024</td> <td>2</td> <td>5</td> <td>5</td> <td>Parcial primer corte</td>
 	</tr>
 	<tr>
-		<td>30/08/2024</td> <td>2</td> <td>6</td> <td>6</td> <td>Parcial primer corte</td><!--semana de parciales del primer corte-->
+		<td>30/08/2024</td> <td>2</td> <td>6</td> <td>6</td> <td></td><!--semana de parciales del primer corte-->
 	</tr>
 	<tr>
 		<td>06/09/2024</td> <td>2</td> <td>7</td> <td>7</td> <td> Retroalimentación del parcial primer corte y entrega de notas primer corte</td>
