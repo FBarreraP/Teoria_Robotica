@@ -187,16 +187,18 @@ Nota del curso = (***0.21***+0.09)*NotaCorte1 + (***0.21***+0.09)*NotaCorte2 + (
 	<li> Computador 💻</li>
 	<li> Matlab</li>
 	<li> STM-32</li>
-	<img src="https://www.codeinsideout.com/blog/stm32/stm32-nucleo-boards.png" alt="Imagen de Raspberrys Pi 3B y 4B" caption="Hola"/>
+	<img src="image.png" alt="Imagen de Raspberrys Pi 3B y 4B" caption="Hola"/>
+	<!--
 	<li> Plataforma diferencial</li>
     <img src="https://down-id.img.susercontent.com/file/4707898d5ce46da11955f0269f3f5468" alt="plataforma diferencial" caption="Hola"/>
-	 <li> Motoreductor DC</li>
+	<li> Motoreductor DC</li>
     <img src="https://static.wixstatic.com/media/d96bda_8b8831ef4e0541c1839ac31ecdd8241e~mv2.png/v1/fill/w_480,h_480,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/d96bda_8b8831ef4e0541c1839ac31ecdd8241e~mv2.png" alt="motoreductor" caption="Hola"/>
 	<img src="https://3dbots.co/wp-content/uploads/2023/05/LUXURY-TIRE.jpg" alt="motoreductor" caption="Hola"/>
+	-->
 	<li> Brazo robótico 5 GDL</li>
-	<img src="https://yorobotics.co/wp-content/uploads/2022/10/BRAZO-ROBOTICO-V2.0-MEJORADO.jpg" alt="brazo robótico 5 GDL" caption="Hola"/>
+	<img src="image-1.png" alt="brazo robótico 5 GDL" caption="Hola"/>
 	<li> Servomotores SG90 o MG90</li>
-    <img src="https://cdn.shopify.com/s/files/1/0069/0028/5529/files/Servos_fb55bae1-aef3-4bd6-bf0f-f2eff21c849a_large.jpg?v=1565803072" alt="servomotores" caption="Hola"/>
+    <img src="image-2.png" alt="servomotores" caption="Hola"/>
 </ul>
 
 <h3>Bibliografía </h3>
