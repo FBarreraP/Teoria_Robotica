@@ -75,24 +75,20 @@ En esta clase se presenta la materia, en cuanto al contenido temático, los mét
 		<td>Fecha</td> <td>Horas</td> <td>Clase</td> <td>Semana</td> <td>Actividades</td>
 	</tr>
 	<tr>
-		<td>25/10/2024</td> <td>2</td> <td>13</td> <td>13</td> <td>Jacobiano analítico</td>
+		<td>25/10/2024</td> <td>2</td> <td>13</td> <td>13</td> <td>Jacobiano analítico y geométrico</td>
 	</tr>
 	<tr>
-		<td>01/11/2024</td> <td>2</td> <td>14</td> <td>14</td> <td>Jacobiano geométrico</td>
+		<td>01/11/2024</td> <td>2</td> <td>14</td> <td>14</td> <td>Control cinemático</td>
 	</tr>
 	<tr>
-		<td>08/11/2024</td> <td>2</td> <td>15</td> <td>15</td> <td>Control cinemático</td>
+		<td>08/11/2024</td> <td>2</td> <td>15</td> <td>15</td> <td>Plataforma diferencial</td>
 	</tr>
 	<tr>
-		<td>15/11/2024</td> <td>2</td> <td>16</td> <td>16</td> <td>Plataforma diferencial</td>
+		<td>15/11/2024</td> <td>2</td> <td>16</td> <td>16</td> <td>Examen final</td>
 	</tr><!--Finalización de clases-->
 	<tr>
-		<td>22/11/2024</td> <td>2</td> <td>17</td> <td>17</td> <td>Examen final</td>
+		<td>22/11/2024</td> <td>2</td> <td>17</td> <td>17</td> <td>Retroalimentación del examen final y entrega de notas del tercer corte</td>
 	</tr>
-	<tr>
-		<td>29/11/2024</td> <td>2</td> <td>18</td> <td>18</td> <td>Retroalimentación del examen final y entrega de notas del tercer corte</td>
-	</tr>
-
 </table>
 
 <h3>MÉTODOS DE EVALUACIÓN ✍️</h3>
