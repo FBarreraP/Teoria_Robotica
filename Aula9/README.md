@@ -1,4 +1,4 @@
-<h1>Aula 8</h1>
+<h1>Aula 9</h1>
 
 Esta clase consiste en comprender y analizar las rutas y las trayectorias con perfil de velocidad trapezoidal de un brazo robótico serial.
 
