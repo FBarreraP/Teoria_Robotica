@@ -1,10 +1,10 @@
-<h1>Aula 9</h1>
+<h1>Aula 8</h1>
 
 Esta clase consiste en comprender y analizar la cinemática inversa de dos robots 3R, así como las rutas y las trayectorias con perfil de velocidad trapezoidal.
 
 <h2>Robot 3R (planar)</h2>
 
-![3R planar](image-8.png)
+![3R planar](Imagenes/image-8.png)
 
 $$𝑚=𝑃_𝑥−𝑙_3 \cdot cos⁡𝛽$$
 
@@ -95,7 +95,7 @@ Robot.fkine([q1,q2,q3])
 
 <h2>Robot 3R (3D)</h2>
 
-![3R 3D](image.png)
+![3R 3D](Imagenes/image.png)
 
 <h3>Theta 1</h3>
 
@@ -183,9 +183,9 @@ Robot.fkine([q1,q2,q3])
 
 Las trayectorias de los robots consisten en realizar tareas de movimiento del robot de un punto inicial a un punto final, en el espacio articular (espacio de movimientos de las articulaciones) o en el espacio operacional del robot (espacio (área o volumen) de trabajo).
 
-![Espacios de trabajo](image-1.png)
+![Espacios de trabajo](Imagenes/image-1.png)
 
-![Diagrama de flujo](image-2.png)
+![Diagrama de flujo](Imagenes/image-2.png)
 
 <h3>Planeación de ruta (<i>path planning</i>)</h3>
 
@@ -193,7 +193,7 @@ Genera una ruta geométrica, desde un punto inicial hasta un punto final a trav�
 
 Las rutas con puntos intermedios a través de la interpolación de ángulos del punto A y B generan un resultado circular (MoveJ).
 
-![Interpolación de ángulos ruta 3R](image-3.png)
+![Interpolación de ángulos ruta 3R](Imagenes/image-3.png)
 
 ```matlab
 %% Ruta 1 (espacio articulacional (MoveJ) - interpolando ángulos)
@@ -266,7 +266,7 @@ hold off
 
 Las rutas con puntos intermedios a través de la interpolación de posiciones del punto A y B generan un resultado lineal (MoveL).
 
-![Interpolación de posiciones ruta 3R](image-4.png)
+![Interpolación de posiciones ruta 3R](Imagenes/image-4.png)
 
 ```matlab
 %% Ruta 2 (espacio operacional (MoveL) - interpolando posiciones)
@@ -347,13 +347,13 @@ Las trayectorias se pueden obtener a través de diferentes métodos:
 
 El perfil de velocidad trapezoidal es realizado en el espacio de las articulaciones. Una de las combinaciones más utilizadas en este perfil es 1/4, 1/2, 1/4; sin embargo, esto depende de la velocidad máxima y el tiempo final.
 
-![PVT](image-5.png)
+![PVT](Imagenes/image-5.png)
 
 $$𝑉𝑚á𝑥=\frac{𝑑_1−𝑑_0}{𝑡_𝑓} \cdot 1.5$$
 
 Las trayectorias con puntos intermedios a través de la interpolación de ángulos del punto A y B generan un resultado circular (MoveJ).
 
-![Interpolación de ángulos PVT 3R](image-6.png)
+![Interpolación de ángulos PVT 3R](Imagenes/image-6.png)
 
 ```matlab
 %% Trayectoria de perfil de velocidad trapezoidal 3R (MoveJ)
@@ -468,7 +468,7 @@ legend(figC,'d2q1','d2q2','d2q3','Location','northeast')
 
 Las trayectorias con puntos intermedios a través de la interpolación de posiciones del punto A y B generan un resultado lineal (MoveL).
 
-![![Interpolación de posiciones PVT 3R]](image-9.png)
+![![Interpolación de posiciones PVT 3R]](Imagenes/image-9.png)
 
 ```matlab
 %% Trayectoria de perfil de velocidad trapezoidal 3R (MoveL)
@@ -585,4 +585,4 @@ legend(figF,'d2X','d2Y','d2Z','Location','northeast')
 
 Determinar la cinemática inversa para cada uno de los siguientes cinco tipos de robots: 1. Cartesiano, 2. Cilíndrico, 3. Esférico, 4. Scara y 5. Angular.
 
-![Ejercicios](image-7.png)
+![Ejercicios](Imagenes/image-7.png)
