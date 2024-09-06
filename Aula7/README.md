@@ -1,4 +1,4 @@
-<h1>Aula 8</h1>
+<h1>Aula 7</h1>
 
 Esta clase consiste en comprender y analizar la cinemática inversa de un robot 2R
 
