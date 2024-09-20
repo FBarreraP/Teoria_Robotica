@@ -1,42 +1,3 @@
-<h1>Aula 8</h1>
-
-Esta clase consiste en comprender y analizar la cinemática inversa de dos robots 3R, así como las rutas y las trayectorias con perfil de velocidad trapezoidal.
-
-<h2>Robot 3R (planar)</h2>
-
-![3R planar](Imagenes/image-8.png)
-
-$$𝑚=𝑃_𝑥−𝑙_3 \cdot cos⁡𝛽$$
-
-$$𝑛=𝑃_𝑦−𝑙_3 \cdot 𝑠𝑒𝑛⁡𝛽$$
-
-$𝜃_2$ y $𝜃_1$ son obtenidos a partir del análisis de la cinemática inversa del 2R
-
-<h3>Theta 2</h3>
-
-$$𝑏=\sqrt{𝑚^2+𝑛^2}$$
-
-$$cos𝜃_2=\frac{𝑏^2−𝑙_2^2−𝑙_1^2}{2\cdot𝑙_1\cdot𝑙_2}$$
-
-$$sin⁡𝜃_2=±\sqrt{1−(cos𝜃_2)^2}$$
-
-$$𝜃_2=tan^{−1}\frac{sin𝜃_2}{cos𝜃_2}$$
-
-<h3>Theta 1</h3>
-
-$$𝛼=tan^{−1}⁡\frac{𝑛}{𝑚}$$
-
-$$∅=tan^{−1}\frac{𝑙_2 \cdot sin⁡𝜃_2}{𝑙_1+𝑙_2 \cdot cos⁡𝜃_2}$$
-
-$$𝜃_1=𝛼−∅$$
-
-<h3>Theta 3</h3>
-
-$$𝜃_3=𝛽−𝜃_1−𝜃_2$$
-
-Siendo que $𝛽$ es el ángulo escogido para la rotación de la muñeca con respecto al eje horizontal.
-
-```matlab
 %% Robot 3R (planar)
 
 clear all
@@ -47,7 +8,7 @@ l1 = 10;
 l2 = 10;
 l3 = 10;
 
-% Cinemática inversa
+% Cinem�tica inversa
 Px = 27.071;
 Py = 7.071;
 beta = deg2rad(45)
@@ -91,41 +52,8 @@ Robot = SerialLink(R,'name','Bender')
 zlim([-15,30]);
 Robot.teach([q1,q2,q3],'scale',1.0,'workspace',[-30 30 -30 30 -30 30],'rpy/zyx');
 Robot.fkine([q1,q2,q3])
-```
 
-<h2>Robot 3R (3D)</h2>
 
-![3R 3D](Imagenes/image.png)
-
-<h3>Theta 1</h3>
-
-$$𝜃_1=tan^{−1}\frac{⁡𝑃_𝑦}{𝑃_𝑥}$$
-
-$$𝑒=\sqrt{𝑃_𝑥^2+𝑃_𝑦^2}$$
-
-$𝜃_3$ y $𝜃_2$ son obtenidos a partir del análisis de la cinemática inversa del 2R
-
-<h3>Theta 3</h3>
-
-$$𝑐=𝑃_𝑧−𝑙_1$$
-
-$$𝑏=\sqrt{𝑒^2+𝑐^2}$$
-
-$$cos𝜃_3=\frac{𝑏^2−𝑙_3^2−𝑙_2^2}{2\cdot𝑙_2\cdot𝑙_3}$$
-
-$$sin⁡𝜃_3=±\sqrt{1−(cos𝜃_3)^2}$$
-
-$$𝜃_3=tan^{−1}\frac{sin𝜃_3}{cos𝜃_3}$$
-
-<h3>Theta 2</h3>
-
-$$𝛼=tan^{−1}⁡\frac{𝑐}{𝑒}$$
-
-$$∅=tan^{−1}\frac{𝑙_3 \cdot sin⁡𝜃_3}{𝑙_2+𝑙_3 \cdot cos⁡𝜃_3}$$
-
-$$𝜃_2=𝛼−∅$$
-
-```matlab
 %% Robot 3R (angular)
 
 clear all
@@ -136,7 +64,7 @@ l1 = 10;
 l2 = 10;
 l3 = 10;
 
-% Cinemática inversa
+% Cinem�tica inversa
 Px = -9.545;
 Py = 7.896;
 Pz = 23.192;
@@ -177,10 +105,3 @@ Robot = SerialLink(R,'name','Bender')
 zlim([-15,30]);
 Robot.teach([q1,q2,q3],'scale',1.0,'workspace',[-30 30 -30 30 -30 30],'rpy/zyx');
 Robot.fkine([q1,q2,q3])
-```
-
-<h3>Ejercicios</h3>
-
-Determinar la cinemática inversa para cada uno de los siguientes cinco tipos de robots: 1. Cartesiano, 2. Cilíndrico, 3. Esférico, 4. Scara y 5. Angular.
-
-![Ejercicios](Imagenes/image-7.png)
