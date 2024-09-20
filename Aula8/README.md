@@ -6,15 +6,15 @@ Esta clase consiste en comprender y analizar la cinemática inversa de dos robot
 
 ![3R planar](Imagenes/image-8.png)
 
-$$𝑚=𝑃_𝑥−𝑙_3 \cdot cos⁡𝛽$$
+$$e=𝑃_𝑥−𝑙_3 \cdot cos⁡𝛽$$
 
-$$𝑛=𝑃_𝑦−𝑙_3 \cdot 𝑠𝑒𝑛⁡𝛽$$
+$$c=𝑃_𝑦−𝑙_3 \cdot 𝑠𝑒𝑛⁡𝛽$$
 
 $𝜃_2$ y $𝜃_1$ son obtenidos a partir del análisis de la cinemática inversa del 2R
 
 <h3>Theta 2</h3>
 
-$$𝑏=\sqrt{𝑚^2+𝑛^2}$$
+$$𝑏=\sqrt{e^2+c^2}$$
 
 $$cos𝜃_2=\frac{𝑏^2−𝑙_2^2−𝑙_1^2}{2\cdot𝑙_1\cdot𝑙_2}$$
 
@@ -24,7 +24,7 @@ $$𝜃_2=tan^{−1}\frac{sin𝜃_2}{cos𝜃_2}$$
 
 <h3>Theta 1</h3>
 
-$$𝛼=tan^{−1}⁡\frac{𝑛}{𝑚}$$
+$$𝛼=tan^{−1}⁡\frac{c}{e}$$
 
 $$∅=tan^{−1}\frac{𝑙_2 \cdot sin⁡𝜃_2}{𝑙_1+𝑙_2 \cdot cos⁡𝜃_2}$$
 
