@@ -105,35 +105,35 @@ En esta clase se presenta la materia, en cuanto al contenido temático, los mét
 		<td rowspan="2">Primer (21%)</td>
 		<td>Parcial</td>
 		<td>13.65%</td>
-		<td>23/08/2024</td>
+		<td>22/08/2025</td>
 		<td rowspan="7">Presencial</td>
 	</tr>
 	<tr>
 		<td>Quices y/o talleres</td>
 		<td>7.35%</td>
-		<td>09/08/2024<br>16/08/2024</td>
+		<td>22/08/2025<br>29/08/2025</td>
 	</tr>
 	<tr>
 		<td rowspan="2">Segundo (21%)</td>
 		<td>Parcial</td>
 		<td>13.65%</td>
-		<td>04/10/2024</td>
+		<td>03/10/2025</td>
 	</tr>
 	<tr>
 		<td>Quices y/o talleres</td>
 		<td>7.35%</td>
-		<td>13/09/2024<br>20/09/2024<br>27/09/2024</td>
+		<td>19/09/2025<br>26/09/2025<br>03/10/2025</td>
 	</tr>
 	<tr>
 		<td rowspan="3">Tercer (20%)</td>
 		<td>Examen final</td>
 		<td>15%</td>
-		<td>22/11/2024</td>
+		<td>14/11/2025</td>
 	</tr>
 	<tr>
 		<td>Quices y/o talleres</td>
 		<td>5%</td>
-		<td>01/11/2024<br>08/11/2024<br>15/11/2024</td>
+		<td>21/11/2025</td>
 	</tr>
 </table>
 
