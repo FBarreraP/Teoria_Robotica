@@ -1,7 +1,7 @@
 <h1 align="center">Profesor: MSc. Fabián Barrera Prieto 👨‍🏫<br>
 Materia: Teoría de robótica 🦾<br>
 Universidad: UMNG 🏫<br>
-Año: 2024 📅</h1><br>
+Año: 2025 📅</h1><br>
 
 La teoría de robótica está enfocado al estudio y desarrollo de brazos manipuladores teniendo en cuenta las cinemáticas directas e inversas de cada robot de configuración serial. Este curso tiene un valor del 70% en la nota del primer y segundo corte del curso y del 50% en la nota del tercer corte del curso.
 
@@ -20,22 +20,22 @@ En esta clase se presenta la materia, en cuanto al contenido temático, los mét
 		<td>Fecha</td> <td>Horas</td> <td>Clase</td> <td>Semana</td> <td>Actividades</td>
 	</tr>
 	<tr>
-		<td>26/07/2024</td> <td>2</td> <td>1</td> <td>1</td> <td>Presentación de la materia</td>
+		<td>25/07/2025</td> <td>2</td> <td>1</td> <td>1</td> <td>Presentación de la materia</td>
 	</tr>
 	<tr>
-		<td>02/08/2024</td> <td>2</td> <td>2</td> <td>2</td> <td>Posición y orientación del cuerpo rígido y matrices de rotación</td>
+		<td>01/08/2025</td> <td>2</td> <td>2</td> <td>2</td> <td>Posición y orientación del cuerpo rígido y matrices de rotación</td>
 	</tr>
 	<tr>
-		<td>09/08/2024</td> <td>2</td> <td>3</td> <td>3</td> <td>Matrices de transformación homogénea</td>
+		<td>08/08/2025</td> <td>2</td> <td>3</td> <td>3</td> <td>Matrices de transformación homogénea</td>
 	</tr>
 	<tr>
-		<td>16/08/2024</td> <td>2</td> <td>4</td> <td>4</td> <td>Introducción a la cinemática directa y convención Denavit Hartenberg para robots manipuladores</td>
+		<td>15/08/2025</td> <td>2</td> <td>4</td> <td>4</td> <td>Introducción a la cinemática directa y convención Denavit Hartenberg para robots manipuladores</td>
 	</tr>
 	<tr>
-		<td>23/08/2024</td> <td>2</td> <td>5</td> <td>5</td> <td>Parcial primer corte</td>
+		<td>22/08/2025</td> <td>2</td> <td>5</td> <td>5</td> <td>Parcial primer corte</td>
 	</tr><!--semana de parciales del primer corte-->
 	<tr>
-		<td>30/08/2024</td> <td>2</td> <td>6</td> <td>6</td> <td>Retroalimentación del parcial primer corte y entrega de notas primer corte</td>
+		<td>29/08/2025</td> <td>2</td> <td>6</td> <td>6</td> <td>Retroalimentación del parcial primer corte y entrega de notas primer corte</td>
 	</tr><!--última semana de registro de notas del primer corte-->
 </table>
 
@@ -46,25 +46,25 @@ En esta clase se presenta la materia, en cuanto al contenido temático, los mét
 		<td>Fecha</td> <td>Horas</td> <td>Clase</td> <td>Semana</td> <td>Actividades</td>
 	</tr>
 	<tr>
-		<td>06/09/2024</td> <td>2</td> <td>7</td> <td>7</td> <td>Introducción a la cinemática inversa con 2R</td>
+		<td>05/09/2025</td> <td>2</td> <td>7</td> <td>7</td> <td>Introducción a la cinemática inversa con 2R</td>
 	</tr>
 	<tr>
-		<td>13/09/2024</td> <td>2</td> <td>8</td> <td>8</td> <td>Cinemática inversa de robot manipulador 3R</td>
+		<td>12/09/2025</td> <td>2</td> <td>8</td> <td>8</td> <td>Cinemática inversa de robot manipulador 3R</td>
 	</tr>
 	<tr>
-		<td>20/09/2024</td> <td>2</td> <td>9</td> <td>9</td> <td>Rutas y trayectorias</td>
+		<td>19/09/2025</td> <td>2</td> <td>9</td> <td>9</td> <td>Rutas y trayectorias</td>
 	</tr>
 	<tr>
-		<td>27/09/2024</td> <td>2</td> <td>10</td> <td>10</td> <td>Desacople cinemático 6R</td>
+		<td>26/09/2025</td> <td>2</td> <td>10</td> <td>10</td> <td>Desacople cinemático 6R</td>
 	</tr>
 	<tr>
-		<td>04/10/2024</td> <td>2</td> <td>11</td> <td>11</td> <td>Parcial segundo corte</td>
+		<td>03/10/2025</td> <td>2</td> <td>11</td> <td>11</td> <td>Parcial segundo corte</td>
 	</tr>
 	<tr>
-		<td>11/10/2024</td> <td></td> <td></td> <td></td> <td>SEMANA DE RECESO</td>
+		<td>10/10/2025</td> <td></td> <td></td> <td></td> <td>SEMANA DE RECESO</td>
 	</tr><!--semana de parciales del segundo corte-->
 	<tr>
-		<td>18/10/2024</td> <td>2</td> <td>12</td> <td>12</td> <td>Retroalimentación del parcial segundo corte y entrega de notas segundo corte</td>
+		<td>17/10/2025</td> <td>2</td> <td>12</td> <td>12</td> <td>Retroalimentación del parcial segundo corte y entrega de notas segundo corte</td>
 	</tr><!--última semana de registro de notas del primer corte-->
 </table>
 
@@ -75,19 +75,19 @@ En esta clase se presenta la materia, en cuanto al contenido temático, los mét
 		<td>Fecha</td> <td>Horas</td> <td>Clase</td> <td>Semana</td> <td>Actividades</td>
 	</tr>
 	<tr>
-		<td>25/10/2024</td> <td>2</td> <td>13</td> <td>13</td> <td>Jacobiano analítico y geométrico</td>
+		<td>24/10/2025</td> <td>2</td> <td>13</td> <td>13</td> <td>Jacobiano analítico y geométrico</td>
 	</tr>
 	<tr>
-		<td>01/11/2024</td> <td>2</td> <td>14</td> <td>14</td> <td>Control cinemático</td>
+		<td>31/10/2025</td> <td>2</td> <td>14</td> <td>14</td> <td>Robot UR</td>
 	</tr>
 	<tr>
-		<td>08/11/2024</td> <td>2</td> <td>15</td> <td>15</td> <td>Plataforma diferencial</td>
+		<td>07/11/2025</td> <td>2</td> <td>15</td> <td>15</td> <td>Dudas</td>
 	</tr>
 	<tr>
-		<td>15/11/2024</td> <td>2</td> <td>16</td> <td>16</td> <td>Examen final</td>
+		<td>14/11/2025</td> <td>2</td> <td>16</td> <td>16</td> <td>Examen final</td>
 	</tr><!--Finalización de clases-->
 	<tr>
-		<td>22/11/2024</td> <td>2</td> <td>17</td> <td>17</td> <td>Retroalimentación del examen final y entrega de notas del tercer corte</td>
+		<td>21/11/2025</td> <td>2</td> <td>17</td> <td>17</td> <td>Retroalimentación del examen final y entrega de notas del tercer corte</td>
 	</tr>
 </table>
 
