@@ -122,7 +122,7 @@ En esta clase se presenta la materia, en cuanto al contenido temático, los mét
 	<tr>
 		<td>Quices y/o talleres</td>
 		<td>7.35%</td>
-		<td>19/09/2025<br>26/09/2025<br>03/10/2025</td>
+		<td>19/09/2025<br>26/09/2025<br>17/10/2025</td>
 	</tr>
 	<tr>
 		<td rowspan="3">Tercer (20%)</td>
