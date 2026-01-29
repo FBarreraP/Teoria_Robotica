@@ -61,7 +61,7 @@ En esta clase se presenta la materia, en cuanto al contenido temático, los mét
 		<td>10/04/2026</td> <td>2</td> <td>10</td> <td>10</td> <td>Desacople cinemático 6R</td>
 	</tr>
 	<tr>
-		<td>17/04/2026</td> <td></td> <td></td> <td></td> <td>Parcial segundo corte</td>
+		<td>17/04/2026</td> <td>2</td> <td>11</td> <td>11</td> <td>Parcial segundo corte</td>
 	</tr><!--semana de parciales del segundo corte-->
 	<tr>
 		<td>24/04/2026</td> <td>2</td> <td>12</td> <td>12</td> <td>Retroalimentación del parcial segundo corte y entrega de notas segundo corte</td>
@@ -75,10 +75,10 @@ En esta clase se presenta la materia, en cuanto al contenido temático, los mét
 		<td>Fecha</td> <td>Horas</td> <td>Clase</td> <td>Semana</td> <td>Actividades</td>
 	</tr>
 	<tr>
-		<td>01/05/2026</td> <td>2</td> <td>13</td> <td>13</td> <td>Jacobiano analítico y geométrico</td>
+		<td>01/05/2026</td> <td>2</td> <td>13</td> <td>13</td> <td>FESTIVO</td>
 	</tr>
 	<tr>
-		<td>08/05/2026</td> <td>2</td> <td>14</td> <td>14</td> <td>Robot UR</td>
+		<td>08/05/2026</td> <td>2</td> <td>14</td> <td>14</td> <td>Jacobiano analítico y geométrico</td>
 	</tr>
 	<tr>
 		<td>15/05/2026</td> <td>2</td> <td>15</td> <td>15</td> <td>Dudas</td>
