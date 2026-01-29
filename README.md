@@ -1,7 +1,7 @@
 <h1 align="center">Profesor: MSc. Fabián Barrera Prieto 👨‍🏫<br>
 Materia: Teoría de robótica 🦾<br>
 Universidad: UMNG 🏫<br>
-Año: 2025 📅</h1><br>
+Año: 2026 📅</h1><br>
 
 La teoría de robótica está enfocado al estudio y desarrollo de brazos manipuladores teniendo en cuenta las cinemáticas directas e inversas de cada robot de configuración serial. Este curso tiene un valor del 70% en la nota del primer y segundo corte del curso y del 50% en la nota del tercer corte del curso.
 
@@ -20,22 +20,22 @@ En esta clase se presenta la materia, en cuanto al contenido temático, los mét
 		<td>Fecha</td> <td>Horas</td> <td>Clase</td> <td>Semana</td> <td>Actividades</td>
 	</tr>
 	<tr>
-		<td>25/07/2025</td> <td>2</td> <td>1</td> <td>1</td> <td>Presentación de la materia</td>
+		<td>30/01/2026</td> <td>2</td> <td>1</td> <td>1</td> <td>Presentación de la materia</td>
 	</tr>
 	<tr>
-		<td>01/08/2025</td> <td>2</td> <td>2</td> <td>2</td> <td>Posición y orientación del cuerpo rígido y matrices de rotación</td>
+		<td>06/02/2026</td> <td>2</td> <td>2</td> <td>2</td> <td>Posición y orientación del cuerpo rígido y matrices de rotación</td>
 	</tr>
 	<tr>
-		<td>08/08/2025</td> <td>2</td> <td>3</td> <td>3</td> <td>Matrices de transformación homogénea</td>
+		<td>13/02/2026</td> <td>2</td> <td>3</td> <td>3</td> <td>Matrices de transformación homogénea</td>
 	</tr>
 	<tr>
-		<td>15/08/2025</td> <td>2</td> <td>4</td> <td>4</td> <td>Introducción a la cinemática directa y convención Denavit Hartenberg para robots manipuladores</td>
+		<td>20/02/2026</td> <td>2</td> <td>4</td> <td>4</td> <td>Introducción a la cinemática directa y convención Denavit Hartenberg para robots manipuladores</td>
 	</tr>
 	<tr>
-		<td>22/08/2025</td> <td>2</td> <td>5</td> <td>5</td> <td>Parcial primer corte</td>
+		<td>27/02/2026</td> <td>2</td> <td>5</td> <td>5</td> <td>Parcial primer corte</td>
 	</tr><!--semana de parciales del primer corte-->
 	<tr>
-		<td>29/08/2025</td> <td>2</td> <td>6</td> <td>6</td> <td>Retroalimentación del parcial primer corte y entrega de notas primer corte</td>
+		<td>06/03/2026</td> <td>2</td> <td>6</td> <td>6</td> <td>Retroalimentación del parcial primer corte y entrega de notas primer corte</td>
 	</tr><!--última semana de registro de notas del primer corte-->
 </table>
 
@@ -46,25 +46,25 @@ En esta clase se presenta la materia, en cuanto al contenido temático, los mét
 		<td>Fecha</td> <td>Horas</td> <td>Clase</td> <td>Semana</td> <td>Actividades</td>
 	</tr>
 	<tr>
-		<td>05/09/2025</td> <td>2</td> <td>7</td> <td>7</td> <td>Introducción a la cinemática inversa con 2R</td>
+		<td>13/03/2026</td> <td>2</td> <td>7</td> <td>7</td> <td>Introducción a la cinemática inversa con 2R</td>
 	</tr>
 	<tr>
-		<td>12/09/2025</td> <td>2</td> <td>8</td> <td>8</td> <td>Cinemática inversa de robot manipulador 3R</td>
+		<td>20/03/2026</td> <td>2</td> <td>8</td> <td>8</td> <td>Cinemática inversa de robot manipulador 3R</td>
 	</tr>
 	<tr>
-		<td>19/09/2025</td> <td>2</td> <td>9</td> <td>9</td> <td>Rutas y trayectorias</td>
+		<td>27/03/2026</td> <td>2</td> <td>9</td> <td>9</td> <td>Rutas y trayectorias</td>
 	</tr>
 	<tr>
-		<td>26/09/2025</td> <td>2</td> <td>10</td> <td>10</td> <td>Desacople cinemático 6R</td>
+		<td>03/04/2026</td> <td></td> <td></td> <td></td> <td>SEMANA SANTA</td>
 	</tr>
 	<tr>
-		<td>03/10/2025</td> <td>2</td> <td>11</td> <td>11</td> <td>Parcial segundo corte</td>
+		<td>10/04/2026</td> <td>2</td> <td>10</td> <td>10</td> <td>Desacople cinemático 6R</td>
 	</tr>
 	<tr>
-		<td>10/10/2025</td> <td></td> <td></td> <td></td> <td>SEMANA DE RECESO</td>
+		<td>17/04/2026</td> <td></td> <td></td> <td></td> <td>Parcial segundo corte</td>
 	</tr><!--semana de parciales del segundo corte-->
 	<tr>
-		<td>17/10/2025</td> <td>2</td> <td>12</td> <td>12</td> <td>Retroalimentación del parcial segundo corte y entrega de notas segundo corte</td>
+		<td>24/04/2026</td> <td>2</td> <td>12</td> <td>12</td> <td>Retroalimentación del parcial segundo corte y entrega de notas segundo corte</td>
 	</tr><!--última semana de registro de notas del primer corte-->
 </table>
 
@@ -75,19 +75,19 @@ En esta clase se presenta la materia, en cuanto al contenido temático, los mét
 		<td>Fecha</td> <td>Horas</td> <td>Clase</td> <td>Semana</td> <td>Actividades</td>
 	</tr>
 	<tr>
-		<td>24/10/2025</td> <td>2</td> <td>13</td> <td>13</td> <td>Jacobiano analítico y geométrico</td>
+		<td>01/05/2026</td> <td>2</td> <td>13</td> <td>13</td> <td>Jacobiano analítico y geométrico</td>
 	</tr>
 	<tr>
-		<td>31/10/2025</td> <td>2</td> <td>14</td> <td>14</td> <td>Robot UR</td>
+		<td>08/05/2026</td> <td>2</td> <td>14</td> <td>14</td> <td>Robot UR</td>
 	</tr>
 	<tr>
-		<td>07/11/2025</td> <td>2</td> <td>15</td> <td>15</td> <td>Dudas</td>
+		<td>15/05/2026</td> <td>2</td> <td>15</td> <td>15</td> <td>Dudas</td>
 	</tr>
 	<tr>
-		<td>14/11/2025</td> <td>2</td> <td>16</td> <td>16</td> <td>Examen final</td>
+		<td>22/05/2026</td> <td>2</td> <td>16</td> <td>16</td> <td>Examen final</td>
 	</tr><!--Finalización de clases-->
 	<tr>
-		<td>21/11/2025</td> <td>2</td> <td>17</td> <td>17</td> <td>Retroalimentación del examen final y entrega de notas del tercer corte</td>
+		<td>29/05/2026</td> <td>2</td> <td>17</td> <td>17</td> <td>Retroalimentación del examen final y entrega de notas del tercer corte</td>
 	</tr>
 </table>
 
@@ -105,35 +105,35 @@ En esta clase se presenta la materia, en cuanto al contenido temático, los mét
 		<td rowspan="2">Primer (21%)</td>
 		<td>Parcial</td>
 		<td>13.65%</td>
-		<td>22/08/2025</td>
+		<td>22/08/2026</td>
 		<td rowspan="7">Presencial</td>
 	</tr>
 	<tr>
 		<td>Quices y/o talleres</td>
 		<td>7.35%</td>
-		<td>22/08/2025<br>29/08/2025</td>
+		<td>22/08/2026<br>29/08/2026</td>
 	</tr>
 	<tr>
 		<td rowspan="2">Segundo (21%)</td>
 		<td>Parcial</td>
 		<td>13.65%</td>
-		<td>03/10/2025</td>
+		<td>03/10/2026</td>
 	</tr>
 	<tr>
 		<td>Quices y/o talleres</td>
 		<td>7.35%</td>
-		<td>19/09/2025<br>26/09/2025<br>17/10/2025</td>
+		<td>19/09/2026<br>26/09/2026<br>17/10/2026</td>
 	</tr>
 	<tr>
 		<td rowspan="3">Tercer (20%)</td>
 		<td>Examen final</td>
 		<td>15%</td>
-		<td>14/11/2025</td>
+		<td>14/11/2026</td>
 	</tr>
 	<tr>
 		<td>Quices y/o talleres</td>
 		<td>5%</td>
-		<td>21/11/2025</td>
+		<td>21/11/2026</td>
 	</tr>
 </table>
 
