@@ -95,45 +95,25 @@ En esta clase se presenta la materia, en cuanto al contenido temático, los mét
 
 <table>
 	<tr>
-		<td>Corte</td>
-		<td>Actividad</td>
-		<td>Porcentaje 💯</td>
-		<td>Fecha</td>
-		<td>Metodología</td>
+		<td>Corte</td> <td>Actividad</td> <td>Porcentaje 💯</td> <td>Fecha</td> <td>Metodología</td>
 	</tr>
 	<tr>
-		<td rowspan="2">Primer (21%)</td>
-		<td>Parcial</td>
-		<td>13.65%</td>
-		<td>22/08/2026</td>
-		<td rowspan="7">Presencial</td>
+		<td rowspan="2">Primer (21%)</td> <td>Parcial</td> <td>13.65%</td> <td>27/02/2026</td> <td rowspan="7">Presencial</td>
 	</tr>
 	<tr>
-		<td>Quices y/o talleres</td>
-		<td>7.35%</td>
-		<td>22/08/2026<br>29/08/2026</td>
+		<td>Quices y/o talleres</td> <td>7.35%</td> <td>06/03/2026</td>
 	</tr>
 	<tr>
-		<td rowspan="2">Segundo (21%)</td>
-		<td>Parcial</td>
-		<td>13.65%</td>
-		<td>03/10/2026</td>
+		<td rowspan="2">Segundo (21%)</td> <td>Parcial</td> <td>13.65%</td> <td>17/04/2026</td>
 	</tr>
 	<tr>
-		<td>Quices y/o talleres</td>
-		<td>7.35%</td>
-		<td>19/09/2026<br>26/09/2026<br>17/10/2026</td>
+		<td>Quices y/o talleres</td> <td>7.35%</td> <td>24/04/2026</td>
 	</tr>
 	<tr>
-		<td rowspan="3">Tercer (20%)</td>
-		<td>Examen final</td>
-		<td>15%</td>
-		<td>14/11/2026</td>
+		<td rowspan="3">Tercer (20%)</td> <td>Examen final</td> <td>15%</td> <td>22/05/2026</td>
 	</tr>
 	<tr>
-		<td>Quices y/o talleres</td>
-		<td>5%</td>
-		<td>21/11/2026</td>
+		<td>Quices y/o talleres</td> <td>5%</td> <td>29/05/2026</td>
 	</tr>
 </table>
 
