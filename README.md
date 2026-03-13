@@ -52,13 +52,13 @@ En esta clase se presenta la materia, en cuanto al contenido temático, los mét
 		<td>20/03/2026</td> <td>2</td> <td>8</td> <td>8</td> <td>Cinemática inversa de robot manipulador 3R</td>
 	</tr>
 	<tr>
-		<td>27/03/2026</td> <td>2</td> <td>9</td> <td>9</td> <td>Rutas y trayectorias</td>
+		<td>27/03/2026</td> <td>2</td> <td>9</td> <td>9</td> <td>Desacople cinemático 6R</td>
 	</tr>
 	<tr>
 		<td>03/04/2026</td> <td></td> <td></td> <td></td> <td>SEMANA SANTA</td>
 	</tr>
 	<tr>
-		<td>10/04/2026</td> <td>2</td> <td>10</td> <td>10</td> <td>Desacople cinemático 6R</td>
+		<td>10/04/2026</td> <td>2</td> <td>10</td> <td>10</td> <td>Rutas y trayectorias 3R</td>
 	</tr>
 	<tr>
 		<td>17/04/2026</td> <td>2</td> <td>11</td> <td>11</td> <td>Parcial segundo corte</td>
