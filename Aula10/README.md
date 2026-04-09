@@ -316,7 +316,7 @@ Robot = SerialLink(R,'name','Bender')
 %Trayectoria 1 - perfil trapezoidal
 t0 = 0
 tf = 1
-t = linspace(t0,tf,50)
+t = linspace(t0,tf,20)
 
 % v1 = [1 0.9]
 % v2 = [2 1.8]
@@ -331,9 +331,9 @@ P2x = -9.804;
 P2y = 11.851;
 P2z = 20.723;
 
-[x1T, dx1T, d2x1T] = lspb(P1x,P2x,t)
-[y2T, dy2T, d2y2T] = lspb(P1y,P2y,t)
-[z3T, dz3T, d2z3T] = lspb(P1z,P2z,t)
+[x1, dx1, ddx1] = TraTra(P1x,P2x,t)
+[y2, dy2, ddy2] = TraTra(P1y,P2y,t)
+[z3, dz3, ddz3] = TraTra(P1z,P2z,t)
 
 % AT = qf - q0
 % dq_max = AT*(2/(1.5*tf))*1.2 %Velocidad de la articulación
@@ -365,36 +365,36 @@ xlabel('tiempo (s)')
 ylabel('aceleración (m/s^2)')
 
 
-for i=1:length(x1T)
+for i=1:length(x1)
     t2_(i,1) = t(i);
     % Gráfica de posición
-    x1T_(i,1) = x1T(i)
-    plot(figD,t2_(:),x1T_(:,1),'-b')
-    y2T_(i,1) = y2T(i)
-    plot(figD,t2_(:),y2T_(:,1),'-g')
-    z3T_(i,1) = z3T(i)
-    plot(figD,t2_(:),z3T_(:,1),'-r')
+    x1_(i,1) = x1(i)
+    plot(figD,t2_(:),x1_(:,1),'-b')
+    y2_(i,1) = y2(i)
+    plot(figD,t2_(:),y2_(:,1),'-g')
+    z3_(i,1) = z3(i)
+    plot(figD,t2_(:),z3_(:,1),'-r')
     % Gráfica de velocidad
-    dx1T_(i,1) = dx1T(i)
-    plot(figE,t2_(:),dx1T_(:,1),'-b')
-    dy2T_(i,1) = dy2T(i)
-    plot(figE,t2_(:),dy2T_(:,1),'-g')
-    dz3T_(i,1) = dz3T(i)
-    plot(figE,t2_(:),dz3T_(:,1),'-r')
+    dx1_(i,1) = dx1(i)
+    plot(figE,t2_(:),dx1_(:,1),'-b')
+    dy2_(i,1) = dy2(i)
+    plot(figE,t2_(:),dy2_(:,1),'-g')
+    dz3_(i,1) = dz3(i)
+    plot(figE,t2_(:),dz3_(:,1),'-r')
     % Gráfica de aceleración
-    d2x1T_(i,1) = d2x1T(i)
-    plot(figF,t2_(:),d2x1T_(:,1),'-b')
-    d2y2T_(i,1) = d2y2T(i)
-    plot(figF,t2_(:),d2y2T_(:,1),'-g')
-    d2z3T_(i,1) = d2z3T(i)
-    plot(figF,t2_(:),d2z3T_(:,1),'-r')
+    ddx1_(i,1) = ddx1(i)
+    plot(figF,t2_(:),ddx1_(:,1),'-b')
+    ddy2_(i,1) = ddy2(i)
+    plot(figF,t2_(:),ddy2_(:,1),'-g')
+    ddz3_(i,1) = ddz3(i)
+    plot(figF,t2_(:),ddz3_(:,1),'-r')
     
     figure(1)
     %Robot.plot([q1T(i),q2T(i),q3T(i)],'scale',1.0,'workspace',[-30 30 -30 30 -30 30]);
     
 %     zlim([-15,30]);
     
-    [theta1(i), theta2(i), theta3(i)] = InverseKinematics3R(l1,l2,l3,x1T(i),y2T(i),z3T(i));
+    [theta1(i), theta2(i), theta3(i)] = InverseKinematics3R(l1,l2,l3,x1(i),y2(i),z3(i));
     Robot.teach([theta1(i),theta2(i),theta3(i)],'scale',1.0,'workspace',[-30 30 -30 30 -30 30]);
     % Cinemática directa (Peter corke)
     MTH = Robot.fkine([theta1(i),theta2(i),theta3(i)])
