@@ -179,25 +179,25 @@ El perfil de velocidad trapezoidal también conocido como trayectoria de segment
 <h5>Condiciones</h5>
 
 <div align="center">
-<img src="Imagenes/image-7.png" alt="Condiciones"/>
+<img src="Imagenes/Ecuacion1.png" alt="Condiciones"/>
 </div>
 
 <h5>Puntos medios</h5>
 
 <div align="center">
-<img src="Imagenes/image-8.png" alt="Puntos medios"/>
+<img src="Imagenes/Ecuacion2.png" alt="Puntos medios"/>
 </div>
 
 <h5>Posición, velocidad y aceleración</h5>
 
 <div align="center">
-<img src="Imagenes/image-10.png" alt="Posición, velocidad y aceleración"/>
+<img src="Imagenes/Ecuacion3.png" alt="Posición, velocidad y aceleración"/>
 </div>
 
 <h5>Velocidad máximo y tiempo de dobles</h5>
 
 <div align="center">
-<img src="Imagenes/image-11.png" alt="Puntos medios"/>
+<img src="Imagenes/Ecuacion4.png" alt="Puntos medios"/>
 </div>
 
 Las trayectorias con puntos intermedios a través de la interpolación de ángulos del punto A y B generan un resultado circular (MoveJ).
