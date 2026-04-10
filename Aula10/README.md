@@ -183,7 +183,7 @@ El perfil de velocidad trapezoidal también conocido como trayectoria de segment
 <br>
 </div>
 
-<h5>Puntos medios</h5>
+<h5>Puntos m</h5>
 
 <div align="center">
 <img src="Imagenes/image-8.png" alt="Puntos medios"/>
