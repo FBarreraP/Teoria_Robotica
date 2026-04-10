@@ -168,7 +168,7 @@ Las trayectorias se pueden obtener a través de diferentes métodos:
 
 <h4>Perfil de velocidad trapezoidal</h4>
 
-El perfil de velocidad trapezoidal también conocido como trayectoria de segmento lineal con dobleces parabólicos (lspb) consiste en tres fases (aceleración, velocidad cruzero y desaceleración), considerando una velocidad máxima $\omega_{máx}$ y un tiempo de dobles $t_b$.
+El perfil de velocidad trapezoidal también conocido como trayectoria de segmento lineal con dobleces parabólicos (lspb) consiste en tres fases (aceleración, velocidad cruzero y desaceleración), considerando una velocidad máxima ($\omega_{máx}$) y un tiempo de dobles ($t_b$).
 
 <div align="center">
 <img src="Imagenes/image-5.png" width="750" alt="Diagrama trapezoidal"/>
