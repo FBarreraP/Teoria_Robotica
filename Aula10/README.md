@@ -168,15 +168,41 @@ Las trayectorias se pueden obtener a través de diferentes métodos:
 
 <h4>Perfil de velocidad trapezoidal</h4>
 
-El perfil de velocidad trapezoidal también conocido como trayectoria de segmento lineal con dobleces parabólicos (lspb) consiste en tres fases (aceleración, velocidad cruzero y desaceleración).
+El perfil de velocidad trapezoidal también conocido como trayectoria de segmento lineal con dobleces parabólicos (lspb) consiste en tres fases (aceleración, velocidad cruzero y desaceleración), considerando una velocidad máxima $W_máx$ y un tiempo de dobles $t_b$.
 
+<div align="center">
+<img src="Imagenes/image-5.png" alt="Diagrama trapezoidal"/>
+<br>
+<figcaption>Fuente: Autor</figcaption>
+</div>
 
+<h5>Condiciones</h5>
 
-es realizado en el espacio de las articulaciones. Una de las combinaciones más utilizadas en este perfil es 1/4, 1/2, 1/4; sin embargo, esto depende de la velocidad máxima y el tiempo final.
+<div align="center">
+<img src="Imagenes/image-7.png" alt="Condiciones"/>
+<br>
+</div>
 
-![PVT](Imagenes/image-5.png)
+<h5>Puntos medios</h5>
 
-$$𝑉𝑚á𝑥=\frac{𝑑_1−𝑑_0}{𝑡_𝑓} \cdot 1.5$$
+<div align="center">
+<img src="Imagenes/image-8.png" alt="Puntos medios"/>
+<br>
+</div>
+
+<h5>Posición, velocidad y aceleración</h5>
+
+<div align="center">
+<img src="Imagenes/image-10.png" alt="Puntos medios"/>
+<br>
+</div>
+
+<h5>Posición, velocidad y aceleración</h5>
+
+<div align="center">
+<img src="Imagenes/image-11.png" alt="Puntos medios"/>
+<br>
+</div>
 
 Las trayectorias con puntos intermedios a través de la interpolación de ángulos del punto A y B generan un resultado circular (MoveJ).
 
