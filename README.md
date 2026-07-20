@@ -23,16 +23,16 @@ En esta clase se presenta la materia, en cuanto al contenido temático, los mét
 		<td>24/07/2026</td> <td>2</td> <td>1</td> <td>1</td> <td>Presentación de la materia</td>
 	</tr>
 	<tr>
-		<td>31/07/2026</td> <td>2</td> <td>2</td> <td>2</td> <td>Posición y orientación del cuerpo rígido y matrices de rotación</td>
+		<td>31/07/2026</td> <td>2</td> <td>2</td> <td>2</td> <td>Posición y orientación del cuerpo rígido<br>Matrices de rotación</td>
 	</tr>
 	<tr>
 		<td>07/08/2026</td> <td>2</td> <td>3</td> <td>3</td> <td>FESTIVO</td>
 	</tr>
 	<tr>
-		<td>14/08/2026</td> <td>2</td> <td>4</td> <td>4</td> <td>Matrices de transformación homogénea</td>
+		<td>14/08/2026</td> <td>2</td> <td>4</td> <td>4</td> <td>Matrices de transformación homogénea (MTH)</td>
 	</tr>
 	<tr>
-		<td>21/08/2026</td> <td>2</td> <td>5</td> <td>5</td> <td>Introducción a la cinemática directa y convención Denavit Hartenberg para robots manipuladores</td>
+		<td>21/08/2026</td> <td>2</td> <td>5</td> <td>5</td> <td>Introducción a la cinemática directa<br>Convención Denavit Hartenberg para robots manipuladores</td>
 	</tr>
 	<tr>
 		<td>28/08/2026</td> <td>2</td> <td>6</td> <td>6</td> <td>Parcial primer corte</td>
@@ -98,22 +98,22 @@ En esta clase se presenta la materia, en cuanto al contenido temático, los mét
 		<td>Corte</td> <td>Actividad</td> <td>Porcentaje 💯</td> <td>Fecha</td> <td>Metodología</td>
 	</tr>
 	<tr>
-		<td rowspan="2">Primer (21%)</td> <td>Parcial</td> <td>13.65%</td> <td>27/02/2026</td> <td rowspan="7">Presencial</td>
+		<td rowspan="2">Primer (21%)</td> <td>Parcial</td> <td>13.65%</td> <td>28/08/2026</td> <td rowspan="7">Presencial</td>
 	</tr>
 	<tr>
-		<td>Quices y/o talleres</td> <td>7.35%</td> <td>06/03/2026</td>
+		<td>Quices y/o talleres</td> <td>7.35%</td> <td>04/09/2026</td>
 	</tr>
 	<tr>
-		<td rowspan="2">Segundo (21%)</td> <td>Parcial</td> <td>13.65%</td> <td>17/04/2026</td>
+		<td rowspan="2">Segundo (21%)</td> <td>Parcial</td> <td>13.65%</td> <td>16/10/2026</td>
 	</tr>
 	<tr>
-		<td>Quices y/o talleres</td> <td>7.35%</td> <td>24/04/2026</td>
+		<td>Quices y/o talleres</td> <td>7.35%</td> <td>23/10/2026</td>
 	</tr>
 	<tr>
-		<td rowspan="3">Tercer (20%)</td> <td>Examen final</td> <td>15%</td> <td>22/05/2026</td>
+		<td rowspan="3">Tercer (20%)</td> <td>Examen final</td> <td>15%</td> <td>13/11/2026</td>
 	</tr>
 	<tr>
-		<td>Quices y/o talleres</td> <td>5%</td> <td>29/05/2026</td>
+		<td>Quices y/o talleres</td> <td>5%</td> <td>20/11/2026</td>
 	</tr>
 </table>
 
