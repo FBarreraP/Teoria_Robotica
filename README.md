@@ -38,7 +38,7 @@ En esta clase se presenta la materia, en cuanto al contenido temático, los mét
 		<td>28/08/2026</td> <td>2</td> <td>6</td> <td>6</td> <td>Parcial primer corte</td>
 	</tr><!--semana de parciales del primer corte-->
 	<tr>
-		<td>04/09/2026</td> <td>2</td> <td>7</td> <td>7</td> <td>Retroalimentación del parcial primer corte y entrega de notas primer corte</td>
+		<td>04/09/2026</td> <td>2</td> <td>7</td> <td>7</td> <td>Retroalimentación del parcial primer corte<br>Entrega de notas primer corte</td>
 	</tr><!--última semana de registro de notas del primer corte-->
 </table>
 
@@ -49,25 +49,25 @@ En esta clase se presenta la materia, en cuanto al contenido temático, los mét
 		<td>Fecha</td> <td>Horas</td> <td>Clase</td> <td>Semana</td> <td>Actividades</td>
 	</tr>
 	<tr>
-		<td>13/03/2026</td> <td>2</td> <td>7</td> <td>7</td> <td>Introducción a la cinemática inversa con 2R</td>
+		<td>11/09/2026</td> <td>2</td> <td>8</td> <td>8</td> <td>Introducción a la cinemática inversa con 2R</td>
 	</tr>
 	<tr>
-		<td>20/03/2026</td> <td>2</td> <td>8</td> <td>8</td> <td>Cinemática inversa de robot manipulador 3R</td>
+		<td>18/09/2026</td> <td>2</td> <td>9</td> <td>9</td> <td>Cinemática inversa de robot manipulador 3R</td>
 	</tr>
 	<tr>
-		<td>27/03/2026</td> <td>2</td> <td>9</td> <td>9</td> <td>Desacople cinemático 6R</td>
+		<td>25/09/2026</td> <td>2</td> <td>10</td> <td>10</td> <td>Desacople cinemático 6R</td>
 	</tr>
 	<tr>
-		<td>03/04/2026</td> <td></td> <td></td> <td></td> <td>SEMANA SANTA</td>
+		<td>02/10/2026</td> <td>2</td> <td>11</td> <td>11</td> <td>Rutas y trayectorias 3R</td>
 	</tr>
 	<tr>
-		<td>10/04/2026</td> <td>2</td> <td>10</td> <td>10</td> <td>Rutas y trayectorias 3R</td>
+		<td>09/10/2026</td> <td></td> <td></td> <td></td> <td>SEMANA DE RECESO</td>
 	</tr>
 	<tr>
-		<td>17/04/2026</td> <td>2</td> <td>11</td> <td>11</td> <td>Parcial segundo corte</td>
+		<td>16/10/2026</td> <td>2</td> <td>12</td> <td>12</td> <td>Parcial segundo corte</td>
 	</tr><!--semana de parciales del segundo corte-->
 	<tr>
-		<td>24/04/2026</td> <td>2</td> <td>12</td> <td>12</td> <td>Retroalimentación del parcial segundo corte y entrega de notas segundo corte</td>
+		<td>23/10/2026</td> <td>2</td> <td>13</td> <td>13</td> <td>Retroalimentación del parcial segundo corte<br>Entrega de notas segundo corte</td>
 	</tr><!--última semana de registro de notas del primer corte-->
 </table>
 
@@ -78,19 +78,16 @@ En esta clase se presenta la materia, en cuanto al contenido temático, los mét
 		<td>Fecha</td> <td>Horas</td> <td>Clase</td> <td>Semana</td> <td>Actividades</td>
 	</tr>
 	<tr>
-		<td>01/05/2026</td> <td>2</td> <td>13</td> <td>13</td> <td>FESTIVO</td>
+		<td>30/10/2026</td> <td>2</td> <td>14</td> <td>14</td> <td>Jacobiano analítico y geométrico</td>
 	</tr>
 	<tr>
-		<td>08/05/2026</td> <td>2</td> <td>14</td> <td>14</td> <td>Jacobiano analítico y geométrico</td>
+		<td>06/11/2026</td> <td>2</td> <td>15</td> <td>15</td> <td>Dudas</td>
 	</tr>
 	<tr>
-		<td>15/05/2026</td> <td>2</td> <td>15</td> <td>15</td> <td>Dudas</td>
-	</tr>
-	<tr>
-		<td>22/05/2026</td> <td>2</td> <td>16</td> <td>16</td> <td>Examen final</td>
+		<td>13/11/2026</td> <td>2</td> <td>16</td> <td>16</td> <td>Examen final</td>
 	</tr><!--Finalización de clases-->
 	<tr>
-		<td>29/05/2026</td> <td>2</td> <td>17</td> <td>17</td> <td>Retroalimentación del examen final y entrega de notas del tercer corte</td>
+		<td>20/11/2026</td> <td>2</td> <td>17</td> <td>17</td> <td>Retroalimentación del examen final<br>Entrega de notas del tercer corte</td>
 	</tr>
 </table>
 
