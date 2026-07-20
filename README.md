@@ -20,22 +20,25 @@ En esta clase se presenta la materia, en cuanto al contenido temático, los mét
 		<td>Fecha</td> <td>Horas</td> <td>Clase</td> <td>Semana</td> <td>Actividades</td>
 	</tr>
 	<tr>
-		<td>30/01/2026</td> <td>2</td> <td>1</td> <td>1</td> <td>Presentación de la materia</td>
+		<td>24/07/2026</td> <td>2</td> <td>1</td> <td>1</td> <td>Presentación de la materia</td>
 	</tr>
 	<tr>
-		<td>06/02/2026</td> <td>2</td> <td>2</td> <td>2</td> <td>Posición y orientación del cuerpo rígido y matrices de rotación</td>
+		<td>31/07/2026</td> <td>2</td> <td>2</td> <td>2</td> <td>Posición y orientación del cuerpo rígido y matrices de rotación</td>
 	</tr>
 	<tr>
-		<td>13/02/2026</td> <td>2</td> <td>3</td> <td>3</td> <td>Matrices de transformación homogénea</td>
+		<td>07/08/2026</td> <td>2</td> <td>3</td> <td>3</td> <td>FESTIVO</td>
 	</tr>
 	<tr>
-		<td>20/02/2026</td> <td>2</td> <td>4</td> <td>4</td> <td>Introducción a la cinemática directa y convención Denavit Hartenberg para robots manipuladores</td>
+		<td>14/08/2026</td> <td>2</td> <td>4</td> <td>4</td> <td>Matrices de transformación homogénea</td>
 	</tr>
 	<tr>
-		<td>27/02/2026</td> <td>2</td> <td>5</td> <td>5</td> <td>Parcial primer corte</td>
+		<td>21/08/2026</td> <td>2</td> <td>5</td> <td>5</td> <td>Introducción a la cinemática directa y convención Denavit Hartenberg para robots manipuladores</td>
+	</tr>
+	<tr>
+		<td>28/08/2026</td> <td>2</td> <td>6</td> <td>6</td> <td>Parcial primer corte</td>
 	</tr><!--semana de parciales del primer corte-->
 	<tr>
-		<td>06/03/2026</td> <td>2</td> <td>6</td> <td>6</td> <td>Retroalimentación del parcial primer corte y entrega de notas primer corte</td>
+		<td>04/09/2026</td> <td>2</td> <td>7</td> <td>7</td> <td>Retroalimentación del parcial primer corte y entrega de notas primer corte</td>
 	</tr><!--última semana de registro de notas del primer corte-->
 </table>
 
