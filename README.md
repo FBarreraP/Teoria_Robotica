@@ -58,17 +58,14 @@ En esta clase se presenta la materia, en cuanto al contenido temático, los mét
 		<td>25/09/2026</td> <td>2</td> <td>10</td> <td>10</td> <td>Desacople cinemático 6R</td>
 	</tr>
 	<tr>
-		<td>02/10/2026</td> <td>2</td> <td>11</td> <td>11</td> <td>Rutas y trayectorias 3R</td>
+		<td>02/10/2026</td> <td>2</td> <td>11</td> <td>11</td> <td>Parcial segundo corte</td>
 	</tr>
 	<tr>
 		<td>09/10/2026</td> <td></td> <td></td> <td></td> <td>SEMANA DE RECESO</td>
 	</tr>
 	<tr>
-		<td>16/10/2026</td> <td>2</td> <td>12</td> <td>12</td> <td>Parcial segundo corte</td>
+		<td>16/10/2026</td> <td>2</td> <td>12</td> <td>12</td> <td>Retroalimentación del parcial segundo corte<br>Entrega de notas segundo corte</td>
 	</tr><!--semana de parciales del segundo corte-->
-	<tr>
-		<td>23/10/2026</td> <td>2</td> <td>13</td> <td>13</td> <td>Retroalimentación del parcial segundo corte<br>Entrega de notas segundo corte</td>
-	</tr><!--última semana de registro de notas del primer corte-->
 </table>
 
 <h4>Tercer corte</h4>
@@ -77,6 +74,9 @@ En esta clase se presenta la materia, en cuanto al contenido temático, los mét
 	<tr>
 		<td>Fecha</td> <td>Horas</td> <td>Clase</td> <td>Semana</td> <td>Actividades</td>
 	</tr>
+	<tr>
+		<td>23/10/2026</td> <td>2</td> <td>13</td> <td>13</td> <td>Rutas y trayectorias 3R</td>
+	</tr><!--última semana de registro de notas del primer corte-->
 	<tr>
 		<td>30/10/2026</td> <td>2</td> <td>14</td> <td>14</td> <td>Jacobiano analítico y geométrico</td>
 	</tr>
