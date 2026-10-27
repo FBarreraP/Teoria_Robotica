@@ -195,7 +195,7 @@ El perfil de velocidad trapezoidal también conocido como trayectoria de segment
 <h5>Condiciones</h5>
 
 <div align="center">
-<img src="Imagenes/Ecuacion1.png" alt="Condiciones"/>
+<img src="Imagenes/Ecuacion1.png" width="750" alt="Condiciones iniciales"/>
 </div>
 
 <h5>Puntos medios</h5>
