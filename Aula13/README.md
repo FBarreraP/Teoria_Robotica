@@ -13,7 +13,7 @@ Las trayectorias de los robots consisten en realizar tareas de movimiento del ro
 </div>
 
 <div align="center">
-<img src="Imagenes/image-2.png" width="200" alt="Diagrama de flujo"/>
+<img src="Imagenes/image-2.png" width="300" alt="Diagrama de flujo"/>
 <br>
 <figcaption>Fuente: Autor</figcaption>
 </div>
@@ -101,7 +101,11 @@ hold off
 
 Las rutas con puntos intermedios a través de la interpolación de posiciones del punto A y B generan un resultado lineal (MoveL).
 
-![Interpolación de posiciones ruta 3R](Imagenes/image-4.png)
+<div align="center">
+<img src="Imagenes/image-4.png" alt="Interpolación de posiciones ruta 3R"/>
+<br>
+<figcaption>Fuente: Autor</figcaption>
+</div>
 
 ```matlab
 %% Ruta 2 (espacio operacional (MoveL) - interpolando posiciones)
