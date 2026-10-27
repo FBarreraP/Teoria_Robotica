@@ -219,7 +219,7 @@ El perfil de velocidad trapezoidal también conocido como trayectoria de segment
 Las trayectorias con puntos intermedios a través de la interpolación de ángulos del punto A y B generan un resultado circular (MoveJ).
 
 <div align="center">
-<img src="Imagenes/image-6.png" width="750" alt="Interpolación de ángulos PVT 3R"/>
+<img src="Imagenes/image-6.png" alt="Interpolación de ángulos PVT 3R"/>
 <br>
 <figcaption>Fuente: Autor</figcaption>
 </div>
@@ -337,7 +337,7 @@ legend(figC,'d2q1','d2q2','d2q3','Location','northeast')
 Las trayectorias con puntos intermedios a través de la interpolación de posiciones del punto A y B generan un resultado lineal (MoveL).
 
 <div align="center">
-<img src="Imagenes/image-9.png" width="750" alt="Interpolación de posiciones PVT 3R"/>
+<img src="Imagenes/image-9.png" alt="Interpolación de posiciones PVT 3R"/>
 <br>
 <figcaption>Fuente: Autor</figcaption>
 </div>
