@@ -13,7 +13,7 @@ Las trayectorias de los robots consisten en realizar tareas de movimiento del ro
 </div>
 
 <div align="center">
-<img src="Imagenes/image-2.png" width="50" alt="Diagrama de flujo"/>
+<img src="Imagenes/image-2.png" width="200" alt="Diagrama de flujo"/>
 <br>
 <figcaption>Fuente: Autor</figcaption>
 </div>
@@ -25,7 +25,7 @@ Genera una ruta geométrica, desde un punto inicial hasta un punto final a trav�
 Las rutas con puntos intermedios a través de la interpolación de ángulos del punto A y B generan un resultado circular (MoveJ).
 
 <div align="center">
-<img src="Imagenes/image-3.png" width="750" alt="Interpolación de ángulos ruta 3R"/>
+<img src="Imagenes/image-3.png" alt="Interpolación de ángulos ruta 3R"/>
 <br>
 <figcaption>Fuente: Autor</figcaption>
 </div>
