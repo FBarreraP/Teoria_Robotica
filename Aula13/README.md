@@ -7,13 +7,13 @@ Esta clase consiste en comprender y analizar las rutas y las trayectorias con pe
 Las trayectorias de los robots consisten en realizar tareas de movimiento del robot de un punto inicial a un punto final, en el espacio articular (espacio de movimientos de las articulaciones) o en el espacio operacional del robot (espacio (área o volumen) de trabajo).
 
 <div align="center">
-<img src="Imagenes/image-1.png" width="750" alt="Espacios de trabajo"/>
+<img src="Imagenes/image-1.png" width="850" alt="Espacios de trabajo"/>
 <br>
 <figcaption>Fuente: Autor</figcaption>
 </div>
 
 <div align="center">
-<img src="Imagenes/image-2.png" width="750" alt="Diagrama de flujo"/>
+<img src="Imagenes/image-2.png" width="50" alt="Diagrama de flujo"/>
 <br>
 <figcaption>Fuente: Autor</figcaption>
 </div>
