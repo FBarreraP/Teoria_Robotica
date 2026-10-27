@@ -1,159 +1,442 @@
 <h1>Aula 13</h1>
 
-Esta clase consiste en comprender la cinemática directa e inversa de la plataforma diferencial y aplicarlas en análisis de recorridos por transiciones y por trayectorias.
+Esta clase consiste en comprender y analizar las rutas y las trayectorias con perfil de velocidad trapezoidal de un brazo robótico serial.
 
-<h2>Plataforma diferencial</h2>
+<h2>Trayectorias</h2>
 
-Son robots móviles que se componen por un sistema basado en dos ruedas motrices en paralelo, las cuales pueden girar a distinta velocidad.
+Las trayectorias de los robots consisten en realizar tareas de movimiento del robot de un punto inicial a un punto final, en el espacio articular (espacio de movimientos de las articulaciones) o en el espacio operacional del robot (espacio (área o volumen) de trabajo).
 
-![Diferencial](image.png)
+<div align="center">
+<img src="Imagenes/image-1.png" width="750" alt="Espacios de trabajo"/>
+<br>
+<figcaption>Fuente: Autor</figcaption>
+</div>
 
-Fuente: Introduction to Autonomous Mobile Robots. Roland Siegwart and Illah R. Nourbakhsh. 2004
+<div align="center">
+<img src="Imagenes/image-2.png" width="750" alt="Diagrama de flujo"/>
+<br>
+<figcaption>Fuente: Autor</figcaption>
+</div>
 
-La cinemática directa de la plataforma diferencial es el cálculo de las velocidades de la plataforma, a partir de las velocidades de las ruedas.
+<h3>Planeación de ruta (<i>path planning</i>)</h3>
 
-$$𝑉_𝑃=\frac{𝑉_𝐷+𝑉_𝐼}{2}$$
+Genera una ruta geométrica, desde un punto inicial hasta un punto final a través de puntos intermedios (waypoints) previamente definidos de manera discontinua (saltos bruscos), donde solo es relevante la posición.
 
-$$𝜔_𝑃=\frac{𝑉_𝐷−𝑉_𝐼}{𝐿}$$
+Las rutas con puntos intermedios a través de la interpolación de ángulos del punto A y B generan un resultado circular (MoveJ).
 
-Aplicando la relación de velocidades $𝑣=𝜔\cdot 𝑟$
+<div align="center">
+<img src="Imagenes/image-3.png" width="750" alt="Interpolación de ángulos ruta 3R"/>
+<br>
+<figcaption>Fuente: Autor</figcaption>
+</div>
 
-$$𝑉_𝑃=\frac{𝑟_𝑟(𝜔_𝐷+𝜔_𝐼)}{2}$$
+```matlab
+%% Ruta 1 (espacio articulacional (MoveJ) - interpolando ángulos)
 
-$$𝜔_𝑃=\frac{𝑟_𝑟(𝜔_𝐷−𝜔_𝐼)}{𝐿}$$
+clear all
+close all
+clc
 
-La cinemática inversa de la plataforma diferencial es el cálculo de las velocidades de las ruedas, a partir de las velocidades de la plataforma.
+l1 = 10;
+l2 = 10;
+l3 = 10;
 
-$$𝜔_𝐼=−\frac{𝐿𝜔_𝑃}{2𝑟_𝑟}+\frac{𝑉_𝑃}{𝑟_𝑟}$$
+% Cinemática inversa
+% Punto 1
+P1x = 2.456;
+P1y = 0.31;
+P1z = 26.933;
 
-$$𝜔_𝐷=\frac{𝐿𝜔_𝑃}{2𝑟_𝑟}+\frac{𝑉_𝑃}{𝑟_𝑟}$$
+[theta1_P1, theta2_P1, theta3_P1] = InverseKinematics3R(l1,l2,l3,P1x,P1y,P1z);
 
-<h3>Ejercicio 1</h3>
+% Punto 2
+P2x = -9.804;
+P2y = 11.851;
+P2z = 20.723;
 
-Teniendo en cuenta que un robot móvil diferencial, gira en la rueda derecha a 75 𝑅𝑃𝑀 y en la rueda izquierda a 40 𝑅𝑃𝑀. Así mismo, el ancho de la plataforma y el radio de las ruedas es de 12 𝑐𝑚 y 3.5 𝑐𝑚, respectivamente. Determinar:
+[theta1_P2, theta2_P2, theta3_P2] = InverseKinematics3R(l1,l2,l3,P2x,P2y,P2z);
+%
 
-<ol type="a">
-    <li>La velocidad lineal de la plataforma</li>
-    <li>La velocidad angular de la plataforma</li>
-    <li>El sentido de giro de la plataforma</li>
-</ol>
+n = 10;
+x = 1:1:n;
 
-<h3>Ejercicio 2</h3>
+theta1_P1toP2 = linspace(theta1_P1, theta1_P2, n);
+theta2_P1toP2 = linspace(theta2_P1, theta2_P2, n);
+theta3_P1toP2 = linspace(theta3_P1, theta3_P2, n);
 
-Un robot móvil diferencial, gira en la rueda derecha a 0.35 𝑚/𝑠 y en la rueda izquierda a 0.27 𝑚/𝑠, siendo que el radio de las ruedas es de 5 𝑐𝑚 y el ancho de la plataforma es de 9 𝑐𝑚. Si la plataforma acelera angularmente a −0.1 $rad/𝑠^2$ en 5𝑠, determinar:
+figure(1)
+for i=1:n
+    % Cinemática directa (Peter corke)
+    [MTH] = ForwardKinematics3R(l1,l2,l3,theta1_P1toP2(i),theta2_P1toP2(i),theta3_P1toP2(i));
+    d(:,i) = MTH.t;
+    hold on;
+    plot3(d(1,i),d(2,i),d(3,i),'.b');
+end
 
-<ol type="a">
-    <li>Las velocidades de las ruedas en RPM</li>
-    <li>La velocidad lineal inicial y la velocidad angular inicial de la plataforma</li>
-    <li>El radio sobre el cual gira la plataforma</li>
-    <li>La aceleración lineal de la plataforma</li>
-    <li>La velocidad lineal final y la velocidad angular final de la plataforma</li>
-    <li>La velocidad final de la rueda derecha e izquierda</li>
-    <li>El sentido de giro de la plataforma</li>
-    <li>El número de vueltas de cada una de las ruedas</li>
-    <li>La distancia recorrida de cada una de las ruedas</li>
-</ol>
+figure(2)
+tiledlayout(2,1)
+ax1 = nexttile;
+plot(ax1, x, rad2deg(theta1_P1toP2),'r')
+title('Espacio articulacional')
+xlabel('Waypoint')
+ylabel('Ángulo (°)')
+hold on
+grid on
+plot(ax1, x, rad2deg(theta2_P1toP2),'g')
+plot(ax1, x, rad2deg(theta3_P1toP2),'b')
+legend('q1','q2','q3','Location','northwest')
+hold off
+ax2 = nexttile;
+plot(ax2, x, d(1,:),'r')
+title('Espacio operacional')
+xlabel('Waypoint')
+ylabel('Posición (m)')
+hold on
+grid on
+plot(ax2, x, d(2,:),'g')
+plot(ax2, x, d(3,:),'b')
+legend('X','Y','Z','Location','northwest')
+hold off
+```
 
-<h2>Análisis de recorrido por transiciones</h2>
+Las rutas con puntos intermedios a través de la interpolación de posiciones del punto A y B generan un resultado lineal (MoveL).
 
-El análisis de recorrido consiste en analizar cada trayectoria (lineal o angular) de la plataforma robótica, para determinar la posición y la orientación de la misma.
+![Interpolación de posiciones ruta 3R](Imagenes/image-4.png)
 
-![Plataforma diferencial](image.png)
+```matlab
+%% Ruta 2 (espacio operacional (MoveL) - interpolando posiciones)
 
-Fuente: Introduction to Autonomous Mobile Robots. Roland Siegwart and Illah R. Nourbakhsh. 2004
+% clear all
+% close all
+% clc
 
-$𝑉_𝑃≠0$ y $𝜔_𝑃=0$ 
+l1 = 10;
+l2 = 10;
+l3 = 10;
 
-$𝑉_𝑃=0$ y $𝜔_𝑃≠0$
+% Punto 1
+P1x = 2.456;
+P1y = 0.31;
+P1z = 26.933;
 
-$𝑉_𝑃=\frac{𝑟_𝑟(𝜔_𝐷+𝜔_𝐼)}{2}$ y $𝜔_𝑃=\frac{𝑟_𝑟(𝜔_𝐷−𝜔_𝐼)}{𝐿}$
+% Punto 2
+P2x = -9.804;
+P2y = 11.851;
+P2z = 20.723;
 
-$𝜔_𝐼=−\frac{𝐿𝜔_𝑃}{2𝑟_𝑟}+\frac{𝑉_𝑃}{𝑟_𝑟}$ y $𝜔_𝐷=\frac{𝐿𝜔_𝑃}{2𝑟_𝑟}+\frac{𝑉_𝑃}{𝑟_𝑟}$
+n = 10
+x = 1:1:n
 
-<h3>Ejercicio 3</h3>
+Px_P1toP2 = linspace(P1x, P2x, n);
+Py_P1toP2 = linspace(P1y, P2y, n);
+Pz_P1toP2 = linspace(P1z, P2z, n);
 
-Recorrido 1: Un robot móvil diferencial de ancho de 15 𝑐𝑚 se desplaza a 40° con respecto al eje X durante 7.4𝑠 y gira en las ruedas (𝑟=3.5𝑐𝑚) derecha e izquierda a 28 𝑅𝑃𝑀. Así mismo, las posiciones iniciales de la plataforma en X y Y son de 4 𝑚 y 3 𝑚, respectivamente. Sin aceleración lineal y angular, determinar:
+figure(1)
+for i=1:n
+    % Cinemática inversa
+    [theta1(i), theta2(i), theta3(i)] = InverseKinematics3R(l1,l2,l3,Px_P1toP2(i),Py_P1toP2(i),Pz_P1toP2(i));
+    
+    % Cinemática directa (Peter corke)
+    [MTH] = ForwardKinematics3R(l1,l2,l3,theta1(i),theta2(i),theta3(i));
+    hold on;
+    plot3(MTH.t(1),MTH.t(2),MTH.t(3),'.r');
+end
 
-<ol type="a">
-    <li>La posición final en X</li>
-    <li>La posición final en Y</li>
-    <li>El ángulo final de la plataforma</li>
-</ol>
+figure(3)
+tiledlayout(2,1)
+ax1 = nexttile;
+plot(ax1, x, rad2deg(theta1),'r')
+title('Espacio articulacional')
+xlabel('Waypoint')
+ylabel('Ángulo (°)')
+hold on
+grid on
+plot(ax1, x, rad2deg(theta2),'g')
+plot(ax1, x, rad2deg(theta3),'b')
+legend('q1','q2','q3','Location','northwest')
+hold off
+ax2 = nexttile;
+plot(ax2, x, Px_P1toP2(:),'r')
+title('Espacio operacional')
+xlabel('Waypoint')
+ylabel('Posición (m)')
+hold on
+grid on
+plot(ax2, x, Py_P1toP2(:),'g')
+plot(ax2, x, Pz_P1toP2(:),'b')
+legend('X','Y','Z','Location','northwest')
+hold off
+```
 
-<h3>Ejercicio 4</h3>
+<h3>Planeación de trayectoria (<i>trajectory planning</i>)</h3>
 
-Recorrido 2: A partir de la trayectoria 1 (ejercicio 1) un robot móvil diferencial gira en las ruedas derecha e izquierda a 20 𝑅𝑃𝑀 y −20 𝑅𝑃𝑀, respectivamente; durante 0.5𝑠. Sin aceleración lineal y angular, determinar:
+A partir de una ruta geométrica determinada, se genera una trayectoria continua (movimiento suave) en función del tiempo, es decir, contemplando las velocidades y las aceleraciones de las articulaciones.
 
-<ol type="a">
-    <li>La posición final en X</li>
-    <li>La posición final en Y</li>
-    <li>El ángulo final de la plataforma</li>
-</ol>
+Las trayectorias se pueden obtener a través de diferentes métodos:
 
-<h3>Ejercicio 5</h3>
+- Polinomios
+- Perfil de velocidad trapezoidal
+- Jacobianos  
 
-Recorrido 3: A partir de la trayectoria 2 (ejercicio 2) un robot móvil diferencial gira en las ruedas derecha e izquierda a −10 𝑅𝑃𝑀; durante 1.5𝑠. Sin aceleración lineal y angular, determinar:
+<h4>Perfil de velocidad trapezoidal</h4>
 
-<ol type="a">
-    <li>La posición final en X</li>
-    <li>La posición final en Y</li>
-    <li>El ángulo final de la plataforma</li>
-</ol>
+El perfil de velocidad trapezoidal también conocido como trayectoria de segmento lineal con dobleces parabólicos (lspb) consiste en tres fases (aceleración, velocidad cruzero y desaceleración), considerando una velocidad máxima ($\omega_{máx}$) y un tiempo de dobles ($t_b$).
 
-<h3>Ejercicio 6</h3>
+<div align="center">
+<img src="Imagenes/image-5.png" width="750" alt="Diagrama trapezoidal"/>
+<br>
+<figcaption>Fuente: Autor</figcaption>
+</div>
 
-Recorrido 4: A partir de la trayectoria 3 (ejercicio 3) un robot móvil diferencial gira en las ruedas derecha e izquierda a −5 𝑅𝑃𝑀 y 5 𝑅𝑃𝑀, respectivamente; durante 3𝑠. Sin aceleración lineal y angular, determinar:
+<h5>Condiciones</h5>
 
-<ol type="a">
-    <li>La posición final en X</li>
-    <li>La posición final en Y</li>
-    <li>El ángulo final de la plataforma</li>
-</ol>
+<div align="center">
+<img src="Imagenes/Ecuacion1.png" alt="Condiciones"/>
+</div>
 
-<h2>Análisis de recorrido por trayectorias</h2>
+<h5>Puntos medios</h5>
 
-El análisis de recorrido por trayectorias consiste en analizar una trayectoria circular de la plataforma robótica, linealizando dicha trayectoria a través de puntos intermedios equidistantes en tiempo, para determinar la posición y la orientación de la misma.
+<div align="center">
+<img src="Imagenes/Ecuacion2.png" width="300" alt="Puntos medios"/>
+</div>
 
-$𝑉_𝑃≠0$ y $𝜔_𝑃≠0$ 
+<h5>Posición, velocidad y aceleración</h5>
 
-$𝑉_𝑃=\frac{𝑟_𝑟(𝜔_𝐷+𝜔_𝐼)}{2}$ y $𝜔_𝑃=\frac{𝑟_𝑟(𝜔_𝐷−𝜔_𝐼)}{𝐿}$
+<div align="center">
+<img src="Imagenes/Ecuacion3.png" width="500" alt="Posición, velocidad y aceleración"/>
+</div>
 
-$𝜔_𝐼=−\frac{𝐿𝜔_𝑃}{2𝑟_𝑟}+\frac{𝑉_𝑃}{𝑟_𝑟}$ y $𝜔_𝐷=\frac{𝐿𝜔_𝑃}{2𝑟_𝑟}+\frac{𝑉_𝑃}{𝑟_𝑟}$
+<h5>Velocidad máximo y tiempo de dobles</h5>
 
-![Plataforma diferencial](image.png)
+<div align="center">
+<img src="Imagenes/Ecuacion4.png" width="600" alt="Puntos medios"/>
+</div>
 
-Fuente: Introduction to Autonomous Mobile Robots. Roland Siegwart and Illah R. Nourbakhsh. 2004
+Las trayectorias con puntos intermedios a través de la interpolación de ángulos del punto A y B generan un resultado circular (MoveJ).
 
-$$𝑉_𝑃=\frac{∆𝑑}{∆𝑡}=\frac{𝑑_1−𝑑_0}{∆𝑡}$$
+![Interpolación de ángulos PVT 3R](Imagenes/image-6.png)
 
-$$𝑑_1=𝑑_0+𝑉_𝑃 \cdot ∆𝑡$$
+```matlab
+%% Trayectoria de perfil de velocidad trapezoidal 3R (MoveJ)
 
-$$𝑋_𝑘=𝑋_{𝑘−1}+𝑉_{𝑃_{𝑋_{𝑘−1}}} \cdot ∆𝑡$$
+% clear all
+% close all
+% clc
 
-$$𝑌_𝑘=𝑌_{𝑘−1}+𝑉_{𝑃_{𝑌_{𝑘−1}}} \cdot ∆𝑡$$
+l1 = 10;
+l2 = 10;
+l3 = 10;
 
-$$𝜃_𝑘=𝜃_{𝑘−1}+𝜔_𝑃 \cdot ∆𝑡$$
+R(1) = Link('revolute','d',l1,'alpha',pi/2,'a',0,'offset',0);
+R(2) = Link('revolute','d',0,'alpha',0,'a',l2,'offset',0);
+R(3) = Link('revolute','d',0,'alpha',0,'a',l3,'offset',0);
 
-$$𝑉_{𝑃_{𝑋_𝑘}}=𝑉_𝑃 \cdot cos⁡𝜃_𝑘$$
+Robot = SerialLink(R,'name','Bender')
 
-$$𝑉_{𝑃_{𝑌_𝑘}}=𝑉_𝑃 \cdot sin𝜃_𝑘$$
+%Trayectoria 1 - perfil trapezoidal
+t0 = 0
+tf = 10
+t = linspace(t0,tf,20);
 
-<h3>Ejercicio 7</h3>
+% v1 = [1 0.9]
+% v2 = [2 1.8]
 
-Trayectoria 1: Un robot móvil diferencial de ancho de 15 𝑐𝑚 se desplaza a 30° con respecto al eje X durante 4𝑠 y gira en las ruedas (𝑟=3𝑐𝑚) derecha a 35 𝑅𝑃𝑀 e izquierda a 25 𝑅𝑃𝑀. Así mismo, las posiciones iniciales de la plataforma en X y Y son de 3 𝑚 y 2 𝑚, respectivamente. Tener en cuenta un tiempo de muestreo de 1s. Sin aceleración lineal y angular, determinar:
+% Punto 1
+P1x = 2.456;
+P1y = 0.31;
+P1z = 26.933;
 
-<ol type="a">
-    <li>La posición final en X</li>
-    <li>La posición final en Y</li>
-    <li>El ángulo final de la plataforma</li>
-</ol>
+[theta1_P1, theta2_P1, theta3_P1] = InverseKinematics3R(l1,l2,l3,P1x,P1y,P1z);
 
-<h3>Ejercicio 8</h3>
+% Punto 2
+P2x = -9.804;
+P2y = 11.851;
+P2z = 20.723;
 
-Trayectoria 2: A partir del recorrido 1 (ejercicio 1) un robot móvil diferencial gira en las ruedas derecha a 25 𝑅𝑃𝑀 e izquierda a 35 𝑅𝑃𝑀, respectivamente; durante 4𝑠. Tener en cuenta un tiempo de muestreo de 0.25s. Sin aceleración lineal y angular, determinar:
+[theta1_P2, theta2_P2, theta3_P2] = InverseKinematics3R(l1,l2,l3,P2x,P2y,P2z);
 
-<ol type="a">
-    <li>La posición final en X</li>
-    <li>La posición final en Y</li>
-    <li>El ángulo final de la plataforma</li>
-</ol>
+[q1, dq1, ddq1] = TraTra(theta1_P1,theta1_P2,t)
+[q2, dq2, ddq2] = TraTra(theta2_P1,theta2_P2,t)
+[q3, dq3, ddq3] = TraTra(theta3_P1,theta3_P2,t)
+
+% AT = qf - q0
+% dq_max = AT*(2/(1.5*tf))*1.2 %Velocidad de la articulación
+
+figure(4)
+title('Articulación 1')
+figA = subplot(3,1,1);
+%axis([t0 tf -Inf Inf])
+grid on
+hold on
+title('Posición angular')
+xlabel('tiempo (s)')
+ylabel('ángulo (grados)')
+
+figB = subplot(3,1,2);
+%axis([t0 tf -Inf Inf])
+grid on
+hold on
+title('Velocidad angular')
+xlabel('tiempo (s)')
+ylabel('velocidad (rad/s)')
+
+figC = subplot(3,1,3);
+%axis([t0 tf -Inf Inf])
+grid on
+hold on
+title('Aceleración angular')
+xlabel('tiempo (s)')
+ylabel('aceleración (rad/s^2)')
+
+
+for i=1:length(q1)
+    t_(i,1) = t(i);
+    % Gráfica de posición
+    q1_(i,1) = rad2deg(q1(i))
+    plot(figA,t_(:),q1_(:,1),'-b')
+    q2_(i,1) = rad2deg(q2(i))
+    plot(figA,t_(:),q2_(:,1),'-g')
+    q3_(i,1) = rad2deg(q3(i))
+    plot(figA,t_(:),q3_(:,1),'-r')
+    % Gráfica de velocidad
+    dq1_(i,1) = dq1(i)
+    plot(figB,t_(:),dq1_(:,1),'-b')
+    dq2_(i,1) = dq2(i)
+    plot(figB,t_(:),dq2_(:,1),'-g')
+    dq3_(i,1) = dq3(i)
+    plot(figB,t_(:),dq3_(:,1),'-r')
+    % Gráfica de aceleración
+    ddq1_(i,1) = ddq1(i)
+    plot(figC,t_(:),ddq1_(:,1),'-b')
+    ddq2_(i,1) = ddq2(i)
+    plot(figC,t_(:),ddq2_(:,1),'-g')
+    ddq3_(i,1) = ddq3(i)
+    plot(figC,t_(:),ddq3_(:,1),'-r')
+    
+    figure(1)
+    Robot.teach([q1(i),q2(i),q3(i)],'scale',1.0,'workspace',[-30 30 -30 30 -30 30]);
+%     zlim([-15,30]);
+    MTH = Robot.fkine([q1(i),q2(i),q3(i)])
+    hold on
+    plot3(MTH.t(1),MTH.t(2),MTH.t(3),'.g')
+end
+
+legend(figA,'q1','q2','q3','Location','northwest')
+legend(figB,'dq1','dq2','dq3','Location','southeast')
+legend(figC,'d2q1','d2q2','d2q3','Location','northeast')
+```
+
+Las trayectorias con puntos intermedios a través de la interpolación de posiciones del punto A y B generan un resultado lineal (MoveL).
+
+![![Interpolación de posiciones PVT 3R]](Imagenes/image-9.png)
+
+```matlab
+%% Trayectoria de perfil de velocidad trapezoidal 3R (MoveL)
+
+%clear all
+%close all
+%clc
+
+l1 = 10;
+l2 = 10;
+l3 = 10;
+
+R(1) = Link('revolute','d',l1,'alpha',pi/2,'a',0,'offset',0);
+R(2) = Link('revolute','d',0,'alpha',0,'a',l2,'offset',0);
+R(3) = Link('revolute','d',0,'alpha',0,'a',l3,'offset',0);
+
+Robot = SerialLink(R,'name','Bender')
+
+%Trayectoria 1 - perfil trapezoidal
+t0 = 0
+tf = 1
+t = linspace(t0,tf,20)
+
+% v1 = [1 0.9]
+% v2 = [2 1.8]
+
+% Punto 1
+P1x = 2.456;
+P1y = 0.31;
+P1z = 26.933;
+
+% Punto 2
+P2x = -9.804;
+P2y = 11.851;
+P2z = 20.723;
+
+[x1, dx1, ddx1] = TraTra(P1x,P2x,t)
+[y2, dy2, ddy2] = TraTra(P1y,P2y,t)
+[z3, dz3, ddz3] = TraTra(P1z,P2z,t)
+
+% AT = qf - q0
+% dq_max = AT*(2/(1.5*tf))*1.2 %Velocidad de la articulación
+
+figure(5)
+title('Articulación 1')
+figD = subplot(3,1,1);
+%axis([t0 tf -Inf Inf])
+grid on
+hold on
+title('Posición lineal')
+xlabel('tiempo (s)')
+ylabel('distancia (m)')
+
+figE = subplot(3,1,2);
+%axis([t0 tf -Inf Inf])
+grid on
+hold on
+title('Velocidad lineal')
+xlabel('tiempo (s)')
+ylabel('velocidad (m/s)')
+
+figF = subplot(3,1,3);
+%axis([t0 tf -Inf Inf])
+grid on
+hold on
+title('Aceleración lineal')
+xlabel('tiempo (s)')
+ylabel('aceleración (m/s^2)')
+
+
+for i=1:length(x1)
+    t2_(i,1) = t(i);
+    % Gráfica de posición
+    x1_(i,1) = x1(i)
+    plot(figD,t2_(:),x1_(:,1),'-b')
+    y2_(i,1) = y2(i)
+    plot(figD,t2_(:),y2_(:,1),'-g')
+    z3_(i,1) = z3(i)
+    plot(figD,t2_(:),z3_(:,1),'-r')
+    % Gráfica de velocidad
+    dx1_(i,1) = dx1(i)
+    plot(figE,t2_(:),dx1_(:,1),'-b')
+    dy2_(i,1) = dy2(i)
+    plot(figE,t2_(:),dy2_(:,1),'-g')
+    dz3_(i,1) = dz3(i)
+    plot(figE,t2_(:),dz3_(:,1),'-r')
+    % Gráfica de aceleración
+    ddx1_(i,1) = ddx1(i)
+    plot(figF,t2_(:),ddx1_(:,1),'-b')
+    ddy2_(i,1) = ddy2(i)
+    plot(figF,t2_(:),ddy2_(:,1),'-g')
+    ddz3_(i,1) = ddz3(i)
+    plot(figF,t2_(:),ddz3_(:,1),'-r')
+    
+    figure(1)
+    %Robot.plot([q1T(i),q2T(i),q3T(i)],'scale',1.0,'workspace',[-30 30 -30 30 -30 30]);
+    
+%     zlim([-15,30]);
+    
+    [theta1(i), theta2(i), theta3(i)] = InverseKinematics3R(l1,l2,l3,x1(i),y2(i),z3(i));
+    Robot.teach([theta1(i),theta2(i),theta3(i)],'scale',1.0,'workspace',[-30 30 -30 30 -30 30]);
+    % Cinemática directa (Peter corke)
+    MTH = Robot.fkine([theta1(i),theta2(i),theta3(i)])
+    hold on
+    plot3(MTH.t(1),MTH.t(2),MTH.t(3),'.m')
+end
+
+legend(figD,'X','Y','Z','Location','northwest')
+legend(figE,'dX','dy','dZ','Location','southeast')
+legend(figF,'d2X','d2Y','d2Z','Location','northeast')
+```
